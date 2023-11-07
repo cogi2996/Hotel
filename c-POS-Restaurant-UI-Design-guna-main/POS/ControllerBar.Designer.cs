@@ -34,6 +34,22 @@ namespace POS
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.SuspendLayout();
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 32;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(343, 322);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(410, 23);
+            this.button2.TabIndex = 31;
+            this.button2.Text = "button1";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
@@ -43,30 +59,17 @@ namespace POS
             this.guna2HtmlLabel1.TabIndex = 31;
             this.guna2HtmlLabel1.Text = "guna2HtmlLabel1";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(318, 349);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 31;
-            this.button2.Text = "button1";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // ControllerBar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1056, 691);
+            this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.guna2HtmlLabel1);
-            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "ControllerBar";
             this.Text = "ControllerBar";
             this.Load += new System.EventHandler(this.ControllerBar_Load);
-            this.Controls.SetChildIndex(this.button1, 0);
-            this.Controls.SetChildIndex(this.button2, 0);
-            this.Controls.SetChildIndex(this.guna2HtmlLabel1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
