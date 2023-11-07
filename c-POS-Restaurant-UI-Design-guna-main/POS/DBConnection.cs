@@ -51,7 +51,35 @@ namespace POS
         }
 
         //tin
-    
+        public void ThemSuDungDV(int MaKH, int MaDV, int SoLuong)
+        {
+           
+            try
+            {
+                Connect();
+
+                using (SqlCommand cmd = new SqlCommand("ThemDichVuSuDung", cnn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    // Định rõ các tham số của stored procedure
+                    cmd.Parameters.AddWithValue("@MaKH", MaKH);
+                    cmd.Parameters.AddWithValue("@MaDV", MaDV);
+                    cmd.Parameters.AddWithValue("@SoLuong", SoLuong);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (SqlException ex)
+            {
+                // Xử lý lỗi khi stored procedure báo lỗi
+                Console.WriteLine("Lỗi: " + ex.Message);
+            }
+            finally
+            {
+                Close();
+            }
+        }
 
 
         //tay
@@ -61,7 +89,7 @@ namespace POS
 
 
         //tuan
-        
+
 
 
 

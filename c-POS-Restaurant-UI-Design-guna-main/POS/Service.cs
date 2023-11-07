@@ -16,10 +16,7 @@ namespace POS
         SqlConnection con;
         DataSet ds;
         SqlDataAdapter da;
-
         SqlCommand cmd;
-
-
         DBConnection dbcon = new DBConnection();
         public Service()
         {
@@ -48,18 +45,14 @@ namespace POS
                 cellMaDichVu.Value = maDichVu;
                 DataGridViewTextBoxCell cellTenDichVu = new DataGridViewTextBoxCell();
                 cellTenDichVu.Value = tenDichVu;
-                DataGridViewTextBoxCell cellMaKh = new DataGridViewTextBoxCell();
-                cellMaKh.Value = "";
-                rowDichVuDaChon.Cells.Add(cellMaKh);
+                DataGridViewTextBoxCell cellSoLuong = new DataGridViewTextBoxCell();
+                cellSoLuong.Value = 1;
+               
                 rowDichVuDaChon.Cells.Add(cellMaDichVu);
                 rowDichVuDaChon.Cells.Add(cellTenDichVu);
+                rowDichVuDaChon.Cells.Add(cellSoLuong);
                 dg_dvDaChon.Rows.Add(rowDichVuDaChon);
 
-                //this.Hide();
-                //frmChonDV frmChonDV = new frmChonDV();
-                //frmChonDV.ShowDialog();
-                //frmChonDV.Invalidate();
-                //this.Show();
             }
         }
 
@@ -84,50 +77,73 @@ namespace POS
         {
 
             dbcon.Connect();
-            // dt để lưu trữ csdl
-            ds = new DataSet();
             string sql = "select * from DichVu where TenDV like '%" + txt_search.Text + "%'";
-            dg_dsdv.DataSource = dbcon.CreateTable(sql);
-            // làm mới
+            DataTable dt = dbcon.CreateTable(sql);
             
-            //dg_dsdv.Refresh();
+            dg_dsdv.DataSource = dt;
+            
+            // Làm mới
+            dg_dsdv.Refresh();
 
-
-            /*
-            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.KhachSan))
-            {
-                // đt kn csdl
-                con = new SqlConnection();
-                // gắn chuỗi kn
-                con.ConnectionString = Properties.Settings.Default.KhachSan;
-                con.Open();
-                // dt để lưu trữ csdl
-                ds = new DataSet();
-                string sql = "select * from DichVu where TenDV like '%" + txt_search.Text + "%'";
-                // thực hiện truy vấn 
-                da = new SqlDataAdapter(sql, con);
-                // điền dl vào ds
-                da.Fill(ds);
-                // đổ dl lên gridview
-
-                dg_dsdv.DataSource = ds.Tables[0];
-                // làm mới
-                dg_dsdv.Refresh();
-            }*/
+            dbcon.Close();
+           
         }
 
-        private void cb_khachang_SelectedIndexChanged(object sender, EventArgs e)
+        private void dg_dvDaChon_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            /*
-            string sql = "Select * from DMMH where MaMH = '" + cb_khachang.Text + "'";
-            DataTable d = dbcon.CreateTable(sql);
-            foreach (DataRow hang in d.Rows)
+            if (dg_dvDaChon.CurrentCell.OwningColumn.Name == "col_xoa")
             {
-                txt_TenMH.Text = hang["TenMH"].ToString();
-                txt_SoTiet.Text = hang["SoTiet"].ToString();
+                DialogResult result = MessageBox.Show("Bạn có muốn xóa?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+
+                    // Lấy chỉ mục của hàng đang được chọn
+                    int rowIndex = dg_dvDaChon.CurrentCell.RowIndex;
+
+                    // Xóa hàng đó
+                    dg_dvDaChon.Rows.RemoveAt(rowIndex);
+                    //MessageBox.Show("Xoá dịch vụ thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Thêm dịch vụ thành công");
+                }
+
             }
-            string s2 = "Select sv.MaSV, HoSV, TenSV, NgaySinh, Diem from DMSV sv, KetQua kq where (sv.MaSV = kq.MaSV) and kq.MaMH = '" + cb_MaMH.Text + "'";
-            dataGridViewDiem.DataSource = cn.taobang(s2);*/
+        }
+
+        private void btn_huy_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có muốn xóa tất cả các dịch vụ vừa chọn không?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                dg_dvDaChon.Rows.Clear();
+            }
+        }
+
+        private void btn_luu_Click(object sender, EventArgs e)
+        {
+           
+            dbcon.Connect();
+            int MaKh = Convert.ToInt32(cb_khachang.Text);
+           
+            
+            foreach (DataGridViewRow row in dg_dvDaChon.Rows)
+            {
+                int MaDV = Convert.ToInt32(row.Cells["col_madvdachon"].Value);
+                int SL = Convert.ToInt32(row.Cells["col_sl"].Value);
+                dbcon.ThemSuDungDV(MaKh, MaDV, SL);
+         
+            }
+            MessageBox.Show("Thêm các dịch vụ thành công cho mã khách hàng "+MaKh);
+            dg_dvDaChon.Rows.Clear();
+        }
+
+        private void btn_hienThiAll_Click(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }
