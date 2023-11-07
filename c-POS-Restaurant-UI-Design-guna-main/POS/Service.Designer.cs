@@ -40,11 +40,11 @@ namespace POS
             this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(459, 274);
+            this.guna2Button2.Location = new System.Drawing.Point(348, 176);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(180, 45);
             this.guna2Button2.TabIndex = 31;
-            this.guna2Button2.Text = "guna2Button2";
+            this.guna2Button2.Text = "button";
             // 
             // Service
             // 
