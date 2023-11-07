@@ -30,5 +30,16 @@ namespace POS
             dgCustomer.DataSource = cnn.ListCustomer();
             dgCustomer.Refresh();
         }
+
+        private void btnAddCustomer_Click(object sender, EventArgs e)
+        {
+            // Gọi form thêm thông tin khách hàng mới
+            AddCustomer addCustomer = new AddCustomer();
+            addCustomer.ShowDialog();
+
+            // Tải lại dữ liệu sau khi chỉnh sửa
+            dgCustomer.Columns.Clear();
+            LoadData();
+        }
     }
 }
