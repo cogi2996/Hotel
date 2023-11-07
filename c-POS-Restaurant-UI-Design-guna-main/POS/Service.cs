@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace POS
 {
-    public partial class Service : Form
+    public partial class Service : Form1
     {
+
+        
         public Service()
         {
             InitializeComponent();
@@ -21,11 +23,5 @@ namespace POS
         {
 
         }
-
-        private void txt_1_TextChanged(object sender, EventArgs e)
-        {
-            txt_1.Text = "hello";
-        }
-
     }
 }

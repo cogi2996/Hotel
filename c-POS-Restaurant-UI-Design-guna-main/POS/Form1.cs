@@ -20,9 +20,7 @@ namespace POS
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Guna.UI.Lib.ScrollBar.PanelScrollHelper flowphelper = new Guna.UI.Lib.ScrollBar.PanelScrollHelper(flowLayoutPanel2, gunaVScrollBar1, true);
 
-            gunaLabel_date.Text = DateTime.Now.ToLongDateString();
         }
 
         private void gunaGradientTileButton1_Click(object sender, EventArgs e)
