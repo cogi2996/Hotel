@@ -54,10 +54,84 @@ namespace POS
 
 
         //tay
+        public DataTable ListCustomer()
+        {
+            dt = new DataTable();
 
+            cmd = new SqlCommand("proc_XemDanhSachKhachHang", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+               
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public void AddNewCustomer(string TenKH, DateTime NgaySinh, string CCCD, string SDT, string LoaiKH)
+        {
+            cmd = new SqlCommand("proc_ThemKhachHang", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@TenKH", TenKH);
+            cmd.Parameters.AddWithValue("@NgaySinh", NgaySinh);
+            cmd.Parameters.AddWithValue("@CCCD", CCCD);
+            cmd.Parameters.AddWithValue("@SDT", SDT);
+            cmd.Parameters.AddWithValue("@LoaiKH", LoaiKH);
+
+            cmd.ExecuteNonQuery();
+        }
+
+        public DataTable CustomerInfo(int MaKH)
+        {
+            dt = new DataTable();
+
+            cmd = new SqlCommand("proc_ThongTinKhachHang", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@MaKH", MaKH);
+
+            da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public void EditCustomerInfo(int MaKH, string TenKH, DateTime NgaySinh, string CCCD, string SDT, string LoaiKH)
+        {
+            cmd = new SqlCommand("proc_SuaThongTinKhachHang", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@MaKH", MaKH);
+            cmd.Parameters.AddWithValue("@TenKH", TenKH);
+            cmd.Parameters.AddWithValue("@NgaySinh", NgaySinh);
+            cmd.Parameters.AddWithValue("@CCCD", CCCD);
+            cmd.Parameters.AddWithValue("@SDT", SDT);
+            cmd.Parameters.AddWithValue("@LoaiKH", LoaiKH);
+
+            cmd.ExecuteNonQuery();
+        }
+
+        public void DeleteCustomer(int MaKH)
+        {
+            cmd = new SqlCommand("proc_XoaKhachHang", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@MaKH", MaKH);
+
+            cmd.ExecuteNonQuery();
+        }
+
+
+    }
+
+
+    // dat
 
         // dat
 
+
+    //tuan
 
         //tuan
         public int DatPhong(int SoPhong,int MaKH)
@@ -92,5 +166,4 @@ namespace POS
 
 
 
-    }
 }
