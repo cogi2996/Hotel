@@ -44,13 +44,13 @@ namespace POS
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(180, 45);
             this.guna2Button2.TabIndex = 31;
-            this.guna2Button2.Text = "tin - update";
+            this.guna2Button2.Text = "tin - update2";
             // 
             // Service
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1036, 450);
             this.Controls.Add(this.guna2Button2);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Service";
