@@ -16,5 +16,10 @@ namespace POS
         {
             InitializeComponent();
         }
+
+        private void txt_1_TextChanged(object sender, EventArgs e)
+        {
+            txt_1.Text = "hello";
+        }
     }
 }
