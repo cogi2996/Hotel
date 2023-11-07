@@ -58,15 +58,43 @@ namespace POS
 
 
         //tay
+        public DataTable ListCustomer()
+        {
+            dt = new DataTable();
 
-        // dat
+            cmd = new SqlCommand("proc_XemDanhSachKhachHang", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+               
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
 
+            da.Fill(dt);
 
-        //tuan
-        
+            return dt;
+        }
 
+        public void AddNewCustomer(string TenKH, DateTime NgaySinh, string CCCD, string SDT, string LoaiKH)
+        {
+            cmd = new SqlCommand("proc_ThemKhachHang", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
 
+            cmd.Parameters.AddWithValue("@TenKH", TenKH);
+            cmd.Parameters.AddWithValue("@NgaySinh", NgaySinh);
+            cmd.Parameters.AddWithValue("@CCCD", CCCD);
+            cmd.Parameters.AddWithValue("@SDT", SDT);
+            cmd.Parameters.AddWithValue("@LoaiKH", LoaiKH);
 
-
+            cmd.ExecuteNonQuery();
+        }
     }
+
+
+    // dat
+
+
+    //tuan
+
+
+
+
+
 }

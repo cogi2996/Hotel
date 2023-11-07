@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace POS
 {
-    public partial class Customer : Form1
+    public partial class Customer : Form
     {
+        DBConnection cnn = new DBConnection();
+
         public Customer()
         {
             InitializeComponent();
@@ -19,7 +21,14 @@ namespace POS
 
         private void Customer_Load(object sender, EventArgs e)
         {
+            cnn.Connect();
+            LoadData();
+        }
 
+        private void LoadData()
+        {
+            dgCustomer.DataSource = cnn.ListCustomer();
+            dgCustomer.Refresh();
         }
     }
 }
