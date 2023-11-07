@@ -37,26 +37,26 @@ namespace POS
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2ColorTransition1 = new Guna.UI2.WinForms.Guna2ColorTransition(this.components);
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cb_khachang = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.btn_tim = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txt_search = new Guna.UI2.WinForms.Guna2TextBox();
             this.dg_dsdv = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dg_dvDaChon = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.btn_huy = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_luu = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.col_madv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_tendv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.col_them = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dg_dvDaChon = new Guna.UI2.WinForms.Guna2DataGridView();
             this.col_madvdachon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_tendvdachon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_sl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_xoa = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btn_huy = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_luu = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dg_dsdv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg_dvDaChon)).BeginInit();
             this.SuspendLayout();
@@ -68,20 +68,21 @@ namespace POS
         System.Drawing.Color.Blue,
         System.Drawing.Color.Orange};
             // 
-            // guna2ComboBox1
+            // cb_khachang
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(173, 243);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(103, 36);
-            this.guna2ComboBox1.TabIndex = 0;
+            this.cb_khachang.BackColor = System.Drawing.Color.Transparent;
+            this.cb_khachang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_khachang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_khachang.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_khachang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_khachang.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cb_khachang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cb_khachang.ItemHeight = 30;
+            this.cb_khachang.Location = new System.Drawing.Point(173, 243);
+            this.cb_khachang.Name = "cb_khachang";
+            this.cb_khachang.Size = new System.Drawing.Size(103, 36);
+            this.cb_khachang.TabIndex = 0;
+            this.cb_khachang.SelectedIndexChanged += new System.EventHandler(this.cb_khachang_SelectedIndexChanged);
             // 
             // guna2Button2
             // 
@@ -114,6 +115,7 @@ namespace POS
             this.btn_tim.Size = new System.Drawing.Size(69, 32);
             this.btn_tim.TabIndex = 15;
             this.btn_tim.Text = "Tìm";
+            this.btn_tim.Click += new System.EventHandler(this.btn_tim_Click);
             // 
             // guna2HtmlLabel1
             // 
@@ -204,6 +206,41 @@ namespace POS
             this.dg_dsdv.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dg_dsdv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_dsdv_CellContentClick);
             // 
+            // col_madv
+            // 
+            this.col_madv.DataPropertyName = "MaDV";
+            this.col_madv.HeaderText = "Mã Dịch Vụ";
+            this.col_madv.MinimumWidth = 6;
+            this.col_madv.Name = "col_madv";
+            // 
+            // col_tendv
+            // 
+            this.col_tendv.DataPropertyName = "TenDV";
+            this.col_tendv.HeaderText = "Tên Dịch Vụ";
+            this.col_tendv.MinimumWidth = 6;
+            this.col_tendv.Name = "col_tendv";
+            this.col_tendv.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // col_dongia
+            // 
+            this.col_dongia.DataPropertyName = "DonGia";
+            this.col_dongia.HeaderText = "Đơn Giá";
+            this.col_dongia.MinimumWidth = 6;
+            this.col_dongia.Name = "col_dongia";
+            // 
+            // col_them
+            // 
+            this.col_them.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.col_them.FillWeight = 50F;
+            this.col_them.HeaderText = "Thêm";
+            this.col_them.Image = global::POS.Properties.Resources.icons8_add_48;
+            this.col_them.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.col_them.MinimumWidth = 50;
+            this.col_them.Name = "col_them";
+            this.col_them.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.col_them.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.col_them.Width = 50;
+            // 
             // dg_dvDaChon
             // 
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
@@ -261,6 +298,38 @@ namespace POS
             this.dg_dvDaChon.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dg_dvDaChon.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // col_madvdachon
+            // 
+            this.col_madvdachon.HeaderText = "Mã Dịch Vụ";
+            this.col_madvdachon.MinimumWidth = 6;
+            this.col_madvdachon.Name = "col_madvdachon";
+            // 
+            // col_tendvdachon
+            // 
+            this.col_tendvdachon.HeaderText = "Tên Dịch Vụ";
+            this.col_tendvdachon.MinimumWidth = 6;
+            this.col_tendvdachon.Name = "col_tendvdachon";
+            // 
+            // col_sl
+            // 
+            this.col_sl.HeaderText = "Số Lượng";
+            this.col_sl.MinimumWidth = 6;
+            this.col_sl.Name = "col_sl";
+            // 
+            // col_xoa
+            // 
+            this.col_xoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.col_xoa.DataPropertyName = "none";
+            this.col_xoa.FillWeight = 70F;
+            this.col_xoa.HeaderText = "Xóa";
+            this.col_xoa.Image = global::POS.Properties.Resources.icons8_x_48;
+            this.col_xoa.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.col_xoa.MinimumWidth = 70;
+            this.col_xoa.Name = "col_xoa";
+            this.col_xoa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.col_xoa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.col_xoa.Width = 70;
+            // 
             // btn_huy
             // 
             this.btn_huy.AutoRoundedCorners = true;
@@ -302,28 +371,6 @@ namespace POS
             this.guna2HtmlLabel2.TabIndex = 19;
             this.guna2HtmlLabel2.Text = "Khách Hàng";
             // 
-            // col_madv
-            // 
-            this.col_madv.DataPropertyName = "MaDV";
-            this.col_madv.HeaderText = "Mã Dịch Vụ";
-            this.col_madv.MinimumWidth = 6;
-            this.col_madv.Name = "col_madv";
-            // 
-            // col_tendv
-            // 
-            this.col_tendv.DataPropertyName = "TenDV";
-            this.col_tendv.HeaderText = "Tên Dịch Vụ";
-            this.col_tendv.MinimumWidth = 6;
-            this.col_tendv.Name = "col_tendv";
-            this.col_tendv.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // col_dongia
-            // 
-            this.col_dongia.DataPropertyName = "DonGia";
-            this.col_dongia.HeaderText = "Đơn Giá";
-            this.col_dongia.MinimumWidth = 6;
-            this.col_dongia.Name = "col_dongia";
-            // 
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -351,51 +398,6 @@ namespace POS
             this.dataGridViewImageColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewImageColumn2.Width = 70;
             // 
-            // col_them
-            // 
-            this.col_them.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.col_them.FillWeight = 50F;
-            this.col_them.HeaderText = "Thêm";
-            this.col_them.Image = global::POS.Properties.Resources.icons8_add_48;
-            this.col_them.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.col_them.MinimumWidth = 50;
-            this.col_them.Name = "col_them";
-            this.col_them.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.col_them.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.col_them.Width = 50;
-            // 
-            // col_madvdachon
-            // 
-            this.col_madvdachon.HeaderText = "Mã Dịch Vụ";
-            this.col_madvdachon.MinimumWidth = 6;
-            this.col_madvdachon.Name = "col_madvdachon";
-            // 
-            // col_tendvdachon
-            // 
-            this.col_tendvdachon.HeaderText = "Tên Dịch Vụ";
-            this.col_tendvdachon.MinimumWidth = 6;
-            this.col_tendvdachon.Name = "col_tendvdachon";
-            // 
-            // col_sl
-            // 
-            this.col_sl.HeaderText = "Số Lượng";
-            this.col_sl.MinimumWidth = 6;
-            this.col_sl.Name = "col_sl";
-            // 
-            // col_xoa
-            // 
-            this.col_xoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.col_xoa.DataPropertyName = "none";
-            this.col_xoa.FillWeight = 70F;
-            this.col_xoa.HeaderText = "Xóa";
-            this.col_xoa.Image = global::POS.Properties.Resources.icons8_x_48;
-            this.col_xoa.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.col_xoa.MinimumWidth = 70;
-            this.col_xoa.Name = "col_xoa";
-            this.col_xoa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.col_xoa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.col_xoa.Width = 70;
-            // 
             // Service
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -410,7 +412,7 @@ namespace POS
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.txt_search);
             this.Controls.Add(this.dg_dsdv);
-            this.Controls.Add(this.guna2ComboBox1);
+            this.Controls.Add(this.cb_khachang);
             this.Name = "Service";
             this.Text = "Service";
             this.Load += new System.EventHandler(this.Service_Load);
@@ -427,7 +429,7 @@ namespace POS
         private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox1;
         private Guna.UI2.WinForms.Guna2TextBox txt_1;
         private Guna.UI2.WinForms.Guna2ColorTransition guna2ColorTransition1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox cb_khachang;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button btn_tim;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
