@@ -44,5 +44,10 @@ namespace POS
             conn.Connect();
             System.Diagnostics.Debug.WriteLine("Hello world");
         }
+
+        //tin
+
+        //tay
+
     }
 }
