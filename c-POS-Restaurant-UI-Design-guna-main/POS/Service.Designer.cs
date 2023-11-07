@@ -30,6 +30,8 @@ namespace POS
         private void InitializeComponent()
         {
             this.txt_1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.button_2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.SuspendLayout();
             // 
             // txt_1
@@ -53,20 +55,43 @@ namespace POS
             this.txt_1.TabIndex = 0;
             this.txt_1.TextChanged += new System.EventHandler(this.txt_1_TextChanged);
             // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(172, 105);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(108, 18);
+            this.guna2HtmlLabel1.TabIndex = 1;
+            this.guna2HtmlLabel1.Text = "guna2HtmlLabel1";
+            // 
+            // button_2
+            // 
+            this.button_2.BackColor = System.Drawing.Color.Transparent;
+            this.button_2.Location = new System.Drawing.Point(449, 91);
+            this.button_2.Name = "button_2";
+            this.button_2.Size = new System.Drawing.Size(108, 18);
+            this.button_2.TabIndex = 2;
+            this.button_2.Text = "guna2HtmlLabel2";
+            // 
             // Service
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_2);
+            this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.txt_1);
             this.Name = "Service";
             this.Text = "Service";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private Guna.UI2.WinForms.Guna2TextBox txt_1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel button_2;
     }
 }
