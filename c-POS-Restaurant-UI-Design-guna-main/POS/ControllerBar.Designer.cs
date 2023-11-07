@@ -1,7 +1,7 @@
 ﻿
 namespace POS
 {
-    partial class Customer
+    partial class ControllerBar
     {
         /// <summary>
         /// Required designer variable.
@@ -31,14 +31,15 @@ namespace POS
         {
             this.SuspendLayout();
             // 
-            // Customer
+            // ControllerBar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Customer";
-            this.Text = "Customer";
-            this.Load += new System.EventHandler(this.Customer_Load);
+            this.ClientSize = new System.Drawing.Size(1056, 691);
+            this.Location = new System.Drawing.Point(0, 0);
+            this.Name = "ControllerBar";
+            this.Text = "ControllerBar";
+            this.Load += new System.EventHandler(this.ControllerBar_Load);
             this.ResumeLayout(false);
 
         }

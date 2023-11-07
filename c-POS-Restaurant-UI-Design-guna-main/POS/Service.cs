@@ -10,21 +10,18 @@ using System.Windows.Forms;
 
 namespace POS
 {
-    public partial class Service : Form
+    public partial class Service : Form1
     {
+
+        
         public Service()
         {
             InitializeComponent();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void Service_Load(object sender, EventArgs e)
         {
-            this.Close();
-        }
 
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
-        {
-            txt_1.Text = "hello";
         }
     }
 }
