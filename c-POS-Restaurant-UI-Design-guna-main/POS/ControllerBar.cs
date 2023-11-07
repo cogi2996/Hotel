@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace POS
 {
-    public partial class ControllerBar : Form1
+    public partial class ControllerBar : Form
     {
         public ControllerBar()
         {

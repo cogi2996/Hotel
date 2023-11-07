@@ -15,6 +15,11 @@ namespace POS
 {
     class DBConnection
     {
+        SqlConnection conn = null;
+        SqlCommand cmd = null;
+        SqlDataAdapter da = null;
+        DataTable dt = null;
+
         public SqlConnection cnn = new SqlConnection("Data Source=.;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
         public void Connect()
         {
@@ -46,10 +51,20 @@ namespace POS
         }
 
         //tin
+        public void ThemDichVU()
+        {
+
+        }
+
 
         //tay
 
+        // dat
+
+
         //tuan
+        
+
 
 
 

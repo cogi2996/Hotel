@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace POS
 {
-    public partial class Service : Form1
+    public partial class Service : Form
     {
 
         
@@ -23,5 +23,7 @@ namespace POS
         {
 
         }
+
+    
     }
 }
