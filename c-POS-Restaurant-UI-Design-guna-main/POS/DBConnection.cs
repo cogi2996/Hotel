@@ -15,7 +15,6 @@ namespace POS
 {
     class DBConnection
     {
-        SqlConnection conn = null;
         SqlCommand cmd = null;
         SqlDataAdapter da = null;
         DataTable dt = null;
@@ -61,7 +60,34 @@ namespace POS
 
 
         //tuan
-        
+        public int DatPhong(int SoPhong,int MaKH)
+        {
+            cnn.Open();
+            cmd = new SqlCommand("proc_DatPhongKH", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@SoPhong", SoPhong);
+            cmd.Parameters.AddWithValue("@MaKH", MaKH);
+            int count = cmd.ExecuteNonQuery();
+            cnn.Close();
+            return count;
+        }
+
+        // findOne
+        public int findOneByPhone(string phone)
+        {
+            int MaKH = -1;
+            string sql = $"select MaKH from KhachHang where SDT = '{phone}' ";
+            da = new SqlDataAdapter(sql, cnn);
+            dt = new DataTable();
+            da.Fill(dt);
+            foreach (DataRow row in dt.Rows)
+            {
+                  MaKH = int.Parse(row["MaKH"].ToString());
+            }
+
+            return MaKH;
+
+        }
 
 
 

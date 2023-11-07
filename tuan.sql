@@ -85,6 +85,8 @@ AS
 	FROM KhachHang;
 go
 
+--
+
 -- 2. VIEW danh sách khách hàng VIP
 CREATE VIEW v_DanhSachKhachHangVIP 
 AS
@@ -113,6 +115,14 @@ AS
 go
 
 -- 5. VIEW bảng giá phòng
+create view v_Phong
+	as 
+select * from Phong
+go
+
+
+
+
 create view v_BangGia
 as
 select * from BangGiaPhong;
@@ -126,7 +136,16 @@ as
 go
 
 
+--proc : thông tin một khách hàng
 
+create proc proc_ThongTinKhachHang
+	@MaKH int
+as 
+	select *
+	from v_DanhSachKhachHang danhsach
+	where danhsach.MaKH = @MaKH
+
+exec proc_ThongTinKhachHang 21
 
 -- 7. VIEW các phòng trống
 create view v_PhongTrong
@@ -147,13 +166,15 @@ AS
 	SELECT * FROM DanhSachSuDungDichVu;
 go
 
+
 -- thủ tục lấy các dịch vụ dược sử dụng bới khách hàng 
 create proc proc_DanhSachSuDungDichVu
 	@MaKH int
 as 
 begin	
-	select MaDV,SoLuong,ThoiDiem
-	from v_DanhSachSuDungDichVu
+	select v_DichVu.MaDV,SoLuong,DonGia,ThoiDiem
+	from v_DanhSachSuDungDichVu 
+	inner join v_DichVu on v_DanhSachSuDungDichVu.MaDV = v_DichVu.MaDV
 	where v_DanhSachSuDungDichVu.MaKH = @MaKH
 end
 
@@ -179,12 +200,14 @@ as
 go
 
 
+
 --proc: lấy danh sách các phòng của khác hàng đã đặt
 create proc proc_DanhSachPhongDaDat
 	@MaKH int
 as
-	select SoPhong
-	from v_ThongTinPhongDuocDat
+	select Phong.SoPhong,phong.LoaiPhong
+	from v_ThongTinPhongDuocDat 
+	inner join Phong on v_ThongTinPhongDuocDat.SoPhong = Phong.SoPhong
 	where v_ThongTinPhongDuocDat.MaKH = @MaKH
 
 exec proc_DanhSachPhongDaDat 21
@@ -555,6 +578,8 @@ begin
 end
 go
 
+
+select MaKH from KhachHang where SDT = 0987654321;
 -- 6. PROCEDURE xóa phòng khỏi bảng Phong
 create proc proc_XoaPhong
 	@SoPhong int
@@ -775,7 +800,7 @@ go
 
 INSERT INTO DatPhong (SoPhong, MaKH, CheckIn)
 VALUES
-    (101, 21, '2023-10-10 12:00:00'),
+    (105, 21, '2023-10-10 12:00:00'),
 	(102, 26, '2023-10-11 11:00:00'),
 	(103, 27, '2023-10-9 19:00:00')
 go
