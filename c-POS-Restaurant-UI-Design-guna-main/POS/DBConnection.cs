@@ -116,6 +116,17 @@ namespace POS
             cmd.ExecuteNonQuery();
         }
 
+        public void DeleteCustomer(int MaKH)
+        {
+            cmd = new SqlCommand("proc_XoaKhachHang", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@MaKH", MaKH);
+
+            cmd.ExecuteNonQuery();
+        }
+
+
     }
 
 

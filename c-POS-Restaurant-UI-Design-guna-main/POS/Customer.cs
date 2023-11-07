@@ -52,12 +52,12 @@ namespace POS
 
         private void dgCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (e.RowIndex >= 0 && e.RowIndex < dgCustomer.Rows.Count)
             {
-                DataGridViewColumn columnSua = dgCustomer.Columns["Edit"];
-                DataGridViewColumn columnXoa = dgCustomer.Columns["Delete"];
+                DataGridViewColumn editColumn = dgCustomer.Columns["Edit"];
+                DataGridViewColumn deleteColumn = dgCustomer.Columns["Delete"];
 
-                if (columnSua != null && e.ColumnIndex == columnSua.Index)
+                if (editColumn != null && e.ColumnIndex == editColumn.Index)
                 {
                     // Lấy mã khách hàng cần sửa
                     int customerID = (int)dgCustomer.Rows[e.RowIndex].Cells["MaKH"].Value;
@@ -70,34 +70,32 @@ namespace POS
                     dgCustomer.Columns.Clear();
                     LoadData();
                 }
-               /* else if (columnXoa != null && e.ColumnIndex == columnXoa.Index)
+                else if (deleteColumn != null && e.ColumnIndex == deleteColumn.Index)
                 {
                     try
                     {
                         // Lấy mã khách hàng cần xóa
-                        int maKH = (int)dgKhachHang.Rows[e.RowIndex].Cells["MaKH"].Value;
+                        int customerID = (int)dgCustomer.Rows[e.RowIndex].Cells["MaKH"].Value;
 
-                        // Xóa thông tin khách hàng có MaKH đã biết
-                        cmd = new SqlCommand("proc_XoaKhachHang", con);
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.Add("@MaKH", SqlDbType.Int).Value = maKH;
+                        cnn.DeleteCustomer(customerID);
 
-                        // Thực thi SqlCommand
-                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Xóa khách hàng thành công!",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
 
-                        // Tải lại dữ liệu sau khi xóa
-                        dgKhachHang.Columns.Clear();
+                        dgCustomer.Columns.Clear();
                         LoadData();
 
                     }
-                    catch
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("Khách hàng đang có đơn đặt phòng, không thể xóa",
-                                        "Thông báo",
+                        MessageBox.Show(ex.Message,
+                                        "Lỗi",
                                         MessageBoxButtons.OK,
-                                        MessageBoxIcon.Information);
+                                        MessageBoxIcon.Error);
                     }
-                }*/
+                }
             }
         }
 
