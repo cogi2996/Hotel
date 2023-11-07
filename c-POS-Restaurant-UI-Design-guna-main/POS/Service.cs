@@ -16,5 +16,15 @@ namespace POS
         {
             InitializeComponent();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            txt_1.Text = "hello";
+        }
     }
 }
