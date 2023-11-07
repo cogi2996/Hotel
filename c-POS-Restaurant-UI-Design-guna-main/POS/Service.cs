@@ -17,13 +17,15 @@ namespace POS
             InitializeComponent();
         }
 
-<<<<<<< HEAD
-        
-=======
+        private void Service_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void txt_1_TextChanged(object sender, EventArgs e)
         {
             txt_1.Text = "hello";
         }
->>>>>>> 772d846be8f1dd576274646e6a48f553f9ad436e
+
     }
 }
