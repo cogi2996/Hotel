@@ -121,20 +121,8 @@ namespace POS
 
             cmd.ExecuteNonQuery();
         }
-
-
-    }
-
-
-    // dat
-
-        // dat
-
-
-    //tuan
-
         //tuan
-        public int DatPhong(int SoPhong,int MaKH)
+        public int DatPhong(int SoPhong, int MaKH)
         {
             cnn.Open();
             cmd = new SqlCommand("proc_DatPhongKH", cnn);
@@ -156,12 +144,17 @@ namespace POS
             da.Fill(dt);
             foreach (DataRow row in dt.Rows)
             {
-                  MaKH = int.Parse(row["MaKH"].ToString());
+                MaKH = int.Parse(row["MaKH"].ToString());
             }
 
             return MaKH;
 
+
         }
+
+  
+
+    }
 
 
 

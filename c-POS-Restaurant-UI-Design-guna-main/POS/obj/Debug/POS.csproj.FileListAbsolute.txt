@@ -86,3 +86,5 @@ D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Desig
 D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.pdb
 D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.AddCustomer.resources
 D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.EditCustomer.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.AddCustomer.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.EditCustomer.resources

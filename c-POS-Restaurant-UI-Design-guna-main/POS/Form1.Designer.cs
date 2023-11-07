@@ -31,17 +31,17 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
+            this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
+            this.gunaGradientTileButton3 = new Guna.UI.WinForms.GunaGradientTileButton();
+            this.gunaGradientTileButton4 = new Guna.UI.WinForms.GunaGradientTileButton();
+            this.gunaGradientTileButton2 = new Guna.UI.WinForms.GunaGradientTileButton();
+            this.gunaGradientTileButton1 = new Guna.UI.WinForms.GunaGradientTileButton();
             this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaControlBox2 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaControlBox3 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaResizeControl1 = new Guna.UI.WinForms.GunaResizeControl();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
-            this.gunaGradientTileButton3 = new Guna.UI.WinForms.GunaGradientTileButton();
-            this.gunaGradientTileButton4 = new Guna.UI.WinForms.GunaGradientTileButton();
-            this.gunaGradientTileButton2 = new Guna.UI.WinForms.GunaGradientTileButton();
-            this.gunaGradientTileButton1 = new Guna.UI.WinForms.GunaGradientTileButton();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -57,70 +57,8 @@
             this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(101, 503);
+            this.gunaPanel1.Size = new System.Drawing.Size(101, 518);
             this.gunaPanel1.TabIndex = 2;
-            // 
-            // gunaDragControl1
-            // 
-            this.gunaDragControl1.TargetControl = this;
-            // 
-            // gunaControlBox1
-            // 
-            this.gunaControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaControlBox1.AnimationHoverSpeed = 0.07F;
-            this.gunaControlBox1.AnimationSpeed = 0.03F;
-            this.gunaControlBox1.IconColor = System.Drawing.Color.Gray;
-            this.gunaControlBox1.IconSize = 15F;
-            this.gunaControlBox1.Location = new System.Drawing.Point(756, 0);
-            this.gunaControlBox1.Name = "gunaControlBox1";
-            this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.Tomato;
-            this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
-            this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox1.Size = new System.Drawing.Size(45, 29);
-            this.gunaControlBox1.TabIndex = 27;
-            // 
-            // gunaControlBox2
-            // 
-            this.gunaControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaControlBox2.AnimationHoverSpeed = 0.07F;
-            this.gunaControlBox2.AnimationSpeed = 0.03F;
-            this.gunaControlBox2.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MaximizeBox;
-            this.gunaControlBox2.IconColor = System.Drawing.Color.Gray;
-            this.gunaControlBox2.IconSize = 15F;
-            this.gunaControlBox2.Location = new System.Drawing.Point(705, 0);
-            this.gunaControlBox2.Name = "gunaControlBox2";
-            this.gunaControlBox2.OnHoverBackColor = System.Drawing.Color.Tomato;
-            this.gunaControlBox2.OnHoverIconColor = System.Drawing.Color.White;
-            this.gunaControlBox2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox2.Size = new System.Drawing.Size(45, 29);
-            this.gunaControlBox2.TabIndex = 28;
-            // 
-            // gunaControlBox3
-            // 
-            this.gunaControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaControlBox3.AnimationHoverSpeed = 0.07F;
-            this.gunaControlBox3.AnimationSpeed = 0.03F;
-            this.gunaControlBox3.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MinimizeBox;
-            this.gunaControlBox3.IconColor = System.Drawing.Color.Gray;
-            this.gunaControlBox3.IconSize = 15F;
-            this.gunaControlBox3.Location = new System.Drawing.Point(654, 0);
-            this.gunaControlBox3.Name = "gunaControlBox3";
-            this.gunaControlBox3.OnHoverBackColor = System.Drawing.Color.Tomato;
-            this.gunaControlBox3.OnHoverIconColor = System.Drawing.Color.White;
-            this.gunaControlBox3.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox3.Size = new System.Drawing.Size(45, 29);
-            this.gunaControlBox3.TabIndex = 29;
-            // 
-            // gunaResizeControl1
-            // 
-            this.gunaResizeControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaResizeControl1.ForeColor = System.Drawing.Color.Gray;
-            this.gunaResizeControl1.ForeColorDepth = 255;
-            this.gunaResizeControl1.Location = new System.Drawing.Point(780, 482);
-            this.gunaResizeControl1.Name = "gunaResizeControl1";
-            this.gunaResizeControl1.Size = new System.Drawing.Size(20, 20);
-            this.gunaResizeControl1.TabIndex = 30;
-            this.gunaResizeControl1.TargetControl = this;
             // 
             // gunaPictureBox2
             // 
@@ -219,6 +157,7 @@
             this.gunaGradientTileButton2.Size = new System.Drawing.Size(60, 60);
             this.gunaGradientTileButton2.TabIndex = 1;
             this.gunaGradientTileButton2.Text = "Order";
+            this.gunaGradientTileButton2.Click += new System.EventHandler(this.gunaGradientTileButton2_Click);
             // 
             // gunaGradientTileButton1
             // 
@@ -250,12 +189,74 @@
             this.gunaGradientTileButton1.Text = "customer";
             this.gunaGradientTileButton1.Click += new System.EventHandler(this.gunaGradientTileButton1_Click);
             // 
+            // gunaDragControl1
+            // 
+            this.gunaDragControl1.TargetControl = this;
+            // 
+            // gunaControlBox1
+            // 
+            this.gunaControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaControlBox1.AnimationHoverSpeed = 0.07F;
+            this.gunaControlBox1.AnimationSpeed = 0.03F;
+            this.gunaControlBox1.IconColor = System.Drawing.Color.Gray;
+            this.gunaControlBox1.IconSize = 15F;
+            this.gunaControlBox1.Location = new System.Drawing.Point(701, 0);
+            this.gunaControlBox1.Name = "gunaControlBox1";
+            this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.Tomato;
+            this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
+            this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.gunaControlBox1.TabIndex = 27;
+            // 
+            // gunaControlBox2
+            // 
+            this.gunaControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaControlBox2.AnimationHoverSpeed = 0.07F;
+            this.gunaControlBox2.AnimationSpeed = 0.03F;
+            this.gunaControlBox2.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MaximizeBox;
+            this.gunaControlBox2.IconColor = System.Drawing.Color.Gray;
+            this.gunaControlBox2.IconSize = 15F;
+            this.gunaControlBox2.Location = new System.Drawing.Point(650, 0);
+            this.gunaControlBox2.Name = "gunaControlBox2";
+            this.gunaControlBox2.OnHoverBackColor = System.Drawing.Color.Tomato;
+            this.gunaControlBox2.OnHoverIconColor = System.Drawing.Color.White;
+            this.gunaControlBox2.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaControlBox2.Size = new System.Drawing.Size(45, 29);
+            this.gunaControlBox2.TabIndex = 28;
+            // 
+            // gunaControlBox3
+            // 
+            this.gunaControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaControlBox3.AnimationHoverSpeed = 0.07F;
+            this.gunaControlBox3.AnimationSpeed = 0.03F;
+            this.gunaControlBox3.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MinimizeBox;
+            this.gunaControlBox3.IconColor = System.Drawing.Color.Gray;
+            this.gunaControlBox3.IconSize = 15F;
+            this.gunaControlBox3.Location = new System.Drawing.Point(599, 0);
+            this.gunaControlBox3.Name = "gunaControlBox3";
+            this.gunaControlBox3.OnHoverBackColor = System.Drawing.Color.Tomato;
+            this.gunaControlBox3.OnHoverIconColor = System.Drawing.Color.White;
+            this.gunaControlBox3.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaControlBox3.Size = new System.Drawing.Size(45, 29);
+            this.gunaControlBox3.TabIndex = 29;
+            // 
+            // gunaResizeControl1
+            // 
+            this.gunaResizeControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaResizeControl1.ForeColor = System.Drawing.Color.Gray;
+            this.gunaResizeControl1.ForeColorDepth = 255;
+            this.gunaResizeControl1.Location = new System.Drawing.Point(725, 497);
+            this.gunaResizeControl1.Name = "gunaResizeControl1";
+            this.gunaResizeControl1.Size = new System.Drawing.Size(20, 20);
+            this.gunaResizeControl1.TabIndex = 30;
+            this.gunaResizeControl1.TargetControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(800, 503);
+            this.ClientSize = new System.Drawing.Size(745, 518);
             this.Controls.Add(this.gunaResizeControl1);
             this.Controls.Add(this.gunaControlBox3);
             this.Controls.Add(this.gunaControlBox2);
@@ -274,10 +275,6 @@
 
         #endregion
         private Guna.UI.WinForms.GunaPanel gunaPanel1;
-        private Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton1;
-        private Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton3;
-        private Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton4;
-        private Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton2;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox2;
         private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
         private Guna.UI.WinForms.GunaControlBox gunaControlBox3;
@@ -285,6 +282,10 @@
         private Guna.UI.WinForms.GunaControlBox gunaControlBox1;
         private Guna.UI.WinForms.GunaResizeControl gunaResizeControl1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        public Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton1;
+        public Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton3;
+        public Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton4;
+        public Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton2;
     }
 }
 

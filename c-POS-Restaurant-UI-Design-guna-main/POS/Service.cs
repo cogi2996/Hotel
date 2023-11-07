@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace POS
 {
-    public partial class Service : Form
+    public partial class Service : Form1
     {
         SqlConnection con;
         DataSet ds;

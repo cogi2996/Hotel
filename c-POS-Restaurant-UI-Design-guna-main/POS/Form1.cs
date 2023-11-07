@@ -27,5 +27,10 @@ namespace POS
         {
 
         }
+
+        private void gunaGradientTileButton2_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
