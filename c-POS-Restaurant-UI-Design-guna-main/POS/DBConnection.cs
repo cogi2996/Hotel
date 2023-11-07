@@ -51,10 +51,7 @@ namespace POS
         }
 
         //tin
-        public void ThemDichVU()
-        {
-            
-        }
+    
 
 
         //tay
