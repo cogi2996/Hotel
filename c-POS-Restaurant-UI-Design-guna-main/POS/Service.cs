@@ -11,7 +11,8 @@ using System.Windows.Forms;
 
 namespace POS
 {
-    public partial class Service : Form
+    public partial class Service : Form1
+
     {
         SqlConnection con;
         DataSet ds;
@@ -61,10 +62,6 @@ namespace POS
             dbcon.Connect();
             string sql = "select * from DichVu";
             dg_dsdv.DataSource = dbcon.CreateTable(sql);
-            string sql1 = "select * from KhachHang";
-            cb_khachang.DataSource = dbcon.CreateTable(sql1);
-            cb_khachang.DisplayMember = "MaKH";
-
 
         }
 
@@ -77,14 +74,11 @@ namespace POS
         {
 
             dbcon.Connect();
-            string sql = "select * from DichVu where TenDV like '%" + txt_search.Text + "%'";
+            string sql = "select * from DichVu where TenDV like N'%" + txt_search.Text + "%'";
             DataTable dt = dbcon.CreateTable(sql);
             
             dg_dsdv.DataSource = dt;
-            
-            // Làm mới
-            dg_dsdv.Refresh();
-
+ 
             dbcon.Close();
            
         }
@@ -127,7 +121,7 @@ namespace POS
         {
            
             dbcon.Connect();
-            int MaKh = Convert.ToInt32(cb_khachang.Text);
+            int MaKh = Convert.ToInt32(txt_KhachHang.Text);
            
             
             foreach (DataGridViewRow row in dg_dvDaChon.Rows)
