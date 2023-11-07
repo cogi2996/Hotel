@@ -50,8 +50,9 @@ namespace POS
             this.col_madv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_tendv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.col_them = new System.Windows.Forms.DataGridViewImageColumn();
-            this.col_makh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_madvdachon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_tendvdachon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_sl = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -218,7 +219,6 @@ namespace POS
             this.dg_dvDaChon.ColumnHeadersHeight = 18;
             this.dg_dvDaChon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dg_dvDaChon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.col_makh,
             this.col_madvdachon,
             this.col_tendvdachon,
             this.col_sl,
@@ -324,6 +324,33 @@ namespace POS
             this.col_dongia.MinimumWidth = 6;
             this.col_dongia.Name = "col_dongia";
             // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewImageColumn1.FillWeight = 50F;
+            this.dataGridViewImageColumn1.HeaderText = "Thêm";
+            this.dataGridViewImageColumn1.Image = global::POS.Properties.Resources.icons8_add_48;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.MinimumWidth = 50;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewImageColumn1.Width = 50;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewImageColumn2.DataPropertyName = "none";
+            this.dataGridViewImageColumn2.FillWeight = 70F;
+            this.dataGridViewImageColumn2.HeaderText = "Xóa";
+            this.dataGridViewImageColumn2.Image = global::POS.Properties.Resources.icons8_x_48;
+            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn2.MinimumWidth = 70;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewImageColumn2.Width = 70;
+            // 
             // col_them
             // 
             this.col_them.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -336,12 +363,6 @@ namespace POS
             this.col_them.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.col_them.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.col_them.Width = 50;
-            // 
-            // col_makh
-            // 
-            this.col_makh.HeaderText = "Mã Khách Hàng";
-            this.col_makh.MinimumWidth = 6;
-            this.col_makh.Name = "col_makh";
             // 
             // col_madvdachon
             // 
@@ -420,10 +441,11 @@ namespace POS
         private System.Windows.Forms.DataGridViewTextBoxColumn col_tendv;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_dongia;
         private System.Windows.Forms.DataGridViewImageColumn col_them;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_makh;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_madvdachon;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_tendvdachon;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_sl;
         private System.Windows.Forms.DataGridViewImageColumn col_xoa;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
     }
 }
