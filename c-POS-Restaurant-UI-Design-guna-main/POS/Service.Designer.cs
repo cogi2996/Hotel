@@ -44,7 +44,7 @@ namespace POS
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(180, 45);
             this.guna2Button2.TabIndex = 31;
-            this.guna2Button2.Text = "tin";
+            this.guna2Button2.Text = "tin - update";
             // 
             // Service
             // 
