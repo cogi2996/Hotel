@@ -30,7 +30,11 @@ namespace POS
         {
             dgCustomer.DataSource = cnn.ListCustomer();
             dgCustomer.Refresh();
+            AddEditAndDeleteButtons();
+        }
 
+        private void AddEditAndDeleteButtons()
+        {
             // Thêm cột nút sửa
             DataGridViewButtonColumn editButton = new DataGridViewButtonColumn();
             editButton.HeaderText = "";
@@ -117,6 +121,24 @@ namespace POS
             // Load lại dữ liệu
             dgCustomer.DataSource = cnn.ListCustomer();
             dgCustomer.Refresh();
+        }
+
+        private void cbFilterCustomer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbFilterCustomer.SelectedValue != null && cbFilterCustomer.SelectedValue.ToString() == "V")
+            {
+                dgCustomer.DataSource = cnn.ListVIPCustomer();
+                dgCustomer.Refresh();
+
+                AddEditAndDeleteButtons();
+            }
+            else if (cbFilterCustomer.SelectedValue != null && cbFilterCustomer.SelectedValue.ToString() == "T")
+            {
+                dgCustomer.DataSource = cnn.ListNormalCustomer();
+                dgCustomer.Refresh();
+
+                AddEditAndDeleteButtons();
+            }
         }
     }
 }

@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customer));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaGradientTileButton3 = new Guna.UI.WinForms.GunaGradientTileButton();
@@ -46,13 +46,15 @@
             this.gunaResizeControl1 = new Guna.UI.WinForms.GunaResizeControl();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.dgCustomer = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.btnAddCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CCCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAddCustomer = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbFilterCustomer = new Guna.UI2.WinForms.Guna2ComboBox();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgCustomer)).BeginInit();
@@ -68,7 +70,7 @@
             this.gunaPanel1.Controls.Add(this.gunaGradientTileButton1);
             this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
-            this.gunaPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(135, 1007);
             this.gunaPanel1.TabIndex = 2;
@@ -77,7 +79,7 @@
             // 
             this.gunaPictureBox2.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox2.Location = new System.Drawing.Point(-12, -25);
-            this.gunaPictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaPictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.gunaPictureBox2.Name = "gunaPictureBox2";
             this.gunaPictureBox2.Size = new System.Drawing.Size(155, 165);
             this.gunaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -101,7 +103,7 @@
             this.gunaGradientTileButton3.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientTileButton3.Image")));
             this.gunaGradientTileButton3.ImageSize = new System.Drawing.Size(32, 32);
             this.gunaGradientTileButton3.Location = new System.Drawing.Point(24, 485);
-            this.gunaGradientTileButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaGradientTileButton3.Margin = new System.Windows.Forms.Padding(4);
             this.gunaGradientTileButton3.Name = "gunaGradientTileButton3";
             this.gunaGradientTileButton3.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
             this.gunaGradientTileButton3.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
@@ -131,7 +133,7 @@
             this.gunaGradientTileButton4.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientTileButton4.Image")));
             this.gunaGradientTileButton4.ImageSize = new System.Drawing.Size(32, 32);
             this.gunaGradientTileButton4.Location = new System.Drawing.Point(24, 385);
-            this.gunaGradientTileButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaGradientTileButton4.Margin = new System.Windows.Forms.Padding(4);
             this.gunaGradientTileButton4.Name = "gunaGradientTileButton4";
             this.gunaGradientTileButton4.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
             this.gunaGradientTileButton4.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
@@ -161,7 +163,7 @@
             this.gunaGradientTileButton2.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientTileButton2.Image")));
             this.gunaGradientTileButton2.ImageSize = new System.Drawing.Size(26, 26);
             this.gunaGradientTileButton2.Location = new System.Drawing.Point(24, 273);
-            this.gunaGradientTileButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaGradientTileButton2.Margin = new System.Windows.Forms.Padding(4);
             this.gunaGradientTileButton2.Name = "gunaGradientTileButton2";
             this.gunaGradientTileButton2.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
             this.gunaGradientTileButton2.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
@@ -191,7 +193,7 @@
             this.gunaGradientTileButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientTileButton1.Image")));
             this.gunaGradientTileButton1.ImageSize = new System.Drawing.Size(32, 32);
             this.gunaGradientTileButton1.Location = new System.Drawing.Point(24, 172);
-            this.gunaGradientTileButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaGradientTileButton1.Margin = new System.Windows.Forms.Padding(4);
             this.gunaGradientTileButton1.Name = "gunaGradientTileButton1";
             this.gunaGradientTileButton1.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
             this.gunaGradientTileButton1.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
@@ -216,7 +218,7 @@
             this.gunaControlBox1.IconColor = System.Drawing.Color.Gray;
             this.gunaControlBox1.IconSize = 15F;
             this.gunaControlBox1.Location = new System.Drawing.Point(1685, 0);
-            this.gunaControlBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaControlBox1.Margin = new System.Windows.Forms.Padding(4);
             this.gunaControlBox1.Name = "gunaControlBox1";
             this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.Tomato;
             this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
@@ -233,7 +235,7 @@
             this.gunaControlBox2.IconColor = System.Drawing.Color.Gray;
             this.gunaControlBox2.IconSize = 15F;
             this.gunaControlBox2.Location = new System.Drawing.Point(1617, 0);
-            this.gunaControlBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaControlBox2.Margin = new System.Windows.Forms.Padding(4);
             this.gunaControlBox2.Name = "gunaControlBox2";
             this.gunaControlBox2.OnHoverBackColor = System.Drawing.Color.Tomato;
             this.gunaControlBox2.OnHoverIconColor = System.Drawing.Color.White;
@@ -250,7 +252,7 @@
             this.gunaControlBox3.IconColor = System.Drawing.Color.Gray;
             this.gunaControlBox3.IconSize = 15F;
             this.gunaControlBox3.Location = new System.Drawing.Point(1549, 0);
-            this.gunaControlBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaControlBox3.Margin = new System.Windows.Forms.Padding(4);
             this.gunaControlBox3.Name = "gunaControlBox3";
             this.gunaControlBox3.OnHoverBackColor = System.Drawing.Color.Tomato;
             this.gunaControlBox3.OnHoverIconColor = System.Drawing.Color.White;
@@ -264,7 +266,7 @@
             this.gunaResizeControl1.ForeColor = System.Drawing.Color.Gray;
             this.gunaResizeControl1.ForeColorDepth = 255;
             this.gunaResizeControl1.Location = new System.Drawing.Point(1717, 981);
-            this.gunaResizeControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaResizeControl1.Margin = new System.Windows.Forms.Padding(4);
             this.gunaResizeControl1.Name = "gunaResizeControl1";
             this.gunaResizeControl1.Size = new System.Drawing.Size(27, 25);
             this.gunaResizeControl1.TabIndex = 30;
@@ -272,16 +274,16 @@
             // 
             // dgCustomer
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgCustomer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgCustomer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgCustomer.ColumnHeadersHeight = 50;
             this.dgCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -291,14 +293,14 @@
             this.CCCD,
             this.SDT,
             this.LoaiKH});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgCustomer.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgCustomer.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgCustomer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgCustomer.Location = new System.Drawing.Point(177, 142);
             this.dgCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -329,22 +331,6 @@
             this.dgCustomer.ThemeStyle.RowsStyle.Height = 40;
             this.dgCustomer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgCustomer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // btnAddCustomer
-            // 
-            this.btnAddCustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddCustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddCustomer.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddCustomer.ForeColor = System.Drawing.Color.White;
-            this.btnAddCustomer.Location = new System.Drawing.Point(177, 62);
-            this.btnAddCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAddCustomer.Name = "btnAddCustomer";
-            this.btnAddCustomer.Size = new System.Drawing.Size(140, 54);
-            this.btnAddCustomer.TabIndex = 32;
-            this.btnAddCustomer.Text = "Thêm";
-            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
             // MaKH
             // 
@@ -395,12 +381,60 @@
             this.LoaiKH.Name = "LoaiKH";
             this.LoaiKH.ReadOnly = true;
             // 
+            // btnAddCustomer
+            // 
+            this.btnAddCustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddCustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddCustomer.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnAddCustomer.Location = new System.Drawing.Point(177, 62);
+            this.btnAddCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddCustomer.Name = "btnAddCustomer";
+            this.btnAddCustomer.Size = new System.Drawing.Size(140, 54);
+            this.btnAddCustomer.TabIndex = 32;
+            this.btnAddCustomer.Text = "Thêm";
+            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(480, 75);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(422, 32);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Lọc dựa theo loại khách hàng:";
+            // 
+            // cbFilterCustomer
+            // 
+            this.cbFilterCustomer.BackColor = System.Drawing.Color.Transparent;
+            this.cbFilterCustomer.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbFilterCustomer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFilterCustomer.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbFilterCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbFilterCustomer.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbFilterCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbFilterCustomer.ItemHeight = 30;
+            this.cbFilterCustomer.Items.AddRange(new object[] {
+            "T",
+            "V"});
+            this.cbFilterCustomer.Location = new System.Drawing.Point(924, 71);
+            this.cbFilterCustomer.Name = "cbFilterCustomer";
+            this.cbFilterCustomer.Size = new System.Drawing.Size(200, 36);
+            this.cbFilterCustomer.TabIndex = 34;
+            this.cbFilterCustomer.SelectedIndexChanged += new System.EventHandler(this.cbFilterCustomer_SelectedIndexChanged);
+            // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1744, 1007);
+            this.Controls.Add(this.cbFilterCustomer);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAddCustomer);
             this.Controls.Add(this.dgCustomer);
             this.Controls.Add(this.gunaResizeControl1);
@@ -409,7 +443,7 @@
             this.Controls.Add(this.gunaControlBox1);
             this.Controls.Add(this.gunaPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Customer";
             this.Opacity = 0.95D;
             this.Text = "Form1";
@@ -419,6 +453,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgCustomer)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -443,6 +478,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CCCD;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn LoaiKH;
+        private Guna.UI2.WinForms.Guna2ComboBox cbFilterCustomer;
+        private System.Windows.Forms.Label label1;
     }
 }
 
