@@ -57,7 +57,7 @@ namespace POS
             {
                 Connect();
 
-                using (SqlCommand cmd = new SqlCommand("ThemDichVuSuDung", cnn))
+                using (SqlCommand cmd = new SqlCommand("proc_ThemDichVuSuDung", cnn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
 

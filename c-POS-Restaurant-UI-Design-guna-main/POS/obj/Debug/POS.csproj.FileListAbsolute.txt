@@ -87,3 +87,5 @@ D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bi
 D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\stdole.dll
+D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.AddCustomer.resources
+D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.EditCustomer.resources
