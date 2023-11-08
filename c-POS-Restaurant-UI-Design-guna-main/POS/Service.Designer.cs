@@ -89,7 +89,7 @@ namespace POS
             // btn_tim
             // 
             this.btn_tim.AutoRoundedCorners = true;
-            this.btn_tim.BorderRadius = 15;
+            this.btn_tim.BorderRadius = 12;
             this.btn_tim.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_tim.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_tim.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -416,9 +416,53 @@ namespace POS
             this.guna2VSeparator1.Size = new System.Drawing.Size(10, 324);
             this.guna2VSeparator1.TabIndex = 32;
             // 
+            // btn_huy
+            // 
+            this.btn_huy.AutoRoundedCorners = true;
+            this.btn_huy.BorderRadius = 17;
+            this.btn_huy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_huy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_huy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_huy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_huy.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_huy.ForeColor = System.Drawing.Color.White;
+            this.btn_huy.Location = new System.Drawing.Point(1060, 492);
+            this.btn_huy.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_huy.Name = "btn_huy";
+            this.btn_huy.Size = new System.Drawing.Size(57, 37);
+            this.btn_huy.TabIndex = 17;
+            this.btn_huy.Text = "Hủy";
+            // 
+            // btn_luu
+            // 
+            this.btn_luu.AutoRoundedCorners = true;
+            this.btn_luu.BorderRadius = 17;
+            this.btn_luu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_luu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_luu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_luu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_luu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_luu.ForeColor = System.Drawing.Color.White;
+            this.btn_luu.Location = new System.Drawing.Point(985, 492);
+            this.btn_luu.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_luu.Name = "btn_luu";
+            this.btn_luu.Size = new System.Drawing.Size(57, 37);
+            this.btn_luu.TabIndex = 18;
+            this.btn_luu.Text = "Lưu";
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(208, 180);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(63, 15);
+            this.guna2HtmlLabel2.TabIndex = 19;
+            this.guna2HtmlLabel2.Text = "Khách Hàng";
+            // 
             // Service
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1119, 626);
             this.Controls.Add(this.guna2VSeparator1);
