@@ -655,7 +655,37 @@ BEGIN
 END;
 go
 
--- 14. Procedure lấy về danh sách hoá đơn ( makh, madh)
+-- 14. Procedure thêm 1 dịch vụ được sử dụng trong Table SuDungDichVu
+CREATE PROCEDURE ThemDichVuSuDung
+@MaKH INT,
+@MaDV INT,
+@SoLuong INT
+AS
+BEGIN
+	IF NOT EXISTS(SELECT * FROM KhachHang WHERE MaKH = @MaKH)
+	BEGIN
+		RAISERROR(N'Khách hàng không tồn tại.', 16, 1);
+		RETURN;
+	END;
+
+	IF NOT EXISTS(SELECT * FROM DichVu WHERE MaDV = @MaDV)
+	BEGIN
+		RAISERROR(N'Dịch vụ không tồn tại.', 16, 1);
+		RETURN;
+	END;
+
+	IF @SoLuong <= 0
+	BEGIN
+		RAISERROR(N'Số lượng phải lớn hơn 0.', 16, 1);
+		RETURN;
+	END;
+
+	INSERT INTO DanhSachSuDungDichVu (MaKH, MaDV, SoLuong, ThoiDiem)
+	VALUES (@MaKH, @MaDV, @SoLuong, GETDATE());
+
+END;
+	
+-- 15. Procedure lấy về danh sách hoá đơn ( makh, madh)
 create proc proc_DanhSachHoaDon
 as 
 	begin
@@ -722,3 +752,34 @@ VALUES
 go
 
 exec proc_ThemKhachHang 'hehe', '1990-01-01', '123456789010', '0987654329', N'T';
+
+
+-- 4. Trigger cập nhật khi thêm 1 record trên bảng DanhSachSuDungDichVu
+CREATE TRIGGER trg_CapNhatSuDungDichVu
+ON DanhSachSuDungDichVu
+INSTEAD OF INSERT
+AS
+BEGIN
+    -- Kiểm tra xem các bộ (MaKH, MaDV) mới được thêm đã tồn tại hay chưa
+    IF EXISTS (
+    SELECT 1
+    FROM inserted i
+    JOIN DanhSachSuDungDichVu d
+    ON i.MaKH = d.MaKH AND i.MaDV = d.MaDV
+	)
+    BEGIN
+        -- Nếu tồn tại, thực hiện cập nhật thay vì thêm mới
+        UPDATE d
+        SET d.SoLuong = i.SoLuong
+        FROM DanhSachSuDungDichVu d
+        INNER JOIN inserted i ON d.MaKH = i.MaKH AND d.MaDV = i.MaDV;
+    END
+    ELSE
+    BEGIN
+        -- Nếu không tồn tại, thực hiện việc thêm mới
+        INSERT INTO DanhSachSuDungDichVu (MaKH, MaDV, SoLuong, ThoiDiem)
+        SELECT MaKH, MaDV, SoLuong, GETDATE()
+        FROM inserted;
+    END
+END;
+
