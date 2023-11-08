@@ -655,7 +655,37 @@ BEGIN
 END;
 go
 
--- 14. Procedure lấy về danh sách hoá đơn ( makh, madh)
+-- 14. Procedure thêm 1 dịch vụ được sử dụng trong Table SuDungDichVu
+CREATE PROCEDURE ThemDichVuSuDung
+@MaKH INT,
+@MaDV INT,
+@SoLuong INT
+AS
+BEGIN
+	IF NOT EXISTS(SELECT * FROM KhachHang WHERE MaKH = @MaKH)
+	BEGIN
+		RAISERROR(N'Khách hàng không tồn tại.', 16, 1);
+		RETURN;
+	END;
+
+	IF NOT EXISTS(SELECT * FROM DichVu WHERE MaDV = @MaDV)
+	BEGIN
+		RAISERROR(N'Dịch vụ không tồn tại.', 16, 1);
+		RETURN;
+	END;
+
+	IF @SoLuong <= 0
+	BEGIN
+		RAISERROR(N'Số lượng phải lớn hơn 0.', 16, 1);
+		RETURN;
+	END;
+
+	INSERT INTO DanhSachSuDungDichVu (MaKH, MaDV, SoLuong, ThoiDiem)
+	VALUES (@MaKH, @MaDV, @SoLuong, GETDATE());
+
+END;
+	
+-- 15. Procedure lấy về danh sách hoá đơn ( makh, madh)
 create proc proc_DanhSachHoaDon
 as 
 	begin
