@@ -66,7 +66,7 @@ namespace POS
                     EditCustomer formEdit = new EditCustomer(customerID);
                     formEdit.ShowDialog();
 
-                    // Tải lại dữ liệu sau khi chỉnh sửa
+                    // Load lại dữ liệu
                     dgCustomer.DataSource = cnn.ListCustomer();
                     dgCustomer.Refresh();
                 }
@@ -77,16 +77,25 @@ namespace POS
                         // Lấy mã khách hàng cần xóa
                         int customerID = (int)dgCustomer.Rows[e.RowIndex].Cells["MaKH"].Value;
 
-                        cnn.DeleteCustomer(customerID);
+                        // Hiển thị hộp thoại xác nhận
+                        DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa khách hàng này không?",
+                                                                    "Xác nhận xóa",
+                                                                    MessageBoxButtons.YesNo,
+                                                                    MessageBoxIcon.Question);
 
-                        MessageBox.Show("Xóa khách hàng thành công!",
-                                "Thông báo",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
+                        // Nếu người dùng nhấn Yes, tiến hành xóa
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            cnn.DeleteCustomer(customerID);
 
-                        dgCustomer.DataSource = cnn.ListCustomer();
-                        dgCustomer.Refresh();
+                            MessageBox.Show("Xóa khách hàng thành công!",
+                                            "Thông báo",
+                                            MessageBoxButtons.OK,
+                                            MessageBoxIcon.Information);
 
+                            dgCustomer.DataSource = cnn.ListCustomer();
+                            dgCustomer.Refresh();
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -105,9 +114,9 @@ namespace POS
             AddCustomer addCustomer = new AddCustomer();
             addCustomer.ShowDialog();
 
-            // Tải lại dữ liệu sau khi chỉnh sửa
-            dgCustomer.Columns.Clear();
-            LoadData();
+            // Load lại dữ liệu
+            dgCustomer.DataSource = cnn.ListCustomer();
+            dgCustomer.Refresh();
         }
     }
 }
