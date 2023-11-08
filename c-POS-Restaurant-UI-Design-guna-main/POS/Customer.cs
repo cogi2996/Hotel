@@ -8,12 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace POS
 {
     public partial class Customer : Form
     {
         DBConnection cnn = new DBConnection();
+        private Boolean showAllButtonVisible = false;
 
         public Customer()
         {
@@ -30,6 +32,7 @@ namespace POS
         {
             dgCustomer.DataSource = cnn.ListCustomer();
             dgCustomer.Refresh();
+            btnShowAll.Visible = showAllButtonVisible;
             AddEditAndDeleteButtons();
         }
 
@@ -125,20 +128,47 @@ namespace POS
 
         private void cbFilterCustomer_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbFilterCustomer.SelectedValue != null && cbFilterCustomer.SelectedValue.ToString() == "V")
-            {
-                dgCustomer.DataSource = cnn.ListVIPCustomer();
-                dgCustomer.Refresh();
+            int selectedIndex = cbFilterCustomer.SelectedIndex;
 
-                AddEditAndDeleteButtons();
-            }
-            else if (cbFilterCustomer.SelectedValue != null && cbFilterCustomer.SelectedValue.ToString() == "T")
+            if (selectedIndex >= 0)
             {
-                dgCustomer.DataSource = cnn.ListNormalCustomer();
-                dgCustomer.Refresh();
+                string selectedValue = cbFilterCustomer.Items[selectedIndex].ToString();
 
-                AddEditAndDeleteButtons();
+                if (selectedValue == "V")
+                {
+                    dgCustomer.DataSource = cnn.ListVIPCustomer();
+                    dgCustomer.Refresh();
+
+                    showAllButtonVisible = true;
+                }
+                else if (selectedValue == "T")
+                {
+                    dgCustomer.DataSource = cnn.ListNormalCustomer();
+                    dgCustomer.Refresh();
+
+                    showAllButtonVisible = true;
+                }
             }
+            else
+            {
+                showAllButtonVisible = false;
+            }
+
+            btnShowAll.Visible = showAllButtonVisible;
+        }
+
+
+        // Dùng cho ở state lọc khách hàng muốn quay về state hiện tất cả khách hàng
+        private void btnShowAll_Click(object sender, EventArgs e)
+        {
+            dgCustomer.DataSource = cnn.ListCustomer();
+            dgCustomer.Refresh();
+
+            cbFilterCustomer.SelectedIndex = -1;
+
+            showAllButtonVisible = false;
+
+            btnShowAll.Visible = showAllButtonVisible;
         }
     }
 }
