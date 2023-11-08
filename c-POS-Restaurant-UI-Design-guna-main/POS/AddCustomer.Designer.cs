@@ -278,6 +278,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.label6.Location = new System.Drawing.Point(215, 68);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(515, 46);
