@@ -86,5 +86,5 @@ D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design
 D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.CopyComplete
 D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.exe
 D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.pdb
-D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.AssemblyReference.cache
 D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\POS.pdb
+D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.AssemblyReference.cache
