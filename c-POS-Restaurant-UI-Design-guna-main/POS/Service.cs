@@ -11,8 +11,7 @@ using System.Windows.Forms;
 
 namespace POS
 {
-    public partial class Service : Form1
-
+    public partial class Service : Form
     {
         SqlConnection con;
         DataSet ds;
@@ -121,7 +120,7 @@ namespace POS
         {
            
             dbcon.Connect();
-            int MaKh = Convert.ToInt32(txt_KhachHang.Text);
+            int MaKh = dbcon.findOneByPhone(Convert.ToString(txt_SDT.Text));
            
             
             foreach (DataGridViewRow row in dg_dvDaChon.Rows)
