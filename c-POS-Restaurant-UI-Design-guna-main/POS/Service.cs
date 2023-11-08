@@ -128,7 +128,7 @@ namespace POS
                 dbcon.ThemSuDungDV(MaKh, MaDV, SL);
 
             }
-            MessageBox.Show("Thêm các dịch vụ thành công cho mã khách hàng " + MaKh);
+            //MessageBox.Show("Thêm các dịch vụ thành công cho mã khách hàng " + MaKh);
             dg_dvDaChon.Rows.Clear();
         }
 
