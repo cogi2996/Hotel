@@ -50,7 +50,7 @@ namespace POS
         }
 
         //tin
-    
+
 
 
         //tay
@@ -58,9 +58,9 @@ namespace POS
         {
             dt = new DataTable();
 
-            cmd = new SqlCommand("proc_XemDanhSachKhachHang", cnn);
-            cmd.CommandType = CommandType.StoredProcedure;
-               
+            cmd = new SqlCommand("SELECT * FROM f_XemDanhSachKhachHang()", cnn);
+            cmd.CommandType = CommandType.Text;
+
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 
             da.Fill(dt);
@@ -72,8 +72,8 @@ namespace POS
         {
             dt = new DataTable();
 
-            cmd = new SqlCommand("proc_XemDanhSachKhachHangVIP", cnn);
-            cmd.CommandType = CommandType.StoredProcedure;
+            cmd = new SqlCommand("SELECT * FROM f_XemDanhSachKhachHangVIP()", cnn);
+            cmd.CommandType = CommandType.Text;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 
@@ -86,8 +86,8 @@ namespace POS
         {
             dt = new DataTable();
 
-            cmd = new SqlCommand("proc_XemDanhSachKhachHangThuong", cnn);
-            cmd.CommandType = CommandType.StoredProcedure;
+            cmd = new SqlCommand("SELECT * FROM f_XemDanhSachKhachHangThuong()", cnn);
+            cmd.CommandType = CommandType.Text;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 
@@ -95,6 +95,7 @@ namespace POS
 
             return dt;
         }
+
 
         public void AddNewCustomer(string TenKH, DateTime NgaySinh, string CCCD, string SDT, string LoaiKH)
         {
