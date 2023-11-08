@@ -1,4 +1,4 @@
-﻿
+﻿create database QuanLyKhachSan
 use QuanLyKhachSan
 go
 
@@ -36,6 +36,8 @@ CREATE TABLE Phong (
 	FOREIGN KEY (LoaiPhong,SucChua) REFERENCES BangGiaPhong(LoaiPhong,SucChua),
 );
 go
+
+drop table DatPhong
 
 CREATE TABLE DatPhong 
 (
@@ -117,9 +119,7 @@ go
 -- 5. VIEW bảng giá phòng
 create view v_Phong
 	as 
-select * from Phong
-go
-
+	select * from Phong
 
 
 
@@ -579,7 +579,8 @@ end
 go
 
 
-select MaKH from KhachHang where SDT = 0987654321;
+select * from KhachHang where SDT = 0987654321;
+
 -- 6. PROCEDURE xóa phòng khỏi bảng Phong
 create proc proc_XoaPhong
 	@SoPhong int
@@ -614,16 +615,17 @@ go
 -- 9. PROCEDURE đặt phòng
 create proc proc_DatPhongKH
 	@SoPhong int,
-	@MaKH int,
-	@checkin datetime
+	@MaKH int
 as
 	if dbo.f_KiemTraPhongTrong(@SoPhong) = 1
-		insert into DatPhong values (@SoPhong,@MaKH,@checkin)
+		insert into DatPhong values (@SoPhong,@MaKH,GETDATE())
 	else
 		begin
 			print('loi')
 		end
 go
+
+exec proc_DatPhongKH 105,10 
 
 -- 10. Procedure thêm 1 dịch vụ mới trong Table DichVu
 CREATE PROCEDURE proc_ThemDichVu
@@ -775,11 +777,11 @@ go
 /* Đổ dữ liệu*/
 INSERT INTO KhachHang (TenKH, NgaySinh, CCCD, SDT, LoaiKH)
 VALUES
-	('Nguyễn Văn E', '1994-05-05', '098765432102', '0908765433', N'T');
-	('Trần Thị B', '1991-02-02', '987654321098', '0123456789', N'V'),
-	('Trần Thị D', '1993-04-04', '123456789014', '0123456790', N'T'),
+    (N'Nguyễn Văn A', '1990-01-01', '123456789012', '0987654321', N'T');
 	('Nguyễn Văn C', '1992-03-03', '098765432101', '0908765432', N'V'),
-    (N'Nguyễn Văn A', '1990-01-01', '123456789012', '0987654321', N'T'),
+	('Trần Thị D', '1993-04-04', '123456789014', '0123456790', N'T'),
+	('Trần Thị B', '1991-02-02', '987654321098', '0123456789', N'V'),
+	('Nguyễn Văn E', '1994-05-05', '098765432102', '0908765433', N'T'),
 go
 
 INSERT INTO BangGiaPhong (LoaiPhong, SucChua, TienGioDau, TienQuaDem, TienGioTiepTheo)
@@ -788,6 +790,8 @@ VALUES
     (N'V', 3, 120000, 90000, 60000),
     (N'T', 4, 150000, 100000, 70000);
 go
+delete phong
+where 1=1
 INSERT INTO Phong (SoPhong, LoaiPhong, SucChua, TinhTrang)
 VALUES
     (101, N'T', 2, N'Trống'),
@@ -798,11 +802,16 @@ VALUES
     (106, N'V', 3, N'Trống');
 go
 
+
+delete DatPhong
+where 1=1
+delete datphong 
+where 1=1
 INSERT INTO DatPhong (SoPhong, MaKH, CheckIn)
 VALUES
-    (105, 21, '2023-10-10 12:00:00'),
-	(102, 26, '2023-10-11 11:00:00'),
-	(103, 27, '2023-10-9 19:00:00')
+	(103, 9, '2023-10-9 19:00:00')
+	(102, 6, '2023-10-11 11:00:00'),
+    (101, 6, '2023-10-10 12:00:00'),
 go
 
 INSERT INTO DichVu (TenDV, DonGia)
@@ -814,9 +823,9 @@ go
 
 INSERT INTO DanhSachSuDungDichVu (MaKH, MaDV, SoLuong, ThoiDiem)
 VALUES
-    (21, 100, 2, '2023-10-15 08:30:00'),
-    (21, 102, 3, '2023-11-07 07:45:00'),
-    (21, 101, 4, '2023-12-24 20:15:00');
+    (6, 100, 2, '2023-10-15 08:30:00'),
+    (6, 102, 3, '2023-11-07 07:45:00'),
+    (9, 101, 4, '2023-12-24 20:15:00');
 go
 
 INSERT INTO HoaDon(MaKH, NgayThanhToan, TongTienThanhToan)

@@ -32,6 +32,7 @@ namespace POS
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.button3 = new System.Windows.Forms.Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.SuspendLayout();
             // 
@@ -60,6 +61,15 @@ namespace POS
             this.guna2HtmlLabel1.TabIndex = 31;
             this.guna2HtmlLabel1.Text = "guna2HtmlLabel1";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(82, 300);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 33;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // guna2Panel1
             // 
             this.guna2Panel1.Location = new System.Drawing.Point(434, 87);
@@ -72,6 +82,7 @@ namespace POS
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1056, 691);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.button2);
@@ -89,6 +100,7 @@ namespace POS
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private System.Windows.Forms.Button button3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }

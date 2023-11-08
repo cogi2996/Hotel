@@ -14,7 +14,7 @@ using System.Data.SqlClient;
 
 namespace POS
 {
-    public partial class Order : Form1
+    public partial class Order : Form
     {
         DBConnection conn = new DBConnection();
         public Order()
