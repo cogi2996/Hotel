@@ -65,5 +65,55 @@ namespace POS
             }
             this.reset();
         }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSoDT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSucChua_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLoaiPhong_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSoPhong_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dg_dsPhong_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -77,53 +77,53 @@ namespace POS
             this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(208, 199);
-            this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2ComboBox1.Location = new System.Drawing.Point(19, 63);
+            this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(91, 36);
+            this.guna2ComboBox1.Size = new System.Drawing.Size(120, 36);
             this.guna2ComboBox1.TabIndex = 0;
             // 
             // guna2Button2
             // 
             this.guna2Button2.AutoRoundedCorners = true;
-            this.guna2Button2.BorderRadius = 12;
+            this.guna2Button2.BorderRadius = 15;
             this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(544, 203);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button2.Location = new System.Drawing.Point(467, 68);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(103, 26);
+            this.guna2Button2.Size = new System.Drawing.Size(137, 32);
             this.guna2Button2.TabIndex = 14;
             this.guna2Button2.Text = "Hiển thị tất cả";
             // 
             // btn_tim
             // 
             this.btn_tim.AutoRoundedCorners = true;
-            this.btn_tim.BorderRadius = 12;
+            this.btn_tim.BorderRadius = 15;
             this.btn_tim.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_tim.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_tim.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_tim.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_tim.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_tim.ForeColor = System.Drawing.Color.White;
-            this.btn_tim.Location = new System.Drawing.Point(483, 203);
-            this.btn_tim.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_tim.Location = new System.Drawing.Point(386, 68);
+            this.btn_tim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_tim.Name = "btn_tim";
-            this.btn_tim.Size = new System.Drawing.Size(52, 26);
+            this.btn_tim.Size = new System.Drawing.Size(69, 32);
             this.btn_tim.TabIndex = 15;
             this.btn_tim.Text = "Tìm";
             // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(319, 180);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(167, 40);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(37, 15);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(46, 18);
             this.guna2HtmlLabel1.TabIndex = 13;
             this.guna2HtmlLabel1.Text = "Search";
             // 
@@ -139,13 +139,13 @@ namespace POS
             this.txt_search.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_search.IconLeftSize = new System.Drawing.Size(35, 30);
-            this.txt_search.Location = new System.Drawing.Point(319, 203);
-            this.txt_search.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_search.Location = new System.Drawing.Point(167, 68);
+            this.txt_search.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_search.Name = "txt_search";
             this.txt_search.PasswordChar = '\0';
             this.txt_search.PlaceholderText = "Search here";
             this.txt_search.SelectedText = "";
-            this.txt_search.Size = new System.Drawing.Size(160, 26);
+            this.txt_search.Size = new System.Drawing.Size(213, 32);
             this.txt_search.TabIndex = 12;
             // 
             // dg_dsdv
@@ -176,14 +176,14 @@ namespace POS
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dg_dsdv.DefaultCellStyle = dataGridViewCellStyle3;
             this.dg_dsdv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dg_dsdv.Location = new System.Drawing.Point(208, 238);
-            this.dg_dsdv.Margin = new System.Windows.Forms.Padding(2);
+            this.dg_dsdv.Location = new System.Drawing.Point(19, 111);
+            this.dg_dsdv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dg_dsdv.Name = "dg_dsdv";
             this.dg_dsdv.RowHeadersVisible = false;
             this.dg_dsdv.RowHeadersWidth = 51;
             this.dg_dsdv.RowTemplate.Height = 24;
             this.dg_dsdv.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dg_dsdv.Size = new System.Drawing.Size(439, 231);
+            this.dg_dsdv.Size = new System.Drawing.Size(585, 284);
             this.dg_dsdv.TabIndex = 11;
             this.dg_dsdv.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dg_dsdv.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -272,13 +272,13 @@ namespace POS
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dg_dvDaChon.DefaultCellStyle = dataGridViewCellStyle6;
             this.dg_dvDaChon.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dg_dvDaChon.Location = new System.Drawing.Point(698, 238);
-            this.dg_dvDaChon.Margin = new System.Windows.Forms.Padding(2);
+            this.dg_dvDaChon.Location = new System.Drawing.Point(631, 111);
+            this.dg_dvDaChon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dg_dvDaChon.Name = "dg_dvDaChon";
             this.dg_dvDaChon.RowHeadersVisible = false;
             this.dg_dvDaChon.RowHeadersWidth = 51;
             this.dg_dvDaChon.RowTemplate.Height = 24;
-            this.dg_dvDaChon.Size = new System.Drawing.Size(418, 229);
+            this.dg_dvDaChon.Size = new System.Drawing.Size(557, 282);
             this.dg_dvDaChon.TabIndex = 16;
             this.dg_dvDaChon.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dg_dvDaChon.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -343,52 +343,53 @@ namespace POS
             // btn_huy
             // 
             this.btn_huy.AutoRoundedCorners = true;
-            this.btn_huy.BorderRadius = 17;
+            this.btn_huy.BorderRadius = 22;
             this.btn_huy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_huy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_huy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_huy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_huy.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_huy.ForeColor = System.Drawing.Color.White;
-            this.btn_huy.Location = new System.Drawing.Point(1060, 492);
-            this.btn_huy.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_huy.Location = new System.Drawing.Point(1102, 433);
+            this.btn_huy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_huy.Name = "btn_huy";
-            this.btn_huy.Size = new System.Drawing.Size(57, 37);
+            this.btn_huy.Size = new System.Drawing.Size(76, 46);
             this.btn_huy.TabIndex = 17;
             this.btn_huy.Text = "Hủy";
             // 
             // btn_luu
             // 
             this.btn_luu.AutoRoundedCorners = true;
-            this.btn_luu.BorderRadius = 17;
+            this.btn_luu.BorderRadius = 22;
             this.btn_luu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_luu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_luu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_luu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_luu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_luu.ForeColor = System.Drawing.Color.White;
-            this.btn_luu.Location = new System.Drawing.Point(985, 492);
-            this.btn_luu.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_luu.Location = new System.Drawing.Point(1002, 433);
+            this.btn_luu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_luu.Name = "btn_luu";
-            this.btn_luu.Size = new System.Drawing.Size(57, 37);
+            this.btn_luu.Size = new System.Drawing.Size(76, 46);
             this.btn_luu.TabIndex = 18;
             this.btn_luu.Text = "Lưu";
             // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(208, 180);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(19, 40);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(63, 15);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(76, 18);
             this.guna2HtmlLabel2.TabIndex = 19;
             this.guna2HtmlLabel2.Text = "Khách Hàng";
             // 
             // Service
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1141, 683);
+            this.ClientSize = new System.Drawing.Size(1181, 704);
+            this.ControlBox = false;
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.btn_huy);
             this.Controls.Add(this.btn_luu);
@@ -399,20 +400,14 @@ namespace POS
             this.Controls.Add(this.txt_search);
             this.Controls.Add(this.dg_dsdv);
             this.Controls.Add(this.guna2ComboBox1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Service";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Service";
             this.Load += new System.EventHandler(this.Service_Load);
-            this.Controls.SetChildIndex(this.guna2ComboBox1, 0);
-            this.Controls.SetChildIndex(this.dg_dsdv, 0);
-            this.Controls.SetChildIndex(this.txt_search, 0);
-            this.Controls.SetChildIndex(this.guna2HtmlLabel1, 0);
-            this.Controls.SetChildIndex(this.btn_tim, 0);
-            this.Controls.SetChildIndex(this.guna2Button2, 0);
-            this.Controls.SetChildIndex(this.dg_dvDaChon, 0);
-            this.Controls.SetChildIndex(this.btn_luu, 0);
-            this.Controls.SetChildIndex(this.btn_huy, 0);
-            this.Controls.SetChildIndex(this.guna2HtmlLabel2, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dg_dsdv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg_dvDaChon)).EndInit();
             this.ResumeLayout(false);
