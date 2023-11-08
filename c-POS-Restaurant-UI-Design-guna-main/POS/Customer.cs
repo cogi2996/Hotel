@@ -67,8 +67,8 @@ namespace POS
                     formEdit.ShowDialog();
 
                     // Tải lại dữ liệu sau khi chỉnh sửa
-                    dgCustomer.Columns.Clear();
-                    LoadData();
+                    dgCustomer.DataSource = cnn.ListCustomer();
+                    dgCustomer.Refresh();
                 }
                 else if (deleteColumn != null && e.ColumnIndex == deleteColumn.Index)
                 {
@@ -84,8 +84,8 @@ namespace POS
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
 
-                        dgCustomer.Columns.Clear();
-                        LoadData();
+                        dgCustomer.DataSource = cnn.ListCustomer();
+                        dgCustomer.Refresh();
 
                     }
                     catch (Exception ex)

@@ -120,8 +120,7 @@ go
 create view v_Phong
 	as 
 	select * from Phong
-
-
+go
 
 create view v_BangGia
 as
@@ -471,6 +470,16 @@ AS
 BEGIN
     SELECT * FROM KhachHang
     WHERE CCCD = @CCCD;
+END;
+go
+
+-- 5.1 PROCEDURE tìm kiếm thông tin 1 khách hàng dựa vào MaKH
+CREATE PROCEDURE proc_ThongTinKhachHang
+    @MaKH INT
+AS
+BEGIN
+    SELECT * FROM KhachHang
+    WHERE MaKH = @MaKH;
 END;
 go
 
