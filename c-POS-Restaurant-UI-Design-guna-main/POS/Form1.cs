@@ -52,5 +52,10 @@ namespace POS
         {
             OpenChildForm(new Service());
         }
+
+        private void gunaControlBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
