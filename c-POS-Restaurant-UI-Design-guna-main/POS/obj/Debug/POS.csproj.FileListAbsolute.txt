@@ -259,3 +259,4 @@ D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restauran
 D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.EditRoom.resources
 D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Login.resources
 D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.EditRoom.resources
+D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Login.resources
