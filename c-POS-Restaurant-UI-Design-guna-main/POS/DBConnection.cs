@@ -196,6 +196,59 @@ namespace POS
 
             cmd.ExecuteNonQuery();
         }
+
+        public DataTable ListRoom()
+        {
+            dt = new DataTable();
+
+            cmd = new SqlCommand("SELECT * FROM v_Phong", cnn);
+            cmd.CommandType = CommandType.Text;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public void AddRoom(int soPhong, string loai, int sucChua, string tinhTrang)
+        {
+            cmd = new SqlCommand("proc_ThemPhong", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            // Thêm tham số cho stored procedure
+            cmd.Parameters.AddWithValue("@SoPhong", soPhong);
+            cmd.Parameters.AddWithValue("@Loai", loai);
+            cmd.Parameters.AddWithValue("@SucChua", sucChua);
+            cmd.Parameters.AddWithValue("@TinhTrang", tinhTrang);
+
+            cmd.ExecuteNonQuery();
+        }
+
+        public void EditRoom(int soPhong, string loai, int sucChua, string tinhTrang)
+        {
+            cmd = new SqlCommand("proc_SuaPhong", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            // Thêm tham số cho stored procedure
+            cmd.Parameters.AddWithValue("@SoPhong", soPhong);
+            cmd.Parameters.AddWithValue("@Loai", loai);
+            cmd.Parameters.AddWithValue("@SucChua", sucChua);
+            cmd.Parameters.AddWithValue("@TinhTrang", tinhTrang);
+
+            cmd.ExecuteNonQuery();
+        }
+
+        public void RemoveRoom(int soPhong)
+        {
+            cmd = new SqlCommand("proc_XoaPhong", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            // Thêm tham số cho stored procedure
+            cmd.Parameters.AddWithValue("@SoPhong", soPhong);
+
+            cmd.ExecuteNonQuery();
+        }
         //tuan
         public int DatPhong(int SoPhong, int MaKH)
         {

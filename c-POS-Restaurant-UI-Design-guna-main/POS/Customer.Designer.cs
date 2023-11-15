@@ -43,6 +43,9 @@
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAddCustomer = new Guna.UI2.WinForms.Guna2Button();
+            this.cbFilterCustomer = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnShowAll = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgCustomer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,7 +112,7 @@
             this.dgCustomer.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgCustomer.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dgCustomer.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgCustomer.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgCustomer.ThemeStyle.HeaderStyle.Font = null;
             this.dgCustomer.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgCustomer.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgCustomer.ThemeStyle.HeaderStyle.Height = 30;
@@ -181,12 +184,60 @@
             this.btnAddCustomer.Text = "Thêm";
             this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
+            // cbFilterCustomer
+            // 
+            this.cbFilterCustomer.BackColor = System.Drawing.Color.Transparent;
+            this.cbFilterCustomer.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbFilterCustomer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFilterCustomer.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbFilterCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbFilterCustomer.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbFilterCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbFilterCustomer.ItemHeight = 30;
+            this.cbFilterCustomer.Items.AddRange(new object[] {
+            "T",
+            "V"});
+            this.cbFilterCustomer.Location = new System.Drawing.Point(472, 53);
+            this.cbFilterCustomer.Name = "cbFilterCustomer";
+            this.cbFilterCustomer.Size = new System.Drawing.Size(281, 36);
+            this.cbFilterCustomer.TabIndex = 33;
+            this.cbFilterCustomer.SelectedIndexChanged += new System.EventHandler(this.cbFilterCustomer_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(275, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(162, 25);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Loại khách hàng:";
+            // 
+            // btnShowAll
+            // 
+            this.btnShowAll.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnShowAll.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnShowAll.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnShowAll.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnShowAll.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowAll.ForeColor = System.Drawing.Color.White;
+            this.btnShowAll.Location = new System.Drawing.Point(840, 35);
+            this.btnShowAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnShowAll.Name = "btnShowAll";
+            this.btnShowAll.Size = new System.Drawing.Size(186, 54);
+            this.btnShowAll.TabIndex = 35;
+            this.btnShowAll.Text = "Hiển thị tất cả";
+            this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click);
+            // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1107, 677);
+            this.Controls.Add(this.btnShowAll);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbFilterCustomer);
             this.Controls.Add(this.btnAddCustomer);
             this.Controls.Add(this.dgCustomer);
             this.Controls.Add(this.gunaResizeControl1);
@@ -199,6 +250,7 @@
             this.Load += new System.EventHandler(this.Customer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgCustomer)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -214,6 +266,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CCCD;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn LoaiKH;
+        private Guna.UI2.WinForms.Guna2Button btnShowAll;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbFilterCustomer;
     }
 }
 

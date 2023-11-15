@@ -98,6 +98,12 @@
     <Compile Include="EditService.Designer.cs">
       <DependentUpon>EditService.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditRoom.Designer.cs">
+      <DependentUpon>EditRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditService.resx">
       <DependentUpon>EditService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditRoom.resx">
+      <DependentUpon>EditRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
