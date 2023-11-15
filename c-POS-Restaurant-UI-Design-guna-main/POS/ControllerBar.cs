@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace POS
 {
-    public partial class Customer : Form1
+    public partial class ControllerBar : Form1
     {
-        public Customer()
+        public ControllerBar()
         {
             InitializeComponent();
         }
 
-        private void Customer_Load(object sender, EventArgs e)
+        private void ControllerBar_Load(object sender, EventArgs e)
         {
 
         }

@@ -24,3 +24,24 @@ D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design
 D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.CopyComplete
 D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.exe
 D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.pdb
+D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\Guna.UI2.dll
+D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Customer.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.ControllerBar.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Service.resources
+D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.AssemblyReference.cache
+D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.ControllerBar.resources
+D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Customer.resources
+D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Form1.resources
+D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Properties.Resources.resources
+D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Service.resources
+D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.UserControl1.resources
+D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.UserControl2.resources
+D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.GenerateResource.cache
+D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.CoreCompileInputs.cache
+D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.exe
+D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.pdb
+D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\POS.exe.config
+D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\POS.exe
+D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\POS.pdb
+D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\Guna.UI2.dll
+D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.CopyComplete

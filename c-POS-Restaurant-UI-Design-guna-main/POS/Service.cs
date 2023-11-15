@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace POS
 {
-    public partial class Service : Form
+    public partial class Service : Form1
     {
+
+        
         public Service()
         {
             InitializeComponent();
+        }
+
+        private void Service_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
