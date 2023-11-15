@@ -42,12 +42,13 @@ namespace POS
             this.gunaControlBox3.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MinimizeBox;
             this.gunaControlBox3.IconColor = System.Drawing.Color.Gray;
             this.gunaControlBox3.IconSize = 15F;
-            this.gunaControlBox3.Location = new System.Drawing.Point(450, -4);
+            this.gunaControlBox3.Location = new System.Drawing.Point(600, -5);
+            this.gunaControlBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaControlBox3.Name = "gunaControlBox3";
             this.gunaControlBox3.OnHoverBackColor = System.Drawing.Color.Tomato;
             this.gunaControlBox3.OnHoverIconColor = System.Drawing.Color.White;
             this.gunaControlBox3.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox3.Size = new System.Drawing.Size(45, 29);
+            this.gunaControlBox3.Size = new System.Drawing.Size(60, 36);
             this.gunaControlBox3.TabIndex = 32;
             // 
             // gunaControlBox2
@@ -58,12 +59,13 @@ namespace POS
             this.gunaControlBox2.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MaximizeBox;
             this.gunaControlBox2.IconColor = System.Drawing.Color.Gray;
             this.gunaControlBox2.IconSize = 15F;
-            this.gunaControlBox2.Location = new System.Drawing.Point(501, -4);
+            this.gunaControlBox2.Location = new System.Drawing.Point(668, -5);
+            this.gunaControlBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaControlBox2.Name = "gunaControlBox2";
             this.gunaControlBox2.OnHoverBackColor = System.Drawing.Color.Tomato;
             this.gunaControlBox2.OnHoverIconColor = System.Drawing.Color.White;
             this.gunaControlBox2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox2.Size = new System.Drawing.Size(45, 29);
+            this.gunaControlBox2.Size = new System.Drawing.Size(60, 36);
             this.gunaControlBox2.TabIndex = 31;
             // 
             // gunaControlBox1
@@ -73,25 +75,27 @@ namespace POS
             this.gunaControlBox1.AnimationSpeed = 0.03F;
             this.gunaControlBox1.IconColor = System.Drawing.Color.Gray;
             this.gunaControlBox1.IconSize = 15F;
-            this.gunaControlBox1.Location = new System.Drawing.Point(552, -4);
+            this.gunaControlBox1.Location = new System.Drawing.Point(736, -5);
+            this.gunaControlBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaControlBox1.Name = "gunaControlBox1";
             this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.Tomato;
             this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
             this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.gunaControlBox1.Size = new System.Drawing.Size(60, 36);
             this.gunaControlBox1.TabIndex = 30;
             // 
             // Form_non
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(597, 410);
+            this.ClientSize = new System.Drawing.Size(796, 505);
             this.ControlBox = false;
             this.Controls.Add(this.gunaControlBox3);
             this.Controls.Add(this.gunaControlBox2);
             this.Controls.Add(this.gunaControlBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form_non";

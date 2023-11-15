@@ -44,7 +44,6 @@ namespace POS
                 dtDateOfBirth.ResetText();
                 txtCCCD.ResetText();
                 txtPhoneNumber.ResetText();
-                cbCustomerType.ResetText();
             }
         }
     }

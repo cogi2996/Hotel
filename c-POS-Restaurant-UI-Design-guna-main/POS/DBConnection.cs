@@ -51,51 +51,50 @@ namespace POS
 
         //tin
 
+        public void ThemSuDungDV(int MaKH, int MaDV, int SoLuong)
+        {
 
+            try
+            {
+                Connect();
+
+                using (SqlCommand cmd = new SqlCommand("proc_ThemDichVuSuDung", cnn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    // Định rõ các tham số của stored procedure
+                    cmd.Parameters.AddWithValue("@MaKH", MaKH);
+                    cmd.Parameters.AddWithValue("@MaDV", MaDV);
+                    cmd.Parameters.AddWithValue("@SoLuong", SoLuong);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (SqlException ex)
+            {
+                // Xử lý lỗi khi stored procedure báo lỗi
+                Console.WriteLine("Lỗi: " + ex.Message);
+            }
+            finally
+            {
+                Close();
+            }
+        }
 
         //tay
         public DataTable ListCustomer()
         {
             dt = new DataTable();
 
-            cmd = new SqlCommand("SELECT * FROM f_XemDanhSachKhachHang()", cnn);
-            cmd.CommandType = CommandType.Text;
-
+            cmd = new SqlCommand("proc_XemDanhSachKhachHang", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+               
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 
             da.Fill(dt);
 
             return dt;
         }
-
-        public DataTable ListVIPCustomer()
-        {
-            dt = new DataTable();
-
-            cmd = new SqlCommand("SELECT * FROM f_XemDanhSachKhachHangVIP()", cnn);
-            cmd.CommandType = CommandType.Text;
-
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-            da.Fill(dt);
-
-            return dt;
-        }
-
-        public DataTable ListNormalCustomer()
-        {
-            dt = new DataTable();
-
-            cmd = new SqlCommand("SELECT * FROM f_XemDanhSachKhachHangThuong()", cnn);
-            cmd.CommandType = CommandType.Text;
-
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-            da.Fill(dt);
-
-            return dt;
-        }
-
 
         public void AddNewCustomer(string TenKH, DateTime NgaySinh, string CCCD, string SDT, string LoaiKH)
         {
