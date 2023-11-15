@@ -86,15 +86,44 @@ namespace POS
         {
             dt = new DataTable();
 
-            cmd = new SqlCommand("proc_XemDanhSachKhachHang", cnn);
-            cmd.CommandType = CommandType.StoredProcedure;
-               
+            cmd = new SqlCommand("SELECT * FROM f_XemDanhSachKhachHang()", cnn);
+            cmd.CommandType = CommandType.Text;
+
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 
             da.Fill(dt);
 
             return dt;
         }
+
+        public DataTable ListVIPCustomer()
+        {
+            dt = new DataTable();
+
+            cmd = new SqlCommand("SELECT * FROM f_XemDanhSachKhachHangVIP()", cnn);
+            cmd.CommandType = CommandType.Text;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public DataTable ListNormalCustomer()
+        {
+            dt = new DataTable();
+
+            cmd = new SqlCommand("SELECT * FROM f_XemDanhSachKhachHangThuong()", cnn);
+            cmd.CommandType = CommandType.Text;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(dt);
+
+            return dt;
+        }
+
 
         public void AddNewCustomer(string TenKH, DateTime NgaySinh, string CCCD, string SDT, string LoaiKH)
         {
