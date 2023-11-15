@@ -95,7 +95,42 @@ namespace POS
             return dt;
         }
 
+        public void AddService(string TenDV, int DonGia)
+        {
+            cmd = new SqlCommand("proc_ThemDichVu", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
 
+            // Thêm tham số cho stored procedure
+            cmd.Parameters.AddWithValue("@TenDV", TenDV);
+            cmd.Parameters.AddWithValue("@DonGia", DonGia);
+            
+            cmd.ExecuteNonQuery();
+        }
+
+        public void EditService(int MaDV, string TenDV, int DonGia)
+        {
+            cmd = new SqlCommand("proc_SuaDichVu", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            // Thêm tham số cho stored procedure
+            cmd.Parameters.AddWithValue("@MaDV", MaDV);
+            cmd.Parameters.AddWithValue("@TenDV", TenDV);
+            cmd.Parameters.AddWithValue("@DonGia", DonGia);
+
+            cmd.ExecuteNonQuery();
+        }
+
+        public void RemoveService(int MaDV)
+        {
+            cmd = new SqlCommand("proc_XoaDichVu", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            // Thêm tham số cho stored procedure
+            cmd.Parameters.AddWithValue("@MaDV", MaDV);
+
+
+            cmd.ExecuteNonQuery();
+        }
 
 
 
