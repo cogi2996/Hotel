@@ -45,7 +45,6 @@ namespace POS
             this.col_madv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_tendv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_them = new System.Windows.Forms.DataGridViewImageColumn();
             this.btn_huy = new Guna.UI2.WinForms.Guna2Button();
             this.btn_luu = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -54,10 +53,13 @@ namespace POS
             this.col_madvdachon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_tendvdachon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_sl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_xoa = new System.Windows.Forms.DataGridViewImageColumn();
             this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaControlBox3 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaControlBox2 = new Guna.UI.WinForms.GunaControlBox();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.col_xoa = new System.Windows.Forms.DataGridViewImageColumn();
+            this.col_them = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dg_dsdv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg_dvDaChon)).BeginInit();
             this.SuspendLayout();
@@ -218,19 +220,6 @@ namespace POS
             this.col_dongia.MinimumWidth = 6;
             this.col_dongia.Name = "col_dongia";
             // 
-            // col_them
-            // 
-            this.col_them.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.col_them.FillWeight = 50F;
-            this.col_them.HeaderText = "Thêm";
-            this.col_them.Image = global::POS.Properties.Resources.icons8_add_48;
-            this.col_them.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.col_them.MinimumWidth = 50;
-            this.col_them.Name = "col_them";
-            this.col_them.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.col_them.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.col_them.Width = 50;
-            // 
             // btn_huy
             // 
             this.btn_huy.AutoRoundedCorners = true;
@@ -355,6 +344,7 @@ namespace POS
             this.dg_dvDaChon.ThemeStyle.RowsStyle.Height = 24;
             this.dg_dvDaChon.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dg_dvDaChon.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dg_dvDaChon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_dvDaChon_CellContentClick);
             // 
             // col_madvdachon
             // 
@@ -373,20 +363,6 @@ namespace POS
             this.col_sl.HeaderText = "Số Lượng";
             this.col_sl.MinimumWidth = 6;
             this.col_sl.Name = "col_sl";
-            // 
-            // col_xoa
-            // 
-            this.col_xoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.col_xoa.DataPropertyName = "none";
-            this.col_xoa.FillWeight = 70F;
-            this.col_xoa.HeaderText = "Xóa";
-            this.col_xoa.Image = global::POS.Properties.Resources.icons8_x_48;
-            this.col_xoa.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.col_xoa.MinimumWidth = 70;
-            this.col_xoa.Name = "col_xoa";
-            this.col_xoa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.col_xoa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.col_xoa.Width = 70;
             // 
             // gunaControlBox1
             // 
@@ -437,6 +413,60 @@ namespace POS
             this.gunaControlBox2.OnPressedColor = System.Drawing.Color.Black;
             this.gunaControlBox2.Size = new System.Drawing.Size(60, 36);
             this.gunaControlBox2.TabIndex = 38;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewImageColumn1.FillWeight = 50F;
+            this.dataGridViewImageColumn1.HeaderText = "Thêm";
+            this.dataGridViewImageColumn1.Image = global::POS.Properties.Resources.icons8_add_48;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.MinimumWidth = 50;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewImageColumn1.Width = 50;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewImageColumn2.DataPropertyName = "none";
+            this.dataGridViewImageColumn2.FillWeight = 70F;
+            this.dataGridViewImageColumn2.HeaderText = "Xóa";
+            this.dataGridViewImageColumn2.Image = global::POS.Properties.Resources.icons8_x_48;
+            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn2.MinimumWidth = 70;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewImageColumn2.Width = 70;
+            // 
+            // col_xoa
+            // 
+            this.col_xoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.col_xoa.DataPropertyName = "none";
+            this.col_xoa.FillWeight = 70F;
+            this.col_xoa.HeaderText = "Xóa";
+            this.col_xoa.Image = global::POS.Properties.Resources.icons8_x_48;
+            this.col_xoa.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.col_xoa.MinimumWidth = 70;
+            this.col_xoa.Name = "col_xoa";
+            this.col_xoa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.col_xoa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.col_xoa.Width = 70;
+            // 
+            // col_them
+            // 
+            this.col_them.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.col_them.FillWeight = 50F;
+            this.col_them.HeaderText = "Thêm";
+            this.col_them.Image = global::POS.Properties.Resources.icons8_add_48;
+            this.col_them.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.col_them.MinimumWidth = 50;
+            this.col_them.Name = "col_them";
+            this.col_them.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.col_them.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.col_them.Width = 50;
             // 
             // Service
             // 
@@ -498,5 +528,7 @@ namespace POS
         private Guna.UI.WinForms.GunaControlBox gunaControlBox1;
         private Guna.UI.WinForms.GunaControlBox gunaControlBox3;
         private Guna.UI.WinForms.GunaControlBox gunaControlBox2;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
     }
 }
