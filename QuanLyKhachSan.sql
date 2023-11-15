@@ -1,10 +1,9 @@
-﻿create database QuanLyKhachSan
+create database QuanLyKhachSan
 go
 
 use QuanLyKhachSan
 go
 
-select * from KhachHang
 
 --------------------------------------------------------------------------
 ---------------------------  CÁC BẢNG   ----------------------------------
@@ -105,20 +104,16 @@ AS
 	WHERE LoaiKH = 'T';
 go
 
--- 4. VIEW danh sách khách hàng đang đặt phòng
-CREATE VIEW v_DanhSachKhachHangDangDatPhong 
-AS
-	SELECT KhachHang.MaKH, KhachHang.TenKH, KhachHang.NgaySinh, 
-		   KhachHang.CCCD, KhachHang.SDT, KhachHang.LoaiKH, 
-		   DatPhong.SoPhong, DatPhong.CheckIn
-	FROM KhachHang
-	INNER JOIN DatPhong ON KhachHang.MaKH = DatPhong.MaKH;
-go
-
--- 5. VIEW bảng giá phòng
+-- 4. VIEW bảng giá phòng
 create view v_BangGia
 as
 select * from BangGiaPhong;
+go
+
+-- 5. VIEW các phòng
+create view v_Phong
+	as 
+	select * from Phong
 go
 
 -- 6. VIEW các phòng đã đặt
@@ -147,11 +142,11 @@ AS
 	SELECT * FROM DanhSachSuDungDichVu;
 go
 
--- 10. VIEW hiển thị dánh sách hoá đơn
-create view view_DanhSachHoaDon
+-- 10. VIEW hiển thị danh sách hoá đơn
+create view v_DanhSachHoaDon
 as 
-	select makh,mahd
-	from hoadon;
+	select MaKH, MaHD
+	from HoaDon;
 go
 
 -- 11. VIEW thông tin phòng được khách hàng đặt
@@ -321,43 +316,51 @@ BEGIN
 END
 go
 
+-- 7. FUNCTION xem danh sách khách hàng
+CREATE FUNCTION f_XemDanhSachKhachHang()
+RETURNS TABLE
+AS
+RETURN 
+(
+    SELECT * FROM v_DanhSachKhachHang
+);
+go
+
+-- 8. FUNCTION xem danh sách khách hàng VIP
+CREATE FUNCTION f_XemDanhSachKhachHangVIP()
+RETURNS TABLE
+AS
+RETURN 
+(
+    SELECT * FROM v_DanhSachKhachHangVIP
+);
+go
+
+-- 9. FUNCTION xem danh sách khách hàng thường
+CREATE FUNCTION f_XemDanhSachKhachHangThuong()
+RETURNS TABLE
+AS
+RETURN 
+(
+    SELECT * FROM v_DanhSachKhachHangThuong
+);
+go
+
+-- 10. FUNCTION xem danh sách dịch vụ
+CREATE FUNCTION f_XemDanhSachDichVu()
+RETURNS TABLE
+AS
+RETURN 
+(
+    SELECT * FROM v_DichVu 
+);
+go
+
 --------------------------------------------------------------------------
 ---------------------------      PROCEDURE      --------------------------
 --------------------------------------------------------------------------
 
--- 1. PROCEDURE xem danh sách khách hàng
-CREATE PROCEDURE proc_XemDanhSachKhachHang
-AS
-BEGIN
-    SELECT * FROM v_DanhSachKhachHang;
-END;
-go
-
--- 2. PROCEDURE xem danh sách khách hàng VIP
-CREATE PROCEDURE proc_XemDanhSachKhachHangVIP
-AS
-BEGIN
-    SELECT * FROM v_DanhSachKhachHangVIP;
-END;
-go
-
--- 3. PROCEDURE xem danh sách khách hàng thuờng
-CREATE PROCEDURE proc_XemDanhSachKhachHangThuong
-AS
-BEGIN
-    SELECT * FROM v_DanhSachKhachHangThuong;
-END;
-go
-
--- 3. PROCEDURE xem danh sách khách hàng đang đặt phòng
-CREATE PROCEDURE proc_XemDanhSachKhachHangDangDatPhong
-AS
-BEGIN
-    SELECT * FROM v_DanhSachKhachHangDangDatPhong;
-END;
-go
-
--- 4. PROCEDURE thêm khách hàng mới vào bảng KhachHang
+-- 1. PROCEDURE thêm khách hàng mới vào bảng KhachHang
 CREATE PROCEDURE proc_ThemKhachHang
     @TenKH NVARCHAR(50),
     @NgaySinh DATE,
@@ -373,26 +376,31 @@ BEGIN
         BEGIN
             RAISERROR ('Tên khách hàng, ngày sinh, CCCD, số điện thoại hoặc loại khách hàng không được để trống. Vui lòng kiểm tra lại!', 16, 1);
             ROLLBACK TRANSACTION;
+			RETURN;
         END
         IF LEN(@CCCD) != 12
         BEGIN
             RAISERROR ('Độ dài CCCD không hợp lệ!', 16, 1);
+			ROLLBACK TRANSACTION;
             RETURN;
         END
         IF LEN(@SDT) != 10
         BEGIN
             RAISERROR ('Độ dài SĐT không hợp lệ!', 16, 1);
             ROLLBACK TRANSACTION;
+			RETURN;
         END
         IF EXISTS (SELECT * FROM KhachHang WHERE CCCD = @CCCD)
         BEGIN
             RAISERROR ('CCCD đã tồn tại!', 16, 1);
             ROLLBACK TRANSACTION;
+			RETURN;
         END
         IF EXISTS (SELECT * FROM KhachHang WHERE SDT = @SDT)
         BEGIN
             RAISERROR ('SĐT đã tồn tại!', 16, 1);
             ROLLBACK TRANSACTION;
+			RETURN;
         END
         -- Thực hiện thao tác INSERT
         INSERT INTO KhachHang (TenKH, NgaySinh, CCCD, SDT, LoaiKH)
@@ -411,17 +419,7 @@ BEGIN
 END;
 go
 
--- 5. PROCEDURE tìm kiếm thông tin 1 khách hàng dựa vào CCCD
-CREATE PROCEDURE proc_TimKhachHang
-    @CCCD NVARCHAR(12)
-AS
-BEGIN
-    SELECT * FROM KhachHang
-    WHERE CCCD = @CCCD;
-END;
-go
-
--- 5.1 PROCEDURE tìm kiếm thông tin 1 khách hàng dựa vào MaKH
+-- 2. PROCEDURE tìm kiếm thông tin 1 khách hàng dựa vào MaKH
 CREATE PROCEDURE proc_ThongTinKhachHang
     @MaKH INT
 AS
@@ -431,7 +429,7 @@ BEGIN
 END;
 go
 
--- 6. PROCEDURE xóa khách hàng khỏi bảng KhachHang
+-- 3. PROCEDURE xóa khách hàng khỏi bảng KhachHang
 CREATE PROCEDURE proc_XoaKhachHang
     @MaKH INT
 AS
@@ -475,16 +473,19 @@ BEGIN
         BEGIN
             RAISERROR ('Tên khách hàng, ngày sinh, CCCD, số điện thoại hoặc loại khách hàng không được để trống. Vui lòng kiểm tra lại!', 16, 1);
             ROLLBACK TRANSACTION;
+			RETURN;
         END
         IF LEN(@CCCD) != 12
         BEGIN
             RAISERROR ('Độ dài CCCD không hợp lệ!', 16, 1);
-            RETURN;
+            ROLLBACK TRANSACTION;
+			RETURN;
         END
         IF LEN(@SDT) != 10
         BEGIN
             RAISERROR ('Độ dài SĐT không hợp lệ!', 16, 1);
             ROLLBACK TRANSACTION;
+			RETURN;
         END
         -- Thực hiện thao tác UPDATE
         UPDATE KhachHang
@@ -509,22 +510,46 @@ END;
 go
 
 -- 5. PROCEDURE thêm phòng mới vào bảng Phong
-create proc proc_ThemPhong
-	@SoPhong int,
-	@Loai nvarchar(5),
-	@SucChua int,
-	@TinhTrang nvarchar(10)
-as
-begin
-	insert into Phong values (@SoPhong,@Loai,@SucChua,@TinhTrang)
-end
-go
+CREATE PROCEDURE proc_ThemPhong
+    @SoPhong INT,
+    @Loai NVARCHAR(5),
+    @SucChua INT,
+    @TinhTrang NVARCHAR(10)
+AS
+BEGIN
+    -- Kiểm tra điều kiện trước khi thêm phòng
+	IF @SoPhong = ''OR @Loai = '' OR @SucChua = '' OR @TinhTrang = ''
+    BEGIN
+        RAISERROR('Các giá trị không được để trống.', 16, 1)
+        RETURN
+    END
+	IF EXISTS (SELECT 1 FROM Phong WHERE SoPhong = @SoPhong)
+    BEGIN
+        RAISERROR('Số phòng đã tồn tại.', 16, 1)
+        RETURN
+    END
+    IF NOT EXISTS (SELECT 1 FROM BangGiaPhong WHERE LoaiPhong = @Loai AND SucChua = @SucChua)
+    BEGIN
+        RAISERROR('Loại phòng và sức chứa không hợp lệ.', 16, 1)
+        RETURN
+    END
+    -- Thực hiện thêm phòng nếu không có lỗi
+    INSERT INTO Phong (SoPhong, LoaiPhong, SucChua, TinhTrang)
+    VALUES (@SoPhong, @Loai, @SucChua, @TinhTrang)
+END
+GO
 
 -- 6. PROCEDURE xóa phòng khỏi bảng Phong
 create proc proc_XoaPhong
 	@SoPhong int
 as
 begin
+	IF EXISTS (SELECT 1 FROM DatPhong WHERE SoPhong = @SoPhong)
+        BEGIN
+            RAISERROR('Phòng đang có khách sử dụng, không thể xóa.', 16, 1);
+            ROLLBACK TRANSACTION;
+            RETURN;
+        END;
 	delete from Phong where SoPhong = @SoPhong
 end
 go
@@ -684,9 +709,10 @@ BEGIN
 	VALUES (@MaKH, @MaDV, @SoLuong, GETDATE());
 
 END;
+go
 	
 -- 15. Procedure lấy về danh sách hoá đơn ( makh, madh)
-create proc proc_DanhSachHoaDon
+create procedure proc_DanhSachHoaDon
 as 
 	begin
 		select *
@@ -694,9 +720,41 @@ as
 	end
 go
 
+-- 16. Procedure lấy các dịch vụ dược sử dụng bới khách hàng 
+create procedure proc_DanhSachSuDungDichVu
+	@MaKH int
+as 
+begin	
+	select v_DichVu.MaDV,SoLuong,DonGia,ThoiDiem
+	from v_DanhSachSuDungDichVu 
+	inner join v_DichVu on v_DanhSachSuDungDichVu.MaDV = v_DichVu.MaDV
+	where v_DanhSachSuDungDichVu.MaKH = @MaKH
+end
+go
+
+-- 17. Procedure lấy danh sách các phòng của khác hàng đã đặt
+create procedure proc_DanhSachPhongDaDat
+	@MaKH int
+as
+	select Phong.SoPhong,phong.LoaiPhong
+	from v_ThongTinPhongDuocDat 
+	inner join Phong on v_ThongTinPhongDuocDat.SoPhong = Phong.SoPhong
+	where v_ThongTinPhongDuocDat.MaKH = @MaKH
+go
+
+-- 18. Procedure xóa 1 dịch vụ trong Table DichVu
+CREATE PROCEDURE proc_XoaDichVu
+@MaDV INT
+AS
+BEGIN
+	DELETE FROM DichVu
+	WHERE MaDV = @MaDV
+END
+
 --------------------------------------------------------------------------
 ---------------------------      TRIGGER      ----------------------------
 --------------------------------------------------------------------------
+
 -- 1. Trigger báo lỗi khi thêm khách hàng chưa đủ 18 tuổi vào bảng KhachHang
 CREATE TRIGGER trg_KiemTraTuoiKhachHangTruocKhiThem
 ON KhachHang
@@ -735,24 +793,12 @@ as
 		where te.SoPhong = Phong.SoPhong
 		if dbo.f_KiemTraPhongTrong(@SoPhong) =-1
 		begin
-			print('phong da dat')
+			print('Phòng đã đặt')
 			rollback;
 		end
 		update Phong set TinhTrang = N'Đã đặt' where Phong.SoPhong = @Sophong
 end
 go
-
-INSERT INTO KhachHang (TenKH, NgaySinh, CCCD, SDT, LoaiKH)
-VALUES
-	('Nguyễn Văn C', '1992-03-03', '098765432101', '0908765432', N'V'),
-	('Trần Thị D', '1993-04-04', '123456789014', '0123456790', N'T'),
-    (N'Nguyễn Văn A', '1990-01-01', '123456789012', '0987654321', N'T'),
-	('Trần Thị B', '1991-02-02', '987654321098', '0123456789', N'V'),
-	('Nguyễn Văn E', '1994-05-05', '098765432102', '0908765433', N'T');
-go
-
-exec proc_ThemKhachHang 'hehe', '1990-01-01', '123456789010', '0987654329', N'T';
-
 
 -- 4. Trigger cập nhật khi thêm 1 record trên bảng DanhSachSuDungDichVu
 CREATE TRIGGER trg_CapNhatSuDungDichVu
@@ -782,4 +828,67 @@ BEGIN
         FROM inserted;
     END
 END;
+
+/* Đổ dữ liệu*/
+INSERT INTO KhachHang (TenKH, NgaySinh, CCCD, SDT, LoaiKH)
+VALUES
+	(N'Nguyễn Văn E', '1994-05-05', '098765432102', '0908765433', N'T'),
+	(N'Trần Thị B', '1991-02-02', '987654321098', '0123456789', N'V'),
+	(N'Trần Thị D', '1993-04-04', '123456789014', '0123456790', N'T'),
+	(N'Nguyễn Văn C', '1992-03-03', '098765432101', '0908765432', N'V'),
+    (N'Nguyễn Văn A', '1990-01-01', '123456789012', '0987654321', N'T');
+go
+
+INSERT INTO BangGiaPhong (LoaiPhong, SucChua, TienGioDau, TienQuaDem, TienGioTiepTheo)
+VALUES	
+    (N'T', 2, 100000, 80000, 50000),
+    (N'V', 3, 120000, 90000, 60000),
+    (N'T', 4, 150000, 100000, 70000);
+go
+delete phong
+where 1=1
+INSERT INTO Phong (SoPhong, LoaiPhong, SucChua, TinhTrang)
+VALUES
+    (101, N'T', 2, N'Trống'),
+    (102, N'T', 4, N'Trống'),
+	(103, N'V', 3, N'Trống'),
+    (104, N'T', 4, N'Trống'),
+	(105, N'T', 2, N'Trống'),
+    (106, N'V', 3, N'Trống');
+go
+
+
+delete DatPhong
+where 1=1
+delete datphong 
+where 1=1
+INSERT INTO DatPhong (SoPhong, MaKH, CheckIn)
+VALUES
+	(103, 9, '2023-10-9 19:00:00'),
+	(102, 6, '2023-10-11 11:00:00'),
+    (101, 6, '2023-10-10 12:00:00');
+go
+
+INSERT INTO DichVu (TenDV, DonGia)
+VALUES
+    (N'Đồ uống', 50000),
+    (N'Ăn sáng', 80000),
+    (N'Dịch vụ phòng', 100000);
+go
+
+INSERT INTO DanhSachSuDungDichVu (MaKH, MaDV, SoLuong, ThoiDiem)
+VALUES
+    (6, 100, 2, '2023-10-15 08:30:00'),
+    (6, 102, 3, '2023-11-07 07:45:00'),
+    (9, 101, 4, '2023-12-24 20:15:00');
+go
+
+INSERT INTO HoaDon(MaKH, NgayThanhToan, TongTienThanhToan)
+VALUES
+	(21,'2023-10-25', 1000000),
+	(26,'2023-10-26', 2000000),
+	(27,'2023-10-27', 3000000),
+	(4,'2023-10-28', 4000000),
+	(5,'2023-10-29', 5000000);
+go
 

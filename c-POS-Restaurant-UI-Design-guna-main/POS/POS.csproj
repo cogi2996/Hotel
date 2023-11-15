@@ -92,6 +92,12 @@
     <Compile Include="EditCustomer.Designer.cs">
       <DependentUpon>EditCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditService.Designer.cs">
+      <DependentUpon>EditService.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditCustomer.resx">
       <DependentUpon>EditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditService.resx">
+      <DependentUpon>EditService.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditRoom.resx">
       <DependentUpon>EditRoom.cs</DependentUpon>
@@ -244,6 +253,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-pass-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-26.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,4 @@
-﻿create database QuanLyKhachSan
+create database QuanLyKhachSan
 go
 
 use QuanLyKhachSan
@@ -343,6 +343,16 @@ AS
 RETURN 
 (
     SELECT * FROM v_DanhSachKhachHangThuong
+);
+go
+
+-- 10. FUNCTION xem danh sách dịch vụ
+CREATE FUNCTION f_XemDanhSachDichVu()
+RETURNS TABLE
+AS
+RETURN 
+(
+    SELECT * FROM v_DichVu 
 );
 go
 
@@ -731,6 +741,15 @@ as
 	inner join Phong on v_ThongTinPhongDuocDat.SoPhong = Phong.SoPhong
 	where v_ThongTinPhongDuocDat.MaKH = @MaKH
 go
+
+-- 18. Procedure xóa 1 dịch vụ trong Table DichVu
+CREATE PROCEDURE proc_XoaDichVu
+@MaDV INT
+AS
+BEGIN
+	DELETE FROM DichVu
+	WHERE MaDV = @MaDV
+END
 
 --------------------------------------------------------------------------
 ---------------------------      TRIGGER      ----------------------------
