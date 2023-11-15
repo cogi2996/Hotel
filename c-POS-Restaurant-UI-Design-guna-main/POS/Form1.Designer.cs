@@ -50,6 +50,7 @@
             // gunaPanel1
             // 
             this.gunaPanel1.BackColor = System.Drawing.Color.White;
+            this.gunaPanel1.Controls.Add(this.gunaGradientTileButton6);
             this.gunaPanel1.Controls.Add(this.gunaPictureBox2);
             this.gunaPanel1.Controls.Add(this.gunaGradientTileButton5);
             this.gunaPanel1.Controls.Add(this.gunaGradientTileButton3);
@@ -60,7 +61,7 @@
             this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(135, 727);
+            this.gunaPanel1.Size = new System.Drawing.Size(135, 847);
             this.gunaPanel1.TabIndex = 2;
             // 
             // gunaPictureBox2
@@ -301,7 +302,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(1325, 727);
+            this.ClientSize = new System.Drawing.Size(1325, 847);
             this.ControlBox = false;
             this.Controls.Add(this.gunaResizeControl1);
             this.Controls.Add(this.gunaControlBox3);
@@ -335,6 +336,7 @@
         public Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton4;
         public Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton2;
         public Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton5;
+        public Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton6;
     }
 }
 
