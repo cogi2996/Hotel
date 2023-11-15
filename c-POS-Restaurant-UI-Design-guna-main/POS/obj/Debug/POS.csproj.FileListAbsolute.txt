@@ -258,3 +258,5 @@ C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\De
 D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.AssemblyReference.cache
 D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.EditRoom.resources
 D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Login.resources
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.EditService.resources
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Login.resources
