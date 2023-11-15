@@ -257,6 +257,7 @@ namespace POS
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@SoPhong", SoPhong);
             cmd.Parameters.AddWithValue("@MaKH", MaKH);
+            cmd.Parameters.AddWithValue("@checkin", DateTime.Now);
             int count = cmd.ExecuteNonQuery();
             cnn.Close();
             return count;
