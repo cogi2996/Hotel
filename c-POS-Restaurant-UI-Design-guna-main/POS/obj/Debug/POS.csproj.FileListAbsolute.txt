@@ -211,3 +211,4 @@ D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Desig
 D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Form_non.resources
 D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Order.resources
 D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Order_Find.resources
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.EditRoom.resources
