@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Data.SqlClient;
+using CrystalDecisions.CrystalReports.Engine;
 
 
 namespace POS
@@ -20,6 +21,9 @@ namespace POS
         DataTable dt = null;
 
         public SqlConnection cnn = new SqlConnection("Data Source=.;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
+
+        public ParameterDirection Direction { get; private set; }
+
         public void Connect()
         {
             try
@@ -262,8 +266,61 @@ namespace POS
 
 
         }
+        public DataTable DS_KhachHang(string sql)
+        {
+            dt = new DataTable();
 
-  
+            cmd = new SqlCommand(sql, cnn);
+            cmd.CommandType = CommandType.Text;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(dt);
+
+            return dt;
+        }
+        public int SoDem(string checkin,string checkout)
+        {
+            cnn.Open();
+            cmd = new SqlCommand();
+            cmd.CommandText = "f_TinhSoDem";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@checkin_str", checkin));
+            cmd.Parameters.Add(new SqlParameter("@checkout_str", checkout));
+
+            var retValParam = new SqlParameter("sodem", SqlDbType.NVarChar, 50);
+            {
+                Direction = ParameterDirection.ReturnValue;
+            }
+            cmd.Parameters.Add(retValParam);
+            int tenloai;
+            cmd.ExecuteScalar();
+            tenloai = (int)retValParam.Value;
+            return tenloai;
+        }
+        public void TaoHoaDon(string ma,string ten,string phong,string dem,string ngays,string ngayden,string ngaydi,string tp,string tdv,string tiendv,string tt)
+        {
+            cnn.Open();
+            cmd = new SqlCommand("proc_taoHoaDon", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaKH", ma);
+            cmd.Parameters.AddWithValue("@TenKH", ten);
+            cmd.Parameters.AddWithValue("@SoPhong", phong);
+            cmd.Parameters.AddWithValue("@SoDem", dem);
+            cmd.Parameters.AddWithValue("@NgaySinh", ngays);
+            cmd.Parameters.AddWithValue("@CheckIn", ngayden);
+            cmd.Parameters.AddWithValue("@Ngaydi", ngaydi);
+            cmd.Parameters.AddWithValue("@TienPhong", tp);
+            cmd.Parameters.AddWithValue("@TenDV", tdv);
+            cmd.Parameters.AddWithValue("@TienDV", tiendv);
+            cmd.Parameters.AddWithValue("@TongTien", tt);
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+        }
+
+
+
+
 
     }
 

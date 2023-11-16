@@ -669,9 +669,9 @@ BEGIN
   PRINT N'Yêu cầu hủy sử dụng dịch vụ thành công.';
 END;
 go
-
+drop procedure proc_ThemDichVuSuDung
 -- 14. Procedure thêm 1 dịch vụ được sử dụng trong Table SuDungDichVu
-CREATE PROCEDURE ThemDichVuSuDung
+create PROCEDURE proc_ThemDichVuSuDung
 @MaKH INT,
 @MaDV INT,
 @SoLuong INT
@@ -780,7 +780,7 @@ as
 		update Phong set TinhTrang = N'Đã đặt' where Phong.SoPhong = @Sophong
 end
 go
-
+drop trigger trg_CapNhatSuDungDichVu
 -- 4. Trigger cập nhật khi thêm 1 record trên bảng DanhSachSuDungDichVu
 CREATE TRIGGER trg_CapNhatSuDungDichVu
 ON DanhSachSuDungDichVu
@@ -845,9 +845,9 @@ delete datphong
 where 1=1
 INSERT INTO DatPhong (SoPhong, MaKH, CheckIn)
 VALUES
-	(103, 9, '2023-10-9 19:00:00'),
-	(102, 6, '2023-10-11 11:00:00'),
-    (101, 6, '2023-10-10 12:00:00');
+	(103, 1, '2023-10-9 19:00:00'),
+	(102, 2, '2023-10-11 11:00:00'),
+    (101, 3, '2023-10-10 12:00:00');
 go
 
 INSERT INTO DichVu (TenDV, DonGia)
@@ -859,9 +859,9 @@ go
 
 INSERT INTO DanhSachSuDungDichVu (MaKH, MaDV, SoLuong, ThoiDiem)
 VALUES
-    (6, 100, 2, '2023-10-15 08:30:00'),
-    (6, 102, 3, '2023-11-07 07:45:00'),
-    (9, 101, 4, '2023-12-24 20:15:00');
+    (1, 100, 2, '2023-10-15 08:30:00'),
+    (2, 102, 3, '2023-11-07 07:45:00'),
+    (3, 101, 4, '2023-12-24 20:15:00');
 go
 
 INSERT INTO HoaDon(MaKH, NgayThanhToan, TongTienThanhToan)
@@ -872,4 +872,7 @@ VALUES
 	(4,'2023-10-28', 4000000),
 	(5,'2023-10-29', 5000000);
 go
+select d.SoPhong,d.CheckIn 
+from DatPhong d,KhachHang k
+where d.MaKH = k.MaKH and k.MaKH = 2
 

@@ -254,3 +254,6 @@ C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\De
 C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.CopyComplete
 C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.exe
 C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.pdb
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.f_bill.resources
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.checkout.resources
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.f_hoadon.resources

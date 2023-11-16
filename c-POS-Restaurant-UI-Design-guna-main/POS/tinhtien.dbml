@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyKhachSan" Class="tinhtienDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=QuanLyKhachSan;Integrated Security=True" SettingsObjectName="POS.Properties.Settings" SettingsPropertyName="QuanLyKhachSanConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.f_TongTienDichVu" Method="f_TongTienDichVu" IsComposable="true">
+    <Parameter Name="MaKH" Parameter="maKH" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.f_TongTienHoaDon" Method="f_TongTienHoaDon" IsComposable="true">
+    <Parameter Name="MaKH" Parameter="maKH" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.f_TinhSoDem" Method="f_TinhSoDem" IsComposable="true">
+    <Parameter Name="checkin" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="checkout" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
