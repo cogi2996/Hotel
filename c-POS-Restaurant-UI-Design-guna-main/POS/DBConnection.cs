@@ -311,6 +311,30 @@ namespace POS
 
             return dt;
         }
+
+        public DataTable DanhSachDatPhong()
+        {
+            dt = new DataTable();
+
+            cmd = new SqlCommand("proc_XemDatPhong", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public void XoaDatPhong(int soPhong)
+        {
+            cmd = new SqlCommand("proc_XoaDatPhong", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            // Thêm tham số cho stored procedure
+            cmd.Parameters.AddWithValue("@SoPhong", soPhong);
+
+            cmd.ExecuteNonQuery();
+        }
         //tuan
         public int DatPhong(int SoPhong, int MaKH)
         {
