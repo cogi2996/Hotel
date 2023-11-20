@@ -263,3 +263,4 @@ D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Desig
 D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.EditRoom.resources
 D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Login.resources
 D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Price.resources
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.BillHistory.resources

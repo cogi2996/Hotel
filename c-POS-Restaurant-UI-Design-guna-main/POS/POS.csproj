@@ -73,6 +73,12 @@
     <Compile Include="Bill.Designer.cs">
       <DependentUpon>Bill.cs</DependentUpon>
     </Compile>
+    <Compile Include="BillHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillHistory.Designer.cs">
+      <DependentUpon>BillHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControllerBar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     <EmbeddedResource Include="Bill.resx">
       <DependentUpon>Bill.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BillHistory.resx">
+      <DependentUpon>BillHistory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ControllerBar.resx">
       <DependentUpon>ControllerBar.cs</DependentUpon>
     </EmbeddedResource>
@@ -265,6 +274,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-edit-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-price-list-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-activity-history-50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -298,6 +298,19 @@ namespace POS
 
             return dt;
         }
+
+        public DataTable LichSuHoaDon()
+        {
+            dt = new DataTable();
+
+            cmd = new SqlCommand("proc_DanhSachHoaDon", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+
+            return dt;
+        }
         //tuan
         public int DatPhong(int SoPhong, int MaKH)
         {
