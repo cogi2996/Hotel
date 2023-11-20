@@ -77,5 +77,10 @@ namespace POS
         {
             OpenChildForm(new BillHistory());
         }
+
+        private void gunaGradientTileButton9_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new BookedRoom());
+        }
     }
 }

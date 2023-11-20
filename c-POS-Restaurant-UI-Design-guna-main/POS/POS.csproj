@@ -79,6 +79,12 @@
     <Compile Include="BillHistory.Designer.cs">
       <DependentUpon>BillHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="BookedRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookedRoom.Designer.cs">
+      <DependentUpon>BookedRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControllerBar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     <EmbeddedResource Include="BillHistory.resx">
       <DependentUpon>BillHistory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BookedRoom.resx">
+      <DependentUpon>BookedRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ControllerBar.resx">
       <DependentUpon>ControllerBar.cs</DependentUpon>
     </EmbeddedResource>
@@ -280,6 +289,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-activity-history-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reservation-50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
