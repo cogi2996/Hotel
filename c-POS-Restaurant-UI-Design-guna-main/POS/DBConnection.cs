@@ -284,6 +284,20 @@ namespace POS
 
             cmd.ExecuteNonQuery();
         }
+
+        public DataTable BangGiaPhong()
+        {
+            dt = new DataTable();
+
+            cmd = new SqlCommand("SELECT * FROM v_BangGia", cnn);
+            cmd.CommandType = CommandType.Text;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(dt);
+
+            return dt;
+        }
         //tuan
         public int DatPhong(int SoPhong, int MaKH)
         {

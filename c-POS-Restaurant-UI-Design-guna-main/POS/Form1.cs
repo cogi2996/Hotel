@@ -67,5 +67,10 @@ namespace POS
         {
             OpenChildForm(new EditRoom());
         }
+
+        private void gunaGradientTileButton7_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Price());
+        }
     }
 }
