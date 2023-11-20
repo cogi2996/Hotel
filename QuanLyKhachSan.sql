@@ -116,40 +116,20 @@ create view v_Phong
 	select * from Phong
 go
 
--- 6. VIEW các phòng đã đặt
-create view v_PhongDaDat
-as
-	select * from Phong
-	where Phong.TinhTrang = N'Đã đặt';
-go
-
--- 7. VIEW các phòng trống
-create view v_PhongTrong
-as
-	select * from Phong
-	where Phong.TinhTrang = N'Trống';
-go
-
--- 8. VIEW dịch vụ
+-- 6. VIEW dịch vụ
 CREATE VIEW v_DichVu 
 AS
 	SELECT * FROM DichVu;
 go
 
- -- 9. VIEW danh sách sử dụng dịch vụ
-CREATE VIEW v_DanhSachSuDungDichVu
-AS
-	SELECT * FROM DanhSachSuDungDichVu;
-go
-
--- 10. VIEW hiển thị danh sách hoá đơn
+-- 7. VIEW hiển thị danh sách hoá đơn
 create view v_DanhSachHoaDon
 as 
-	select MaKH, MaHD
+	select *
 	from HoaDon;
 go
 
--- 11. VIEW thông tin phòng được khách hàng đặt
+-- 8. VIEW thông tin phòng được khách hàng đặt
 create view v_ThongTinPhongDuocDat
 as
 	select KhachHang.MaKH,Phong.SoPhong,CheckIn,
@@ -554,16 +534,6 @@ begin
 end
 go
 
--- 7. PROCEDURE xóa phòng đã đặt khỏi bảng DatPhong
--- Phục vụ cho việc hủy phòng
-create proc proc_XoaPhongDaDat
-	@Sophong int
-as
-begin
-	delete from DatPhong where SoPhong = @Sophong
-end
-go
-
 -- 8. PROCEDURE sửa thông tin của phòng trong bảng Phong
 create proc proc_SuaPhong
 	@SoPhong int,
@@ -659,29 +629,8 @@ BEGIN
 END;
 go
 
--- 13. Procedure hủy 1 dịch vụ được sử dụng trong Table SuDungDichVu
-CREATE PROCEDURE proc_HuySuDungDichVu
-  @MaKH INT,
-  @MaDV INT
-AS
-BEGIN
-  -- Kiểm tra xem yêu cầu hủy sử dụng dịch vụ có tồn tại hay không
-  IF NOT EXISTS(SELECT * FROM DanhSachSuDungDichVu WHERE MaKH = @MaKH AND MaDV = @MaDV)
-  BEGIN
-    RAISERROR(N'Yêu cầu hủy sử dụng dịch vụ không thành công.', 16, 1);
-    RETURN;
-  END;
-
-  -- Xóa yêu cầu đặt phòng
-  DELETE FROM DanhSachSuDungDichVu WHERE MaKH = @MaKH AND MaDV = @MaDV;
-
-  -- Thông báo đã thành công
-  PRINT N'Yêu cầu hủy sử dụng dịch vụ thành công.';
-END;
-go
-
--- 14. Procedure thêm 1 dịch vụ được sử dụng trong Table SuDungDichVu
-CREATE PROCEDURE ThemDichVuSuDung
+-- 13. Procedure thêm 1 dịch vụ được sử dụng trong Table SuDungDichVu
+CREATE PROCEDURE proc_ThemDichVuSuDung
 @MaKH INT,
 @MaDV INT,
 @SoLuong INT
@@ -710,39 +659,17 @@ BEGIN
 
 END;
 go
-	
--- 15. Procedure lấy về danh sách hoá đơn ( makh, madh)
+
+-- 14. Procedure lấy về danh sách hoá đơn ( makh, madh)
 create procedure proc_DanhSachHoaDon
 as 
 	begin
 		select *
-		from view_DanhSachHoaDon
+		from v_DanhSachHoaDon
 	end
 go
 
--- 16. Procedure lấy các dịch vụ dược sử dụng bới khách hàng 
-create procedure proc_DanhSachSuDungDichVu
-	@MaKH int
-as 
-begin	
-	select v_DichVu.MaDV,SoLuong,DonGia,ThoiDiem
-	from v_DanhSachSuDungDichVu 
-	inner join v_DichVu on v_DanhSachSuDungDichVu.MaDV = v_DichVu.MaDV
-	where v_DanhSachSuDungDichVu.MaKH = @MaKH
-end
-go
-
--- 17. Procedure lấy danh sách các phòng của khác hàng đã đặt
-create procedure proc_DanhSachPhongDaDat
-	@MaKH int
-as
-	select Phong.SoPhong,phong.LoaiPhong
-	from v_ThongTinPhongDuocDat 
-	inner join Phong on v_ThongTinPhongDuocDat.SoPhong = Phong.SoPhong
-	where v_ThongTinPhongDuocDat.MaKH = @MaKH
-go
-
--- 18. Procedure xóa 1 dịch vụ trong Table DichVu
+-- 15. Procedure xóa 1 dịch vụ trong Table DichVu
 CREATE PROCEDURE proc_XoaDichVu
 @MaDV INT
 AS
@@ -750,6 +677,15 @@ BEGIN
 	DELETE FROM DichVu
 	WHERE MaDV = @MaDV
 END
+go
+
+-- 16. Procedure xem bảng đặt phòng
+CREATE PROCEDURE proc_XemDatPhong
+AS
+BEGIN
+	select * from DatPhong
+END
+go
 
 --------------------------------------------------------------------------
 ---------------------------      TRIGGER      ----------------------------
@@ -832,10 +768,26 @@ END;
 /* Đổ dữ liệu*/
 INSERT INTO KhachHang (TenKH, NgaySinh, CCCD, SDT, LoaiKH)
 VALUES
-	(N'Nguyễn Văn E', '1994-05-05', '098765432102', '0908765433', N'T'),
-	(N'Trần Thị B', '1991-02-02', '987654321098', '0123456789', N'V'),
-	(N'Trần Thị D', '1993-04-04', '123456789014', '0123456790', N'T'),
-	(N'Nguyễn Văn C', '1992-03-03', '098765432101', '0908765432', N'V'),
+	(N'Nguyễn Văn E', '1994-05-05', '098765432102', '0908765433', N'T');
+go
+
+INSERT INTO KhachHang (TenKH, NgaySinh, CCCD, SDT, LoaiKH)
+VALUES
+	(N'Trần Thị B', '1991-02-02', '987654321098', '0123456789', N'V');
+go
+
+INSERT INTO KhachHang (TenKH, NgaySinh, CCCD, SDT, LoaiKH)
+VALUES
+	(N'Trần Thị D', '1993-04-04', '123456789014', '0123456790', N'T');
+go
+
+INSERT INTO KhachHang (TenKH, NgaySinh, CCCD, SDT, LoaiKH)
+VALUES
+	(N'Nguyễn Văn C', '1992-03-03', '098765432101', '0908765432', N'V');
+go
+
+INSERT INTO KhachHang (TenKH, NgaySinh, CCCD, SDT, LoaiKH)
+VALUES
     (N'Nguyễn Văn A', '1990-01-01', '123456789012', '0987654321', N'T');
 go
 
@@ -845,8 +797,7 @@ VALUES
     (N'V', 3, 120000, 90000, 60000),
     (N'T', 4, 150000, 100000, 70000);
 go
-delete phong
-where 1=1
+
 INSERT INTO Phong (SoPhong, LoaiPhong, SucChua, TinhTrang)
 VALUES
     (101, N'T', 2, N'Trống'),
@@ -857,14 +808,9 @@ VALUES
     (106, N'V', 3, N'Trống');
 go
 
-
-delete DatPhong
-where 1=1
-delete datphong 
-where 1=1
 INSERT INTO DatPhong (SoPhong, MaKH, CheckIn)
 VALUES
-	(103, 9, '2023-10-9 19:00:00'),
+	(103, 2, '2023-10-9 19:00:00'),
 	(102, 6, '2023-10-11 11:00:00'),
     (101, 6, '2023-10-10 12:00:00');
 go
