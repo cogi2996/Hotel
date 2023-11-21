@@ -87,7 +87,6 @@ D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design
 D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.exe
 D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.pdb
 D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\POS.pdb
-D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.AssemblyReference.cache
 D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
 D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportSource.dll
 D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.Shared.dll
@@ -268,3 +267,6 @@ D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\ob
 D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Price.resources
 D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.BillHistory.resources
 D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.BookedRoom.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.BillHistory.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.BookedRoom.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Price.resources
