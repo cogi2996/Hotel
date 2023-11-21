@@ -19,16 +19,37 @@ namespace POS
         SqlCommand cmd = null;
         SqlDataAdapter da = null;
         DataTable dt = null;
-
-        public SqlConnection cnn = new SqlConnection("Data Source=.;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
-
+        public SqlConnection cnnAdmin;
+        public SqlConnection cnnAccount;
         public ParameterDirection Direction { get; private set; }
 
+        public SqlConnection GetConnectionAdmin()
+        {
+            return this.cnnAdmin;
+        }
+
+        public void ConnectAdmin()
+        {
+            try
+            {
+                cnnAdmin = new SqlConnection("Data Source=.;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
+                cnnAdmin.Open();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+        }
+        public void CloseAdmin()
+        {
+            cnnAdmin.Close();
+        }
         public void Connect()
         {
             try
             {
-                cnn.Open();
+                cnnAccount = new SqlConnection($"Data Source=.;Initial Catalog=QuanLyKhachSan;User ID={GLOBAL.username};Password={GLOBAL.password}");
+                cnnAccount.Open();
             }
             catch (Exception ex)
             {
@@ -37,19 +58,25 @@ namespace POS
         }
         public void Close()
         {
-            cnn.Close();
+            cnnAccount.Close();
         }
+
+
+
         public DataTable CreateTable(string sql)
         {
             DataTable dt = new DataTable();
-            SqlDataAdapter ds = new SqlDataAdapter(sql, cnn);
+            SqlDataAdapter ds = new SqlDataAdapter(sql, cnnAccount);
             ds.Fill(dt);
             return dt;
         }
+
+
+
         public static void main()
         {
             DBConnection conn = new DBConnection();
-            conn.Connect();
+            conn.ConnectAdmin();
             System.Diagnostics.Debug.WriteLine("Hello world");
         }
 
@@ -60,9 +87,9 @@ namespace POS
 
             try
             {
-                Connect();
+                ConnectAdmin();
 
-                using (SqlCommand cmd = new SqlCommand("proc_ThemDichVuSuDung", cnn))
+                using (SqlCommand cmd = new SqlCommand("proc_ThemDichVuSuDung", cnnAccount))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -81,16 +108,69 @@ namespace POS
             }
             finally
             {
-                Close();
+                CloseAdmin();
             }
         }
+
+        public DataTable ListService()
+        {
+            dt = new DataTable();
+
+            cmd = new SqlCommand("SELECT * FROM f_XemDanhSachDichVu()", cnnAccount);
+            cmd.CommandType = CommandType.Text;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public void AddService(string TenDV, int DonGia)
+        {
+            cmd = new SqlCommand("proc_ThemDichVu", cnnAccount);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            // Thêm tham số cho stored procedure
+            cmd.Parameters.AddWithValue("@TenDV", TenDV);
+            cmd.Parameters.AddWithValue("@DonGia", DonGia);
+            
+            cmd.ExecuteNonQuery();
+        }
+
+        public void EditService(int MaDV, string TenDV, int DonGia)
+        {
+            cmd = new SqlCommand("proc_SuaDichVu", cnnAccount);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            // Thêm tham số cho stored procedure
+            cmd.Parameters.AddWithValue("@MaDV", MaDV);
+            cmd.Parameters.AddWithValue("@TenDV", TenDV);
+            cmd.Parameters.AddWithValue("@DonGia", DonGia);
+
+            cmd.ExecuteNonQuery();
+        }
+
+        public void RemoveService(int MaDV)
+        {
+            cmd = new SqlCommand("proc_XoaDichVu", cnnAccount);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            // Thêm tham số cho stored procedure
+            cmd.Parameters.AddWithValue("@MaDV", MaDV);
+
+
+            cmd.ExecuteNonQuery();
+        }
+
+
 
         //tay
         public DataTable ListCustomer()
         {
             dt = new DataTable();
 
-            cmd = new SqlCommand("SELECT * FROM f_XemDanhSachKhachHang()", cnn);
+            cmd = new SqlCommand("SELECT * FROM f_XemDanhSachKhachHang()", cnnAccount);
             cmd.CommandType = CommandType.Text;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -104,7 +184,7 @@ namespace POS
         {
             dt = new DataTable();
 
-            cmd = new SqlCommand("SELECT * FROM f_XemDanhSachKhachHangVIP()", cnn);
+            cmd = new SqlCommand("SELECT * FROM f_XemDanhSachKhachHangVIP()", cnnAccount);
             cmd.CommandType = CommandType.Text;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -118,7 +198,7 @@ namespace POS
         {
             dt = new DataTable();
 
-            cmd = new SqlCommand("SELECT * FROM f_XemDanhSachKhachHangThuong()", cnn);
+            cmd = new SqlCommand("SELECT * FROM f_XemDanhSachKhachHangThuong()", cnnAccount);
             cmd.CommandType = CommandType.Text;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -131,7 +211,7 @@ namespace POS
 
         public void AddNewCustomer(string TenKH, DateTime NgaySinh, string CCCD, string SDT, string LoaiKH)
         {
-            cmd = new SqlCommand("proc_ThemKhachHang", cnn);
+            cmd = new SqlCommand("proc_ThemKhachHang", cnnAccount);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.AddWithValue("@TenKH", TenKH);
@@ -147,7 +227,7 @@ namespace POS
         {
             dt = new DataTable();
 
-            cmd = new SqlCommand("proc_ThongTinKhachHang", cnn);
+            cmd = new SqlCommand("proc_ThongTinKhachHang", cnnAccount);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.AddWithValue("@MaKH", MaKH);
@@ -160,7 +240,7 @@ namespace POS
 
         public void EditCustomerInfo(int MaKH, string TenKH, DateTime NgaySinh, string CCCD, string SDT, string LoaiKH)
         {
-            cmd = new SqlCommand("proc_SuaThongTinKhachHang", cnn);
+            cmd = new SqlCommand("proc_SuaThongTinKhachHang", cnnAccount);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.AddWithValue("@MaKH", MaKH);
@@ -175,7 +255,7 @@ namespace POS
 
         public void DeleteCustomer(int MaKH)
         {
-            cmd = new SqlCommand("proc_XoaKhachHang", cnn);
+            cmd = new SqlCommand("proc_XoaKhachHang", cnnAccount);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.AddWithValue("@MaKH", MaKH);
@@ -187,7 +267,7 @@ namespace POS
         {
             dt = new DataTable();
 
-            cmd = new SqlCommand("SELECT * FROM v_Phong", cnn);
+            cmd = new SqlCommand("SELECT * FROM v_Phong", cnnAccount);
             cmd.CommandType = CommandType.Text;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -199,7 +279,7 @@ namespace POS
 
         public void AddRoom(int soPhong, string loai, int sucChua, string tinhTrang)
         {
-            cmd = new SqlCommand("proc_ThemPhong", cnn);
+            cmd = new SqlCommand("proc_ThemPhong", cnnAccount);
             cmd.CommandType = CommandType.StoredProcedure;
 
             // Thêm tham số cho stored procedure
@@ -213,7 +293,7 @@ namespace POS
 
         public void EditRoom(int soPhong, string loai, int sucChua, string tinhTrang)
         {
-            cmd = new SqlCommand("proc_SuaPhong", cnn);
+            cmd = new SqlCommand("proc_SuaPhong", cnnAccount);
             cmd.CommandType = CommandType.StoredProcedure;
 
             // Thêm tham số cho stored procedure
@@ -227,7 +307,58 @@ namespace POS
 
         public void RemoveRoom(int soPhong)
         {
-            cmd = new SqlCommand("proc_XoaPhong", cnn);
+            cmd = new SqlCommand("proc_XoaPhong", cnnAccount);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            // Thêm tham số cho stored procedure
+            cmd.Parameters.AddWithValue("@SoPhong", soPhong);
+
+            cmd.ExecuteNonQuery();
+        }
+
+        public DataTable BangGiaPhong()
+        {
+            dt = new DataTable();
+
+            cmd = new SqlCommand("SELECT * FROM v_BangGia", cnnAccount);
+            cmd.CommandType = CommandType.Text;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public DataTable LichSuHoaDon()
+        {
+            dt = new DataTable();
+
+            cmd = new SqlCommand("proc_DanhSachHoaDon", cnnAccount);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public DataTable DanhSachDatPhong()
+        {
+            dt = new DataTable();
+
+            cmd = new SqlCommand("proc_XemDatPhong", cnnAccount);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public void XoaDatPhong(int soPhong)
+        {
+            cmd = new SqlCommand("proc_XoaDatPhong", cnnAccount);
             cmd.CommandType = CommandType.StoredProcedure;
 
             // Thêm tham số cho stored procedure
@@ -238,14 +369,14 @@ namespace POS
         //tuan
         public int DatPhong(int SoPhong, int MaKH)
         {
-            cnn.Open();
-            cmd = new SqlCommand("proc_DatPhongKH", cnn);
+            cnnAccount.Open();
+            cmd = new SqlCommand("proc_DatPhongKH", cnnAccount);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@SoPhong", SoPhong);
             cmd.Parameters.AddWithValue("@MaKH", MaKH);
             cmd.Parameters.AddWithValue("@checkin", DateTime.Now);
             int count = cmd.ExecuteNonQuery();
-            cnn.Close();
+            cnnAccount.Close();
             return count;
         }
 
@@ -254,7 +385,7 @@ namespace POS
         {
             int MaKH = -1;
             string sql = $"select MaKH from KhachHang where SDT = '{phone}' ";
-            da = new SqlDataAdapter(sql, cnn);
+            da = new SqlDataAdapter(sql, cnnAccount);
             dt = new DataTable();
             da.Fill(dt);
             foreach (DataRow row in dt.Rows)
@@ -270,7 +401,7 @@ namespace POS
         {
             dt = new DataTable();
 
-            cmd = new SqlCommand(sql, cnn);
+            cmd = new SqlCommand(sql, cnnAccount);
             cmd.CommandType = CommandType.Text;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -281,7 +412,7 @@ namespace POS
         }
         public int SoDem(string checkin,string checkout)
         {
-            cnn.Open();
+            cnnAccount.Open();
             cmd = new SqlCommand();
             cmd.CommandText = "f_TinhSoDem";
             cmd.CommandType = CommandType.StoredProcedure;
@@ -300,8 +431,8 @@ namespace POS
         }
         public void TaoHoaDon(string ma,string ten,string phong,string dem,string ngays,string ngayden,string ngaydi,string tp,string tdv,string tiendv,string tt)
         {
-            cnn.Open();
-            cmd = new SqlCommand("proc_taoHoaDon", cnn);
+            cnnAccount.Open();
+            cmd = new SqlCommand("proc_taoHoaDon", cnnAccount);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@MaKH", ma);
             cmd.Parameters.AddWithValue("@TenKH", ten);
@@ -315,7 +446,7 @@ namespace POS
             cmd.Parameters.AddWithValue("@TienDV", tiendv);
             cmd.Parameters.AddWithValue("@TongTien", tt);
             cmd.ExecuteNonQuery();
-            cnn.Close();
+            cnnAccount.Close();
         }
 
 

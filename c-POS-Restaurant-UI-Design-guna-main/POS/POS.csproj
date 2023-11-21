@@ -80,6 +80,18 @@
     <Compile Include="checkout.Designer.cs">
       <DependentUpon>checkout.cs</DependentUpon>
     </Compile>
+    <Compile Include="BillHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillHistory.Designer.cs">
+      <DependentUpon>BillHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookedRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookedRoom.Designer.cs">
+      <DependentUpon>BookedRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControllerBar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +125,12 @@
     <Compile Include="EditCustomer.Designer.cs">
       <DependentUpon>EditCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditService.Designer.cs">
+      <DependentUpon>EditService.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +161,7 @@
     <Compile Include="f_hoadon.Designer.cs">
       <DependentUpon>f_hoadon.cs</DependentUpon>
     </Compile>
+    <Compile Include="GLOBAL.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +179,12 @@
     </Compile>
     <Compile Include="Order_Find.Designer.cs">
       <DependentUpon>Order_Find.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price.Designer.cs">
+      <DependentUpon>Price.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -200,6 +225,12 @@
     <EmbeddedResource Include="checkout.resx">
       <DependentUpon>checkout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BillHistory.resx">
+      <DependentUpon>BillHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookedRoom.resx">
+      <DependentUpon>BookedRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ControllerBar.resx">
       <DependentUpon>ControllerBar.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditCustomer.resx">
       <DependentUpon>EditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditService.resx">
+      <DependentUpon>EditService.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditRoom.resx">
       <DependentUpon>EditRoom.cs</DependentUpon>
@@ -236,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Order_Find.resx">
       <DependentUpon>Order_Find.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price.resx">
+      <DependentUpon>Price.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -318,6 +355,18 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-price-list-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-activity-history-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reservation-50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

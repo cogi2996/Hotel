@@ -14,7 +14,6 @@ namespace POS
     public partial class Form1 : Form
     {
         Order order = null;
-        Service service = null;
         public Form1()
         {
             InitializeComponent();
@@ -34,7 +33,12 @@ namespace POS
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            if(GLOBAL.role != 2)
+            {
+                btnEditRoom.Enabled = false;
+                btnEditService.Enabled = false;
+                btnHistory.Enabled = false;
+            }
         }
 
         private void gunaGradientTileButton1_Click(object sender, EventArgs e)
@@ -58,6 +62,34 @@ namespace POS
 
         }
 
-        
+        private void gunaGradientTileButton5_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new EditService());
+        }
+
+        private void gunaGradientTileButton6_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new EditRoom());
+        }
+
+        private void gunaGradientTileButton7_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Price());
+        }
+
+        private void gunaGradientTileButton8_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new BillHistory());
+        }
+
+        private void gunaGradientTileButton9_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new BookedRoom());
+        }
+
+        private void gunaGradientTileButton3_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new checkout());
+        }
     }
 }

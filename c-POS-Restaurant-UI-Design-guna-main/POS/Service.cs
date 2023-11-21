@@ -61,11 +61,8 @@ namespace POS
 
         private void LoadData()
         {
-            dbcon.Connect();
-            string sql = "select * from DichVu";
-            dg_dsdv.DataSource = dbcon.CreateTable(sql);
-
-        
+            dg_dsdv.DataSource = dbcon.ListService();
+            dg_dsdv.Refresh();
         }
 
         private void btn_tim_Click(object sender, EventArgs e)
@@ -94,7 +91,7 @@ namespace POS
         private void dg_dvDaChon_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dg_dvDaChon.CurrentCell.OwningColumn.Name == "col_xoa")
-            {
+            {                        
                 DialogResult result = MessageBox.Show("Bạn có muốn xóa?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (result == DialogResult.Yes)
@@ -111,15 +108,15 @@ namespace POS
                 {
                     MessageBox.Show("Thêm dịch vụ thành công");
                 }
-
+                
             }
         }
 
         private void btn_luu_Click(object sender, EventArgs e)
         {
+            /*
             dbcon.Connect();
             int MaKh = dbcon.findOneByPhone(Convert.ToString(txt_SDT.Text));
-
 
             foreach (DataGridViewRow row in dg_dvDaChon.Rows)
             {
@@ -129,7 +126,35 @@ namespace POS
 
             }
             //MessageBox.Show("Thêm các dịch vụ thành công cho mã khách hàng " + MaKh);
-            dg_dvDaChon.Rows.Clear();
+            dg_dvDaChon.Rows.Clear(); */
+            dbcon.Connect();
+            int MaKh = dbcon.findOneByPhone(Convert.ToString(txt_SDT.Text));
+
+
+            foreach (DataGridViewRow row in dg_dvDaChon.Rows)
+            {
+                int MaDV = Convert.ToInt32(row.Cells["col_madvdachon"].Value);
+                int SL = Convert.ToInt32(row.Cells["col_sl"].Value);
+                try
+                {
+                    dbcon.ThemSuDungDV(MaKh, MaDV, SL);
+                    MessageBox.Show("Thêm dịch vụ thành công");
+                }
+                catch (SqlException ex)
+                {
+                    if (ex.Number == 50000) // Kiểm tra mức lỗi 16
+                    {
+                        MessageBox.Show(ex.Message, "Lỗi từ database", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lỗi không xác định", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+
+               
+        
         }
 
         private void btn_huy_Click(object sender, EventArgs e)
