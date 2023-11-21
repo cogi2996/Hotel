@@ -20,7 +20,7 @@ namespace POS
         SqlDataAdapter da = null;
         DataTable dt = null;
 
-        public SqlConnection cnn = new SqlConnection("Data Source=.;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
+        public SqlConnection cnn = new SqlConnection("Data Source=.;Initial Catalog=QuanLyKhachSan_21_11;Integrated Security=True");
 
         public ParameterDirection Direction { get; private set; }
 
@@ -298,24 +298,27 @@ namespace POS
             tenloai = (int)retValParam.Value;
             return tenloai;
         }
-        public void TaoHoaDon(string ma,string ten,string phong,string dem,string ngays,string ngayden,string ngaydi,string tp,string tdv,string tiendv,string tt)
+        public void TaoBangHoaDon()
         {
             cnn.Open();
-            cmd = new SqlCommand("proc_taoHoaDon", cnn);
+            cmd = new SqlCommand("proc_CreateTableHoaDonChiTiet", cnn);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@MaKH", ma);
-            cmd.Parameters.AddWithValue("@TenKH", ten);
-            cmd.Parameters.AddWithValue("@SoPhong", phong);
-            cmd.Parameters.AddWithValue("@SoDem", dem);
-            cmd.Parameters.AddWithValue("@NgaySinh", ngays);
-            cmd.Parameters.AddWithValue("@CheckIn", ngayden);
-            cmd.Parameters.AddWithValue("@Ngaydi", ngaydi);
-            cmd.Parameters.AddWithValue("@TienPhong", tp);
-            cmd.Parameters.AddWithValue("@TenDV", tdv);
-            cmd.Parameters.AddWithValue("@TienDV", tiendv);
-            cmd.Parameters.AddWithValue("@TongTien", tt);
             cmd.ExecuteNonQuery();
             cnn.Close();
+        }
+       
+        public DataTable TaoHoaDon(string ma,string ten,string phong,string dem,string ngays,string ngayden,string ngaydi,string tp,string tdv,string tiendv,string tt)
+        {
+            
+            dt = new DataTable();
+
+            cmd = new SqlCommand($"SELECT * FROM dbo.f_CreateTableHoaDonChiTiet('{ma}', 'N{ten}', '{phong}', '{dem}', 'N{tdv}', '{tiendv}', '{tp}', '{ngays}', '{ngaydi}','{ngayden}', '{tt}') where MaKH='{ma}'", cnn);
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(dt);
+
+            return dt;
         }
 
 
