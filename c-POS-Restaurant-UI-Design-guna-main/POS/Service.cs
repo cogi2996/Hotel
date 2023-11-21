@@ -63,12 +63,6 @@ namespace POS
         {
             dg_dsdv.DataSource = dbcon.ListService();
             dg_dsdv.Refresh();
-            /*
-            dbcon.Connect();
-            string sql = "select * from DichVu";
-            dg_dsdv.DataSource = dbcon.CreateTable(sql);
-            */
-
         }
 
         private void btn_tim_Click(object sender, EventArgs e)

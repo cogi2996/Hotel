@@ -73,6 +73,18 @@
     <Compile Include="Bill.Designer.cs">
       <DependentUpon>Bill.cs</DependentUpon>
     </Compile>
+    <Compile Include="BillHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillHistory.Designer.cs">
+      <DependentUpon>BillHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookedRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookedRoom.Designer.cs">
+      <DependentUpon>BookedRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControllerBar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +146,12 @@
     <Compile Include="Order_Find.Designer.cs">
       <DependentUpon>Order_Find.cs</DependentUpon>
     </Compile>
+    <Compile Include="Price.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price.Designer.cs">
+      <DependentUpon>Price.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanLyKhachSanDataSet.Designer.cs">
@@ -165,6 +183,12 @@
     <EmbeddedResource Include="Bill.resx">
       <DependentUpon>Bill.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BillHistory.resx">
+      <DependentUpon>BillHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookedRoom.resx">
+      <DependentUpon>BookedRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ControllerBar.resx">
       <DependentUpon>ControllerBar.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Order_Find.resx">
       <DependentUpon>Order_Find.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price.resx">
+      <DependentUpon>Price.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -256,6 +283,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-edit-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-price-list-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-activity-history-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reservation-50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
