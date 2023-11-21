@@ -81,20 +81,67 @@ namespace POS
             }
         }
 
-        //tay
-        public DataTable ListCustomer()
+        public DataTable ListService()
         {
             dt = new DataTable();
 
-            cmd = new SqlCommand("proc_XemDanhSachKhachHang", cnn);
-            cmd.CommandType = CommandType.StoredProcedure;
-               
+            cmd = new SqlCommand("SELECT * FROM f_XemDanhSachDichVu()", cnn);
+            cmd.CommandType = CommandType.Text;
+
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 
             da.Fill(dt);
 
             return dt;
         }
+
+
+
+
+
+        //tay
+        public DataTable ListCustomer()
+        {
+            dt = new DataTable();
+
+            cmd = new SqlCommand("SELECT * FROM f_XemDanhSachKhachHang()", cnn);
+            cmd.CommandType = CommandType.Text;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public DataTable ListVIPCustomer()
+        {
+            dt = new DataTable();
+
+            cmd = new SqlCommand("SELECT * FROM f_XemDanhSachKhachHangVIP()", cnn);
+            cmd.CommandType = CommandType.Text;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public DataTable ListNormalCustomer()
+        {
+            dt = new DataTable();
+
+            cmd = new SqlCommand("SELECT * FROM f_XemDanhSachKhachHangThuong()", cnn);
+            cmd.CommandType = CommandType.Text;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(dt);
+
+            return dt;
+        }
+
 
         public void AddNewCustomer(string TenKH, DateTime NgaySinh, string CCCD, string SDT, string LoaiKH)
         {
@@ -149,6 +196,59 @@ namespace POS
 
             cmd.ExecuteNonQuery();
         }
+
+        public DataTable ListRoom()
+        {
+            dt = new DataTable();
+
+            cmd = new SqlCommand("SELECT * FROM v_Phong", cnn);
+            cmd.CommandType = CommandType.Text;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public void AddRoom(int soPhong, string loai, int sucChua, string tinhTrang)
+        {
+            cmd = new SqlCommand("proc_ThemPhong", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            // Thêm tham số cho stored procedure
+            cmd.Parameters.AddWithValue("@SoPhong", soPhong);
+            cmd.Parameters.AddWithValue("@Loai", loai);
+            cmd.Parameters.AddWithValue("@SucChua", sucChua);
+            cmd.Parameters.AddWithValue("@TinhTrang", tinhTrang);
+
+            cmd.ExecuteNonQuery();
+        }
+
+        public void EditRoom(int soPhong, string loai, int sucChua, string tinhTrang)
+        {
+            cmd = new SqlCommand("proc_SuaPhong", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            // Thêm tham số cho stored procedure
+            cmd.Parameters.AddWithValue("@SoPhong", soPhong);
+            cmd.Parameters.AddWithValue("@Loai", loai);
+            cmd.Parameters.AddWithValue("@SucChua", sucChua);
+            cmd.Parameters.AddWithValue("@TinhTrang", tinhTrang);
+
+            cmd.ExecuteNonQuery();
+        }
+
+        public void RemoveRoom(int soPhong)
+        {
+            cmd = new SqlCommand("proc_XoaPhong", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            // Thêm tham số cho stored procedure
+            cmd.Parameters.AddWithValue("@SoPhong", soPhong);
+
+            cmd.ExecuteNonQuery();
+        }
         //tuan
         public int DatPhong(int SoPhong, int MaKH)
         {
@@ -157,6 +257,7 @@ namespace POS
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@SoPhong", SoPhong);
             cmd.Parameters.AddWithValue("@MaKH", MaKH);
+            cmd.Parameters.AddWithValue("@checkin", DateTime.Now);
             int count = cmd.ExecuteNonQuery();
             cnn.Close();
             return count;

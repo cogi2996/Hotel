@@ -111,3 +111,150 @@ D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\ob
 D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Form_non.resources
 D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Order.resources
 D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Order_Find.resources
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\POS.exe.config
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\POS.exe
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\POS.pdb
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.Shared.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\Guna.UI2.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.AssemblyReference.cache
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.SuggestedBindingRedirects.cache
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.AddCustomer.resources
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Bill.resources
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.ControllerBar.resources
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Customer.resources
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.EditCustomer.resources
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Form1.resources
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Form_non.resources
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Order.resources
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Order_Find.resources
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Properties.Resources.resources
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Service.resources
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.UserControl1.resources
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.UserControl2.resources
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.GenerateResource.cache
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.CoreCompileInputs.cache
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.CopyComplete
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.exe
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\New folder (2)\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.pdb
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\POS.exe.config
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\POS.exe
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\POS.pdb
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.Shared.dll
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\Guna.UI2.dll
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\stdole.dll
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.AddCustomer.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Bill.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.ControllerBar.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Customer.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.EditCustomer.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Form1.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Form_non.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Order.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Order_Find.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Properties.Resources.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Service.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.UserControl1.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.UserControl2.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.GenerateResource.cache
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.CoreCompileInputs.cache
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.CopyComplete
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.exe
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.pdb
+D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.EditService.resources
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.Shared.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\stdole.dll
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Bill.resources
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Form_non.resources
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Order.resources
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Order_Find.resources
+D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.EditRoom.resources
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\POS.exe.config
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\POS.exe
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\POS.pdb
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\Guna.UI2.dll
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\bin\Debug\stdole.dll
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.AssemblyReference.cache
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.AddCustomer.resources
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Bill.resources
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.ControllerBar.resources
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Customer.resources
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.EditCustomer.resources
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.EditRoom.resources
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Form1.resources
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Form_non.resources
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Login.resources
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Order.resources
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Order_Find.resources
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Properties.Resources.resources
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Service.resources
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.UserControl1.resources
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.UserControl2.resources
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.GenerateResource.cache
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.CoreCompileInputs.cache
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.CopyComplete
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.exe
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.pdb
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.AssemblyReference.cache
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.EditRoom.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Login.resources

@@ -43,6 +43,9 @@
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAddCustomer = new Guna.UI2.WinForms.Guna2Button();
+            this.cbFilterCustomer = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnShowAll = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgCustomer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +58,7 @@
             this.gunaResizeControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaResizeControl1.ForeColor = System.Drawing.Color.Gray;
             this.gunaResizeControl1.ForeColorDepth = 255;
-            this.gunaResizeControl1.Location = new System.Drawing.Point(1060, 718);
+            this.gunaResizeControl1.Location = new System.Drawing.Point(1080, 651);
             this.gunaResizeControl1.Margin = new System.Windows.Forms.Padding(4);
             this.gunaResizeControl1.Name = "gunaResizeControl1";
             this.gunaResizeControl1.Size = new System.Drawing.Size(27, 25);
@@ -74,7 +77,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgCustomer.ColumnHeadersHeight = 40;
+            this.dgCustomer.ColumnHeadersHeight = 30;
             this.dgCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaKH,
@@ -92,13 +95,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgCustomer.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgCustomer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgCustomer.Location = new System.Drawing.Point(5, 138);
+            this.dgCustomer.Location = new System.Drawing.Point(30, 110);
             this.dgCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgCustomer.Name = "dgCustomer";
             this.dgCustomer.RowHeadersVisible = false;
             this.dgCustomer.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgCustomer.RowTemplate.Height = 30;
-            this.dgCustomer.Size = new System.Drawing.Size(1052, 556);
+            this.dgCustomer.RowTemplate.Height = 20;
+            this.dgCustomer.Size = new System.Drawing.Size(1048, 511);
             this.dgCustomer.TabIndex = 31;
             this.dgCustomer.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgCustomer.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -109,16 +112,16 @@
             this.dgCustomer.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgCustomer.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dgCustomer.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgCustomer.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgCustomer.ThemeStyle.HeaderStyle.Font = null;
             this.dgCustomer.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgCustomer.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgCustomer.ThemeStyle.HeaderStyle.Height = 40;
+            this.dgCustomer.ThemeStyle.HeaderStyle.Height = 30;
             this.dgCustomer.ThemeStyle.ReadOnly = false;
             this.dgCustomer.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgCustomer.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgCustomer.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgCustomer.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgCustomer.ThemeStyle.RowsStyle.Height = 30;
+            this.dgCustomer.ThemeStyle.RowsStyle.Height = 20;
             this.dgCustomer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgCustomer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
@@ -173,7 +176,7 @@
             this.btnAddCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnAddCustomer.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCustomer.ForeColor = System.Drawing.Color.White;
-            this.btnAddCustomer.Location = new System.Drawing.Point(5, 56);
+            this.btnAddCustomer.Location = new System.Drawing.Point(30, 35);
             this.btnAddCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddCustomer.Name = "btnAddCustomer";
             this.btnAddCustomer.Size = new System.Drawing.Size(140, 54);
@@ -181,12 +184,60 @@
             this.btnAddCustomer.Text = "Thêm";
             this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
+            // cbFilterCustomer
+            // 
+            this.cbFilterCustomer.BackColor = System.Drawing.Color.Transparent;
+            this.cbFilterCustomer.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbFilterCustomer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFilterCustomer.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbFilterCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbFilterCustomer.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbFilterCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbFilterCustomer.ItemHeight = 30;
+            this.cbFilterCustomer.Items.AddRange(new object[] {
+            "T",
+            "V"});
+            this.cbFilterCustomer.Location = new System.Drawing.Point(472, 53);
+            this.cbFilterCustomer.Name = "cbFilterCustomer";
+            this.cbFilterCustomer.Size = new System.Drawing.Size(281, 36);
+            this.cbFilterCustomer.TabIndex = 33;
+            this.cbFilterCustomer.SelectedIndexChanged += new System.EventHandler(this.cbFilterCustomer_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(275, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(162, 25);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Loại khách hàng:";
+            // 
+            // btnShowAll
+            // 
+            this.btnShowAll.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnShowAll.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnShowAll.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnShowAll.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnShowAll.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowAll.ForeColor = System.Drawing.Color.White;
+            this.btnShowAll.Location = new System.Drawing.Point(840, 35);
+            this.btnShowAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnShowAll.Name = "btnShowAll";
+            this.btnShowAll.Size = new System.Drawing.Size(186, 54);
+            this.btnShowAll.TabIndex = 35;
+            this.btnShowAll.Text = "Hiển thị tất cả";
+            this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click);
+            // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(1087, 744);
+            this.ClientSize = new System.Drawing.Size(1107, 677);
+            this.Controls.Add(this.btnShowAll);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbFilterCustomer);
             this.Controls.Add(this.btnAddCustomer);
             this.Controls.Add(this.dgCustomer);
             this.Controls.Add(this.gunaResizeControl1);
@@ -199,6 +250,7 @@
             this.Load += new System.EventHandler(this.Customer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgCustomer)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -214,6 +266,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CCCD;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn LoaiKH;
+        private Guna.UI2.WinForms.Guna2Button btnShowAll;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbFilterCustomer;
     }
 }
 

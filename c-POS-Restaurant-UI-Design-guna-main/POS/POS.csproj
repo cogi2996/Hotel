@@ -92,6 +92,18 @@
     <Compile Include="EditCustomer.Designer.cs">
       <DependentUpon>EditCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditService.Designer.cs">
+      <DependentUpon>EditService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditRoom.Designer.cs">
+      <DependentUpon>EditRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +115,12 @@
     </Compile>
     <Compile Include="Form_non.Designer.cs">
       <DependentUpon>Form_non.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Order.cs">
       <SubType>Form</SubType>
@@ -156,11 +174,20 @@
     <EmbeddedResource Include="EditCustomer.resx">
       <DependentUpon>EditCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditService.resx">
+      <DependentUpon>EditService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditRoom.resx">
+      <DependentUpon>EditRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_non.resx">
       <DependentUpon>Form_non.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Order.resx">
       <DependentUpon>Order.cs</DependentUpon>
@@ -217,6 +244,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-x-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pass-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-26.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
