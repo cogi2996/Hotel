@@ -534,7 +534,7 @@ begin
 end
 go
 
--- 8. PROCEDURE sửa thông tin của phòng trong bảng Phong
+-- 7. PROCEDURE sửa thông tin của phòng trong bảng Phong
 create proc proc_SuaPhong
 	@SoPhong int,
 	@Loai nvarchar(5),
@@ -546,7 +546,7 @@ begin
 end
 go
 
--- 9. PROCEDURE đặt phòng
+-- 8. PROCEDURE đặt phòng
 create proc proc_DatPhongKH
 	@SoPhong int,
 	@MaKH int,
@@ -560,7 +560,7 @@ as
 		end
 go
 
--- 10. Procedure thêm 1 dịch vụ mới trong Table DichVu
+-- 9. Procedure thêm 1 dịch vụ mới trong Table DichVu
 CREATE PROCEDURE proc_ThemDichVu
   @TenDV NVARCHAR(50),
   @DonGia INT
@@ -584,7 +584,7 @@ BEGIN
 END;
 go
 
--- 11. Procedure sửa thông tin 1 dịch vụ trong Table DichVu
+-- 10. Procedure sửa thông tin 1 dịch vụ trong Table DichVu
 CREATE PROCEDURE proc_SuaDichVu
   @MaDV INT,
   @TenDV NVARCHAR(50),
@@ -609,7 +609,7 @@ BEGIN
 END;
 go
 
--- 12. Procedure xóa 1 yêu cầu đặt phòng trong Table DatPhong
+-- 11. Procedure xóa 1 yêu cầu đặt phòng trong Table DatPhong
 CREATE PROCEDURE proc_XoaDatPhong
   @SoPhong INT
 AS
@@ -629,7 +629,7 @@ BEGIN
 END;
 go
 
--- 13. Procedure thêm 1 dịch vụ được sử dụng trong Table SuDungDichVu
+-- 12. Procedure thêm 1 dịch vụ được sử dụng trong Table SuDungDichVu
 CREATE PROCEDURE proc_ThemDichVuSuDung
 @MaKH INT,
 @MaDV INT,
@@ -660,7 +660,7 @@ BEGIN
 END;
 go
 
--- 14. Procedure lấy về danh sách hoá đơn ( makh, madh)
+-- 13. Procedure lấy về danh sách hoá đơn 
 create procedure proc_DanhSachHoaDon
 as 
 	begin
@@ -669,7 +669,7 @@ as
 	end
 go
 
--- 15. Procedure xóa 1 dịch vụ trong Table DichVu
+-- 14. Procedure xóa 1 dịch vụ trong Table DichVu
 CREATE PROCEDURE proc_XoaDichVu
 @MaDV INT
 AS
@@ -679,7 +679,7 @@ BEGIN
 END
 go
 
--- 16. Procedure xem bảng đặt phòng
+-- 15. Procedure xem bảng đặt phòng
 CREATE PROCEDURE proc_XemDatPhong
 AS
 BEGIN
