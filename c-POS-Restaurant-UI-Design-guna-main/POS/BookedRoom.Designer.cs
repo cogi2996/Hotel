@@ -72,12 +72,12 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgDatPhong.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgDatPhong.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgDatPhong.Location = new System.Drawing.Point(90, 53);
+            this.dgDatPhong.Location = new System.Drawing.Point(96, 59);
             this.dgDatPhong.Name = "dgDatPhong";
             this.dgDatPhong.RowHeadersVisible = false;
             this.dgDatPhong.RowHeadersWidth = 51;
             this.dgDatPhong.RowTemplate.Height = 24;
-            this.dgDatPhong.Size = new System.Drawing.Size(701, 351);
+            this.dgDatPhong.Size = new System.Drawing.Size(984, 612);
             this.dgDatPhong.TabIndex = 0;
             this.dgDatPhong.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgDatPhong.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -128,7 +128,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(1107, 677);
+            this.ClientSize = new System.Drawing.Size(1516, 938);
             this.Controls.Add(this.dgDatPhong);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);

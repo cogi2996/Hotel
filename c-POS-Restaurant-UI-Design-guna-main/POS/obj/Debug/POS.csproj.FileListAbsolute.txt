@@ -327,3 +327,4 @@ D:\hk1 N3 2023-2024\he_qt_csdl\Final\Hotel\c-POS-Restaurant-UI-Design-guna-main\
 D:\hk1 N3 2023-2024\he_qt_csdl\Final\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.CopyComplete
 D:\hk1 N3 2023-2024\he_qt_csdl\Final\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.exe
 D:\hk1 N3 2023-2024\he_qt_csdl\Final\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.pdb
+D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.EditAccount.resources

@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿use QuanLyKhachSan
+use QuanLyKhachSan
 
 create role Staff
 grant Select, insert, delete, update,REFERENCES on KhachHang to Staff
@@ -19,7 +18,11 @@ DENY EXECUTE ON proc_ThemDichVu to Staff;
 DENY EXECUTE ON proc_SuaDichVu to Staff;
 DENY EXECUTE ON proc_DanhSachHoaDon to Staff;
 DENY EXECUTE ON proc_XoaDichVu to Staff;
+
+DENY EXECUTE ON proc_ThemTaiKhoan  to Staff;
+DENY EXECUTE ON proc_XoaTaiKhoan  to Staff;
 go
+
 create table DangNhap (
 	username nvarchar(100) primary key,
 	password nvarchar(100),
@@ -289,4 +292,42 @@ END;
 --> THIẾU TRIGGER BẮT LỖI INSERT TRÙNG USERNAME
 
 
->>>>>>> 2fcec49e554c19568d6da1cc297f732357d19d3c
+-- trigger xóa tài khoản
+CREATE TRIGGER deleteAccount
+ON DangNhap
+AFTER DELETE
+AS
+BEGIN
+    -- Lấy ra username vừa bị xóa
+    DECLARE @username NVARCHAR(100)
+    SELECT @username = username
+    FROM deleted
+
+    -- Xóa đăng nhập (LOGIN) tương ứng
+    DECLARE @sqlLogin NVARCHAR(2000)
+    SET @sqlLogin = 'DROP LOGIN [' + @username + ']'
+    EXEC (@sqlLogin)
+
+    -- Xóa người dùng (USER) tương ứng
+    DECLARE @sqlUser NVARCHAR(2000)
+    SET @sqlUser = 'DROP USER [' + @username + ']'
+    EXEC (@sqlUser)
+END
+
+DROP PROC proc_XoaTaiKhoan
+
+--procedure xoá tài khoản
+CREATE PROCEDURE proc_XoaTaiKhoan
+@username NVARCHAR(100)
+AS
+BEGIN
+    -- Kiểm tra xem tên người dùng có tồn tại trong bảng hay không
+    IF NOT EXISTS (SELECT 1 FROM DangNhap WHERE username = @username)
+    BEGIN
+        -- Nếu không tồn tại, báo lỗi
+        RAISERROR('Tên người dùng không tồn tại.', 16, 1)
+        RETURN;
+    END
+    -- Xóa bản ghi từ bảng DangNhap dựa trên tên người dùng
+    DELETE FROM DangNhap WHERE username = @username;
+END

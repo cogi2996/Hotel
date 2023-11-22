@@ -30,10 +30,10 @@ namespace POS
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dg_dsPhong = new Guna.UI2.WinForms.Guna2DataGridView();
             this.sophong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loaiPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,17 +61,17 @@ namespace POS
             // 
             this.dg_dsPhong.AllowUserToResizeColumns = false;
             this.dg_dsPhong.AllowUserToResizeRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            this.dg_dsPhong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dg_dsPhong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dg_dsPhong.AutoGenerateColumns = false;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_dsPhong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_dsPhong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dg_dsPhong.ColumnHeadersHeight = 25;
             this.dg_dsPhong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sophong,
@@ -79,25 +79,25 @@ namespace POS
             this.sucChua,
             this.tinhTrang});
             this.dg_dsPhong.DataSource = this.phongBindingSource;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dg_dsPhong.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_dsPhong.DefaultCellStyle = dataGridViewCellStyle3;
             this.dg_dsPhong.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dg_dsPhong.Location = new System.Drawing.Point(13, 62);
+            this.dg_dsPhong.Location = new System.Drawing.Point(84, 91);
             this.dg_dsPhong.Margin = new System.Windows.Forms.Padding(4);
             this.dg_dsPhong.Name = "dg_dsPhong";
             this.dg_dsPhong.ReadOnly = true;
             this.dg_dsPhong.RowHeadersVisible = false;
             this.dg_dsPhong.RowHeadersWidth = 51;
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(5);
-            this.dg_dsPhong.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
+            this.dg_dsPhong.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dg_dsPhong.RowTemplate.Height = 30;
-            this.dg_dsPhong.Size = new System.Drawing.Size(673, 272);
+            this.dg_dsPhong.Size = new System.Drawing.Size(959, 360);
             this.dg_dsPhong.TabIndex = 31;
             this.dg_dsPhong.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dg_dsPhong.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -172,7 +172,7 @@ namespace POS
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(259, 376);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(309, 520);
             this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(68, 18);
@@ -191,7 +191,7 @@ namespace POS
             this.txtSoPhong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoPhong.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSoPhong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoPhong.Location = new System.Drawing.Point(349, 376);
+            this.txtSoPhong.Location = new System.Drawing.Point(399, 520);
             this.txtSoPhong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSoPhong.Name = "txtSoPhong";
             this.txtSoPhong.PasswordChar = '\0';
@@ -204,7 +204,7 @@ namespace POS
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(492, 376);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(542, 520);
             this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(77, 18);
@@ -215,7 +215,7 @@ namespace POS
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(54, 376);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(104, 520);
             this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(66, 18);
@@ -232,10 +232,10 @@ namespace POS
             this.btnDatPhong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnDatPhong.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDatPhong.ForeColor = System.Drawing.Color.White;
-            this.btnDatPhong.Location = new System.Drawing.Point(554, 441);
+            this.btnDatPhong.Location = new System.Drawing.Point(604, 585);
             this.btnDatPhong.Margin = new System.Windows.Forms.Padding(4);
             this.btnDatPhong.Name = "btnDatPhong";
-            this.btnDatPhong.Size = new System.Drawing.Size(136, 33);
+            this.btnDatPhong.Size = new System.Drawing.Size(132, 34);
             this.btnDatPhong.TabIndex = 35;
             this.btnDatPhong.Text = "Đặt Phòng";
             this.btnDatPhong.Click += new System.EventHandler(this.btnDatPhong_Click);
@@ -252,7 +252,7 @@ namespace POS
             this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(13, 21);
+            this.guna2Button2.Location = new System.Drawing.Point(84, 50);
             this.guna2Button2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(101, 33);
@@ -271,7 +271,7 @@ namespace POS
             this.txtLoaiPhong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLoaiPhong.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtLoaiPhong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLoaiPhong.Location = new System.Drawing.Point(577, 376);
+            this.txtLoaiPhong.Location = new System.Drawing.Point(627, 520);
             this.txtLoaiPhong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtLoaiPhong.Name = "txtLoaiPhong";
             this.txtLoaiPhong.PasswordChar = '\0';
@@ -292,7 +292,7 @@ namespace POS
             this.txtSucChua.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSucChua.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSucChua.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSucChua.Location = new System.Drawing.Point(128, 376);
+            this.txtSucChua.Location = new System.Drawing.Point(178, 520);
             this.txtSucChua.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSucChua.Name = "txtSucChua";
             this.txtSucChua.PasswordChar = '\0';
@@ -313,20 +313,20 @@ namespace POS
             this.txtSoDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoDT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSoDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoDT.Location = new System.Drawing.Point(333, 441);
+            this.txtSoDT.Location = new System.Drawing.Point(383, 585);
             this.txtSoDT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSoDT.Name = "txtSoDT";
             this.txtSoDT.PasswordChar = '\0';
             this.txtSoDT.PlaceholderText = "";
             this.txtSoDT.SelectedText = "";
-            this.txtSoDT.Size = new System.Drawing.Size(199, 33);
+            this.txtSoDT.Size = new System.Drawing.Size(195, 34);
             this.txtSoDT.TabIndex = 32;
             this.txtSoDT.TextChanged += new System.EventHandler(this.txtSoDT_TextChanged);
             // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(113, 441);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(163, 585);
             this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(193, 18);
@@ -338,7 +338,7 @@ namespace POS
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(908, 591);
+            this.ClientSize = new System.Drawing.Size(1189, 726);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.btnDatPhong);
             this.Controls.Add(this.guna2HtmlLabel1);

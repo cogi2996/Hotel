@@ -19,8 +19,8 @@ namespace POS
         SqlCommand cmd = null;
         SqlDataAdapter da = null;
         DataTable dt = null;
-        public SqlConnection cnnAdmin;
-        public SqlConnection cnnAccount;
+        private SqlConnection cnnAdmin;
+        private SqlConnection cnnAccount;
         public ParameterDirection Direction { get; private set; }
 
         public SqlConnection GetConnectionAdmin()
@@ -195,6 +195,7 @@ namespace POS
 
         public void AddAccount(String username, String password, String role)
         {
+            Connect();
             cmd = new SqlCommand("proc_ThemTaiKhoan", cnnAccount);
             cmd.CommandType = CommandType.StoredProcedure;
 
@@ -202,8 +203,8 @@ namespace POS
             cmd.Parameters.AddWithValue("@username", username);
             cmd.Parameters.AddWithValue("@password", password);
             cmd.Parameters.AddWithValue("@role", role);
-
             cmd.ExecuteNonQuery();
+            Close();
         }
 
         //tay

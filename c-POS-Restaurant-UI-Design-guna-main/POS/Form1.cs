@@ -35,9 +35,9 @@ namespace POS
         {
             if(GLOBAL.role != 2)
             {
-                btnEditRoom.Enabled = false;
+               /* btnEditRoom.Enabled = false;
                 btnEditService.Enabled = false;
-                btnHistory.Enabled = false;
+                btnHistory.Enabled = false;*/
             }
         }
 

@@ -58,7 +58,7 @@
             this.gunaResizeControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaResizeControl1.ForeColor = System.Drawing.Color.Gray;
             this.gunaResizeControl1.ForeColorDepth = 255;
-            this.gunaResizeControl1.Location = new System.Drawing.Point(1080, 651);
+            this.gunaResizeControl1.Location = new System.Drawing.Point(1891, 1076);
             this.gunaResizeControl1.Margin = new System.Windows.Forms.Padding(4);
             this.gunaResizeControl1.Name = "gunaResizeControl1";
             this.gunaResizeControl1.Size = new System.Drawing.Size(27, 25);
@@ -101,7 +101,7 @@
             this.dgCustomer.RowHeadersVisible = false;
             this.dgCustomer.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgCustomer.RowTemplate.Height = 20;
-            this.dgCustomer.Size = new System.Drawing.Size(1048, 511);
+            this.dgCustomer.Size = new System.Drawing.Size(1120, 612);
             this.dgCustomer.TabIndex = 31;
             this.dgCustomer.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgCustomer.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -234,7 +234,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(1107, 677);
+            this.ClientSize = new System.Drawing.Size(1918, 1102);
             this.Controls.Add(this.btnShowAll);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbFilterCustomer);

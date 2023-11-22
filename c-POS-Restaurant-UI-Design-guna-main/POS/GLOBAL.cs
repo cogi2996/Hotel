@@ -14,10 +14,10 @@ namespace POS
 {
     public static class GLOBAL
     {
-        public static string username;
-        public static string password;
-        public static int role; // 2 - admin , 1 staff
-        public static SqlConnection conn;
+        public static string username; // sa
+        public static string password; // 29092003
+        public static int role ;  // 2
+        // 2 - admin , 1 staff
       
     }
 }
