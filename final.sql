@@ -111,12 +111,19 @@ END
 
 --procedure xoá tài khoản
 CREATE PROCEDURE proc_XoaTaiKhoan
-@username nvarchar(100)
+@username NVARCHAR(100)
 AS
 BEGIN
-    DELETE FROM DangNhap
-    WHERE username = @username;
-END;
+    -- Kiểm tra xem tên người dùng có tồn tại trong bảng hay không
+    IF NOT EXISTS (SELECT 1 FROM DangNhap WHERE username = @username)
+    BEGIN
+        -- Nếu không tồn tại, báo lỗi
+        RAISERROR('Tên người dùng không tồn tại.', 16, 1)
+        RETURN;
+    END
+    -- Xóa bản ghi từ bảng DangNhap dựa trên tên người dùng
+    DELETE FROM DangNhap WHERE username = @username;
+END
 
 -- sửa procedure thêm tài khoản của tuấn 
 CREATE PROCEDURE proc_ThemTaiKhoan 
