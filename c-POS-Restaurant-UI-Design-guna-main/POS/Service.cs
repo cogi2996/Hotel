@@ -36,11 +36,11 @@ namespace POS
         {
             if (dg_dsdv.CurrentCell.OwningColumn.Name == "col_them")
             {
-
                 // Lấy dữ liệu từ dòng đang được chọn
                 DataGridViewRow row = dg_dsdv.SelectedRows[0];
                 string maDichVu = row.Cells["col_madv"].Value.ToString();
                 string tenDichVu = row.Cells["col_tendv"].Value.ToString();
+            
 
                 DataGridViewRow rowDichVuDaChon = new DataGridViewRow();
                 // dữ liệu của 1 ô mới
@@ -129,8 +129,8 @@ namespace POS
             dg_dvDaChon.Rows.Clear(); */
             dbcon.Connect();
             int MaKh = dbcon.findOneByPhone(Convert.ToString(txt_SDT.Text));
-
-
+            //int MaKh = dbcon.findOneByPhone("0908765432");
+            //txt_SDT.Text = MaKh.ToString();
             foreach (DataGridViewRow row in dg_dvDaChon.Rows)
             {
                 int MaDV = Convert.ToInt32(row.Cells["col_madvdachon"].Value);
@@ -138,7 +138,7 @@ namespace POS
                 try
                 {
                     dbcon.ThemSuDungDV(MaKh, MaDV, SL);
-                    MessageBox.Show("Thêm dịch vụ thành công");
+                   // MessageBox.Show("Thêm dịch vụ thành công");
                 }
                 catch (SqlException ex)
                 {

@@ -57,11 +57,22 @@ insert DangNhap values ('sa2','29092003','admin')
 
 -- kiểm tra đăng nhập 
 drop function dbo.checkLogin
-create function checkLogin (@username NVARCHAR(100), @password NVARCHAR(100))returns intasbegin 	declare @role INT,@check nvarchar(100);	SET @role = 0;	SELECT @check = DangNhap.role	FROM DangNhap	WHERE username = @username and password = @password	if @check = N'admin'  -- Sử dụng N để chỉ ra chuỗi Unicode
+create function checkLogin (@username NVARCHAR(100), @password NVARCHAR(100))
+returns int
+as
+begin 
+	declare @role INT,@check nvarchar(100);
+	SET @role = 0;
+	SELECT @check = DangNhap.role
+	FROM DangNhap
+	WHERE username = @username and password = @password
+	if @check = N'admin'  -- Sử dụng N để chỉ ra chuỗi Unicode
 		set @role = 2;
 	else if @check = N'user'  -- Sử dụng N để chỉ ra chuỗi Unicode
 		set @role = 1;
-	return @role;end
+	return @role;
+end
+
 
 --print(dbo.checkLogin('sda','29092003'))
 SELECT dbo.checkLogin('nhanvien1', '29092003')

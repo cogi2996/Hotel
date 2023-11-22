@@ -22,7 +22,7 @@ namespace POS
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="QuanLyKhachSan")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="QuanLyKhachSan_21_11")]
 	public partial class tinhtienDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -33,7 +33,7 @@ namespace POS
     #endregion
 		
 		public tinhtienDataContext() : 
-				base(global::POS.Properties.Settings.Default.QuanLyKhachSanConnectionString, mappingSource)
+				base(global::POS.Properties.Settings.Default.QuanLyKhachSan_21_11ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -78,6 +78,218 @@ namespace POS
 		public System.Nullable<int> f_TinhSoDem([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="DateTime")] System.Nullable<System.DateTime> checkin, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="DateTime")] System.Nullable<System.DateTime> checkout)
 		{
 			return ((System.Nullable<int>)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), checkin, checkout).ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.f_CreateTableHoaDonChiTiet", IsComposable=true)]
+		public IQueryable<f_CreateTableHoaDonChiTietResult> f_CreateTableHoaDonChiTiet([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaKH", DbType="NVarChar(50)")] string maKH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TenKH", DbType="NVarChar(50)")] string tenKH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SoPhong", DbType="NVarChar(50)")] string soPhong, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SoDem", DbType="NVarChar(50)")] string soDem, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TenDV", DbType="NVarChar(50)")] string tenDV, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TienDV", DbType="NVarChar(50)")] string tienDV, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TienPhong", DbType="NVarChar(50)")] string tienPhong, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NgaySinh", DbType="NVarChar(50)")] string ngaySinh, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NgayDi", DbType="NVarChar(50)")] string ngayDi, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CheckIn", DbType="NVarChar(50)")] string checkIn, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TongTien", DbType="NVarChar(50)")] string tongTien)
+		{
+			return this.CreateMethodCallQuery<f_CreateTableHoaDonChiTietResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maKH, tenKH, soPhong, soDem, tenDV, tienDV, tienPhong, ngaySinh, ngayDi, checkIn, tongTien);
+		}
+	}
+	
+	public partial class f_CreateTableHoaDonChiTietResult
+	{
+		
+		private string _MaKH;
+		
+		private string _TenKH;
+		
+		private string _SoPhong;
+		
+		private string _SoDem;
+		
+		private string _TenDV;
+		
+		private string _TienDV;
+		
+		private string _TienPhong;
+		
+		private string _NgaySinh;
+		
+		private string _NgayDi;
+		
+		private string _CheckIn;
+		
+		private string _TongTien;
+		
+		public f_CreateTableHoaDonChiTietResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaKH", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string MaKH
+		{
+			get
+			{
+				return this._MaKH;
+			}
+			set
+			{
+				if ((this._MaKH != value))
+				{
+					this._MaKH = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenKH", DbType="NVarChar(50)")]
+		public string TenKH
+		{
+			get
+			{
+				return this._TenKH;
+			}
+			set
+			{
+				if ((this._TenKH != value))
+				{
+					this._TenKH = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoPhong", DbType="NVarChar(50)")]
+		public string SoPhong
+		{
+			get
+			{
+				return this._SoPhong;
+			}
+			set
+			{
+				if ((this._SoPhong != value))
+				{
+					this._SoPhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoDem", DbType="NVarChar(50)")]
+		public string SoDem
+		{
+			get
+			{
+				return this._SoDem;
+			}
+			set
+			{
+				if ((this._SoDem != value))
+				{
+					this._SoDem = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenDV", DbType="NVarChar(50)")]
+		public string TenDV
+		{
+			get
+			{
+				return this._TenDV;
+			}
+			set
+			{
+				if ((this._TenDV != value))
+				{
+					this._TenDV = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TienDV", DbType="NVarChar(50)")]
+		public string TienDV
+		{
+			get
+			{
+				return this._TienDV;
+			}
+			set
+			{
+				if ((this._TienDV != value))
+				{
+					this._TienDV = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TienPhong", DbType="NVarChar(50)")]
+		public string TienPhong
+		{
+			get
+			{
+				return this._TienPhong;
+			}
+			set
+			{
+				if ((this._TienPhong != value))
+				{
+					this._TienPhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgaySinh", DbType="NVarChar(50)")]
+		public string NgaySinh
+		{
+			get
+			{
+				return this._NgaySinh;
+			}
+			set
+			{
+				if ((this._NgaySinh != value))
+				{
+					this._NgaySinh = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayDi", DbType="NVarChar(50)")]
+		public string NgayDi
+		{
+			get
+			{
+				return this._NgayDi;
+			}
+			set
+			{
+				if ((this._NgayDi != value))
+				{
+					this._NgayDi = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CheckIn", DbType="NVarChar(50)")]
+		public string CheckIn
+		{
+			get
+			{
+				return this._CheckIn;
+			}
+			set
+			{
+				if ((this._CheckIn != value))
+				{
+					this._CheckIn = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongTien", DbType="NVarChar(50)")]
+		public string TongTien
+		{
+			get
+			{
+				return this._TongTien;
+			}
+			set
+			{
+				if ((this._TongTien != value))
+				{
+					this._TongTien = value;
+				}
+			}
 		}
 	}
 }

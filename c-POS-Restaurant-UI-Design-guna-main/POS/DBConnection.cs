@@ -27,6 +27,10 @@ namespace POS
         {
             return this.cnnAdmin;
         }
+        public SqlConnection GetConnectionAccount()
+        {
+            return this.cnnAccount;
+        }
 
         public void ConnectAdmin()
         {
@@ -87,9 +91,9 @@ namespace POS
 
             try
             {
-                ConnectAdmin();
+                Connect();
 
-                using (SqlCommand cmd = new SqlCommand("proc_ThemDichVuSuDung", cnnAccount))
+                using (SqlCommand cmd = new SqlCommand("ThemDichVuSuDung", cnnAccount))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -108,7 +112,7 @@ namespace POS
             }
             finally
             {
-                CloseAdmin();
+                Close();
             }
         }
 
@@ -369,8 +373,8 @@ namespace POS
         //tuan
         public int DatPhong(int SoPhong, int MaKH)
         {
-            cnnAccount.Open();
-            cmd = new SqlCommand("proc_DatPhongKH", cnnAccount);
+            this.Connect();
+            cmd = new SqlCommand("proc_DatPhongKH", this.cnnAccount);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@SoPhong", SoPhong);
             cmd.Parameters.AddWithValue("@MaKH", MaKH);
@@ -383,6 +387,8 @@ namespace POS
         // findOne
         public int findOneByPhone(string phone)
         {
+            //cnnAccount.Open();
+            this.Connect();
             int MaKH = -1;
             string sql = $"select MaKH from KhachHang where SDT = '{phone}' ";
             da = new SqlDataAdapter(sql, cnnAccount);
@@ -393,8 +399,8 @@ namespace POS
                 MaKH = int.Parse(row["MaKH"].ToString());
             }
 
+            //cnnAccount.Close();
             return MaKH;
-
 
         }
         public DataTable DS_KhachHang(string sql)
@@ -429,24 +435,27 @@ namespace POS
             tenloai = (int)retValParam.Value;
             return tenloai;
         }
-        public void TaoHoaDon(string ma,string ten,string phong,string dem,string ngays,string ngayden,string ngaydi,string tp,string tdv,string tiendv,string tt)
+       /* public void TaoBangHoaDon()
         {
-            cnnAccount.Open();
-            cmd = new SqlCommand("proc_taoHoaDon", cnnAccount);
+            cnn.Open();
+            cmd = new SqlCommand("proc_taoHoaDon", cnn);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@MaKH", ma);
-            cmd.Parameters.AddWithValue("@TenKH", ten);
-            cmd.Parameters.AddWithValue("@SoPhong", phong);
-            cmd.Parameters.AddWithValue("@SoDem", dem);
-            cmd.Parameters.AddWithValue("@NgaySinh", ngays);
-            cmd.Parameters.AddWithValue("@CheckIn", ngayden);
-            cmd.Parameters.AddWithValue("@Ngaydi", ngaydi);
-            cmd.Parameters.AddWithValue("@TienPhong", tp);
-            cmd.Parameters.AddWithValue("@TenDV", tdv);
-            cmd.Parameters.AddWithValue("@TienDV", tiendv);
-            cmd.Parameters.AddWithValue("@TongTien", tt);
             cmd.ExecuteNonQuery();
             cnnAccount.Close();
+        }*/
+       
+        public DataTable TaoHoaDon(string ma,string ten,string phong,string dem,string ngays,string ngayden,string ngaydi,string tp,string tdv,string tiendv,string tt)
+        {
+            
+            dt = new DataTable();
+
+            cmd = new SqlCommand($"SELECT * FROM dbo.f_CreateTableHoaDonChiTiet('{ma}', 'N{ten}', '{phong}', '{dem}', 'N{tdv}', '{tiendv}', '{tp}', '{ngays}', '{ngaydi}','{ngayden}', '{tt}') where MaKH='{ma}'", this.cnnAccount);
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(dt);
+
+            return dt;
         }
 
 

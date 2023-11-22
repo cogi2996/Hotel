@@ -51,6 +51,7 @@ namespace POS
 
         private void btnDatPhong_Click(object sender, EventArgs e)
         {
+            
             string phone = txtSoDT.Text.ToString();
             int MaKH = conn.findOneByPhone(phone);
             int soPhong = int.Parse(txtSoPhong.Text);

@@ -49,14 +49,15 @@ namespace POS
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            db.TaoHoaDon(db.findOneByPhone(txt_sdt.Text).ToString(), txt_ten.Text, txt_phong.Text, txt_sodem.Text, dt_ns.Text, ds_den.Text, ds_di.Text, txt_tienphong.Text, TenDV.ToString(), txt_tiendv.Text, txt_tongtien.Text);
-            string sql = "select * from HoaDonChiTiet where MaKH= "+db.findOneByPhone(txt_sdt.Text)+" ";
-            DataTable dt = db.DS_KhachHang(sql);
+            //db.TaoHoaDon(db.findOneByPhone(txt_sdt.Text).ToString(), txt_ten.Text, txt_phong.Text, txt_sodem.Text, dt_ns.Text, ds_den.Text, ds_di.Text, txt_tienphong.Text, TenDV.ToString(), txt_tiendv.Text, txt_tongtien.Text);
+            //string sql = "select * from " + db.TaoHoaDon(db.findOneByPhone(txt_sdt.Text).ToString(), txt_ten.Text, txt_phong.Text, txt_sodem.Text, dt_ns.Text, ds_den.Text, ds_di.Text, txt_tienphong.Text, TenDV.ToString(), txt_tiendv.Text, txt_tongtien.Text) + "";//+" where MaKH = "+db.findOneByPhone(txt_sdt.Text)+" ";
+            DataTable dt = db.TaoHoaDon(db.findOneByPhone(txt_sdt.Text).ToString(), txt_ten.Text, txt_phong.Text, txt_sodem.Text, dt_ns.Text, ds_den.Text, ds_di.Text, txt_tienphong.Text, TenDV.ToString(), txt_tiendv.Text, txt_tongtien.Text);
             crys_bill bill = new crys_bill();
             bill.SetDataSource(dt);
             f_bill form = new f_bill();
             form.crystalReportViewer1.ReportSource = bill;
             form.ShowDialog();
+         
         }
     }
 }
