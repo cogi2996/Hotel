@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
-            this.gunaGradientTileButton5 = new Guna.UI.WinForms.GunaGradientTileButton();
+            this.btnEditAccount = new Guna.UI.WinForms.GunaGradientTileButton();
             this.gunaGradientTileButton9 = new Guna.UI.WinForms.GunaGradientTileButton();
             this.btnHistory = new Guna.UI.WinForms.GunaGradientTileButton();
             this.gunaGradientTileButton7 = new Guna.UI.WinForms.GunaGradientTileButton();
@@ -55,7 +55,7 @@
             // gunaPanel1
             // 
             this.gunaPanel1.BackColor = System.Drawing.Color.White;
-            this.gunaPanel1.Controls.Add(this.gunaGradientTileButton5);
+            this.gunaPanel1.Controls.Add(this.btnEditAccount);
             this.gunaPanel1.Controls.Add(this.gunaGradientTileButton9);
             this.gunaPanel1.Controls.Add(this.btnHistory);
             this.gunaPanel1.Controls.Add(this.gunaGradientTileButton7);
@@ -68,41 +68,39 @@
             this.gunaPanel1.Controls.Add(this.gunaGradientTileButton1);
             this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
-            this.gunaPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(135, 1102);
+            this.gunaPanel1.Size = new System.Drawing.Size(101, 894);
             this.gunaPanel1.TabIndex = 2;
             // 
-            // gunaGradientTileButton5
+            // btnEditAccount
             // 
-            this.gunaGradientTileButton5.Animated = true;
-            this.gunaGradientTileButton5.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientTileButton5.AnimationSpeed = 0.03F;
-            this.gunaGradientTileButton5.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientTileButton5.BaseColor1 = System.Drawing.Color.Transparent;
-            this.gunaGradientTileButton5.BaseColor2 = System.Drawing.Color.Transparent;
-            this.gunaGradientTileButton5.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientTileButton5.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientTileButton5.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientTileButton5.Font = new System.Drawing.Font("Segoe UI Light", 9.75F);
-            this.gunaGradientTileButton5.ForeColor = System.Drawing.Color.Gray;
-            this.gunaGradientTileButton5.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.gunaGradientTileButton5.Image = global::POS.Properties.Resources.icons8_user_50;
-            this.gunaGradientTileButton5.ImageSize = new System.Drawing.Size(32, 32);
-            this.gunaGradientTileButton5.Location = new System.Drawing.Point(13, 985);
-            this.gunaGradientTileButton5.Margin = new System.Windows.Forms.Padding(4);
-            this.gunaGradientTileButton5.Name = "gunaGradientTileButton5";
-            this.gunaGradientTileButton5.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
-            this.gunaGradientTileButton5.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
-            this.gunaGradientTileButton5.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientTileButton5.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientTileButton5.OnHoverImage = global::POS.Properties.Resources.icons8_account_30;
-            this.gunaGradientTileButton5.OnPressedColor = System.Drawing.Color.White;
-            this.gunaGradientTileButton5.Radius = 6;
-            this.gunaGradientTileButton5.Size = new System.Drawing.Size(107, 76);
-            this.gunaGradientTileButton5.TabIndex = 32;
-            this.gunaGradientTileButton5.Text = "Edit Account";
-            this.gunaGradientTileButton5.Click += new System.EventHandler(this.gunaGradientTileButton5_Click_1);
+            this.btnEditAccount.Animated = true;
+            this.btnEditAccount.AnimationHoverSpeed = 0.07F;
+            this.btnEditAccount.AnimationSpeed = 0.03F;
+            this.btnEditAccount.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditAccount.BaseColor1 = System.Drawing.Color.Transparent;
+            this.btnEditAccount.BaseColor2 = System.Drawing.Color.Transparent;
+            this.btnEditAccount.BorderColor = System.Drawing.Color.Black;
+            this.btnEditAccount.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnEditAccount.FocusedColor = System.Drawing.Color.Empty;
+            this.btnEditAccount.Font = new System.Drawing.Font("Segoe UI Light", 9.75F);
+            this.btnEditAccount.ForeColor = System.Drawing.Color.Gray;
+            this.btnEditAccount.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.btnEditAccount.Image = global::POS.Properties.Resources.icons8_user_50;
+            this.btnEditAccount.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnEditAccount.Location = new System.Drawing.Point(10, 800);
+            this.btnEditAccount.Name = "btnEditAccount";
+            this.btnEditAccount.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
+            this.btnEditAccount.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
+            this.btnEditAccount.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnEditAccount.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnEditAccount.OnHoverImage = global::POS.Properties.Resources.icons8_account_30;
+            this.btnEditAccount.OnPressedColor = System.Drawing.Color.White;
+            this.btnEditAccount.Radius = 6;
+            this.btnEditAccount.Size = new System.Drawing.Size(80, 62);
+            this.btnEditAccount.TabIndex = 32;
+            this.btnEditAccount.Text = "Edit Account";
+            this.btnEditAccount.Click += new System.EventHandler(this.gunaGradientTileButton5_Click_1);
             // 
             // gunaGradientTileButton9
             // 
@@ -120,8 +118,7 @@
             this.gunaGradientTileButton9.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.gunaGradientTileButton9.Image = global::POS.Properties.Resources.icons8_reservation_50;
             this.gunaGradientTileButton9.ImageSize = new System.Drawing.Size(26, 26);
-            this.gunaGradientTileButton9.Location = new System.Drawing.Point(4, 455);
-            this.gunaGradientTileButton9.Margin = new System.Windows.Forms.Padding(4);
+            this.gunaGradientTileButton9.Location = new System.Drawing.Point(3, 370);
             this.gunaGradientTileButton9.Name = "gunaGradientTileButton9";
             this.gunaGradientTileButton9.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
             this.gunaGradientTileButton9.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
@@ -130,7 +127,7 @@
             this.gunaGradientTileButton9.OnHoverImage = global::POS.Properties.Resources.icons8_reservation_50;
             this.gunaGradientTileButton9.OnPressedColor = System.Drawing.Color.White;
             this.gunaGradientTileButton9.Radius = 6;
-            this.gunaGradientTileButton9.Size = new System.Drawing.Size(127, 74);
+            this.gunaGradientTileButton9.Size = new System.Drawing.Size(95, 60);
             this.gunaGradientTileButton9.TabIndex = 9;
             this.gunaGradientTileButton9.Text = "Booked room";
             this.gunaGradientTileButton9.Click += new System.EventHandler(this.gunaGradientTileButton9_Click);
@@ -151,8 +148,7 @@
             this.btnHistory.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.btnHistory.Image = global::POS.Properties.Resources.icons8_activity_history_50;
             this.btnHistory.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnHistory.Location = new System.Drawing.Point(13, 901);
-            this.btnHistory.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHistory.Location = new System.Drawing.Point(10, 732);
             this.btnHistory.Name = "btnHistory";
             this.btnHistory.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
             this.btnHistory.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
@@ -161,7 +157,7 @@
             this.btnHistory.OnHoverImage = global::POS.Properties.Resources.icons8_activity_history_50;
             this.btnHistory.OnPressedColor = System.Drawing.Color.White;
             this.btnHistory.Radius = 6;
-            this.btnHistory.Size = new System.Drawing.Size(107, 76);
+            this.btnHistory.Size = new System.Drawing.Size(80, 62);
             this.btnHistory.TabIndex = 8;
             this.btnHistory.Text = "History";
             this.btnHistory.Click += new System.EventHandler(this.gunaGradientTileButton8_Click);
@@ -182,8 +178,7 @@
             this.gunaGradientTileButton7.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.gunaGradientTileButton7.Image = global::POS.Properties.Resources.icons8_price_list_64;
             this.gunaGradientTileButton7.ImageSize = new System.Drawing.Size(26, 26);
-            this.gunaGradientTileButton7.Location = new System.Drawing.Point(13, 263);
-            this.gunaGradientTileButton7.Margin = new System.Windows.Forms.Padding(4);
+            this.gunaGradientTileButton7.Location = new System.Drawing.Point(10, 214);
             this.gunaGradientTileButton7.Name = "gunaGradientTileButton7";
             this.gunaGradientTileButton7.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
             this.gunaGradientTileButton7.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
@@ -192,7 +187,7 @@
             this.gunaGradientTileButton7.OnHoverImage = global::POS.Properties.Resources.icons8_price_list_64;
             this.gunaGradientTileButton7.OnPressedColor = System.Drawing.Color.White;
             this.gunaGradientTileButton7.Radius = 6;
-            this.gunaGradientTileButton7.Size = new System.Drawing.Size(107, 74);
+            this.gunaGradientTileButton7.Size = new System.Drawing.Size(80, 60);
             this.gunaGradientTileButton7.TabIndex = 7;
             this.gunaGradientTileButton7.Text = "Room price";
             this.gunaGradientTileButton7.Click += new System.EventHandler(this.gunaGradientTileButton7_Click);
@@ -213,8 +208,7 @@
             this.btnEditRoom.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.btnEditRoom.Image = global::POS.Properties.Resources.icons8_edit_26;
             this.btnEditRoom.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnEditRoom.Location = new System.Drawing.Point(13, 817);
-            this.btnEditRoom.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditRoom.Location = new System.Drawing.Point(10, 664);
             this.btnEditRoom.Name = "btnEditRoom";
             this.btnEditRoom.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
             this.btnEditRoom.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
@@ -223,7 +217,7 @@
             this.btnEditRoom.OnHoverImage = global::POS.Properties.Resources.icons8_edit_26;
             this.btnEditRoom.OnPressedColor = System.Drawing.Color.White;
             this.btnEditRoom.Radius = 6;
-            this.btnEditRoom.Size = new System.Drawing.Size(107, 76);
+            this.btnEditRoom.Size = new System.Drawing.Size(80, 62);
             this.btnEditRoom.TabIndex = 6;
             this.btnEditRoom.Text = "Edit room";
             this.btnEditRoom.Click += new System.EventHandler(this.gunaGradientTileButton6_Click);
@@ -232,10 +226,9 @@
             // 
             this.gunaPictureBox2.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox2.Image")));
-            this.gunaPictureBox2.Location = new System.Drawing.Point(-12, -25);
-            this.gunaPictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.gunaPictureBox2.Location = new System.Drawing.Point(-9, -20);
             this.gunaPictureBox2.Name = "gunaPictureBox2";
-            this.gunaPictureBox2.Size = new System.Drawing.Size(155, 165);
+            this.gunaPictureBox2.Size = new System.Drawing.Size(116, 134);
             this.gunaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.gunaPictureBox2.TabIndex = 5;
             this.gunaPictureBox2.TabStop = false;
@@ -256,8 +249,7 @@
             this.btnEditService.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.btnEditService.Image = global::POS.Properties.Resources.icons8_edit_26;
             this.btnEditService.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnEditService.Location = new System.Drawing.Point(9, 733);
-            this.btnEditService.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditService.Location = new System.Drawing.Point(7, 596);
             this.btnEditService.Name = "btnEditService";
             this.btnEditService.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
             this.btnEditService.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
@@ -266,7 +258,7 @@
             this.btnEditService.OnHoverImage = global::POS.Properties.Resources.icons8_edit_26;
             this.btnEditService.OnPressedColor = System.Drawing.Color.White;
             this.btnEditService.Radius = 6;
-            this.btnEditService.Size = new System.Drawing.Size(107, 76);
+            this.btnEditService.Size = new System.Drawing.Size(80, 62);
             this.btnEditService.TabIndex = 3;
             this.btnEditService.Text = "Edit service";
             this.btnEditService.Click += new System.EventHandler(this.gunaGradientTileButton5_Click);
@@ -287,8 +279,7 @@
             this.gunaGradientTileButton3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.gunaGradientTileButton3.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientTileButton3.Image")));
             this.gunaGradientTileButton3.ImageSize = new System.Drawing.Size(32, 32);
-            this.gunaGradientTileButton3.Location = new System.Drawing.Point(13, 637);
-            this.gunaGradientTileButton3.Margin = new System.Windows.Forms.Padding(4);
+            this.gunaGradientTileButton3.Location = new System.Drawing.Point(10, 518);
             this.gunaGradientTileButton3.Name = "gunaGradientTileButton3";
             this.gunaGradientTileButton3.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
             this.gunaGradientTileButton3.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
@@ -297,7 +288,7 @@
             this.gunaGradientTileButton3.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientTileButton3.OnHoverImage")));
             this.gunaGradientTileButton3.OnPressedColor = System.Drawing.Color.White;
             this.gunaGradientTileButton3.Radius = 6;
-            this.gunaGradientTileButton3.Size = new System.Drawing.Size(92, 76);
+            this.gunaGradientTileButton3.Size = new System.Drawing.Size(69, 62);
             this.gunaGradientTileButton3.TabIndex = 3;
             this.gunaGradientTileButton3.Text = "Check out";
             this.gunaGradientTileButton3.Click += new System.EventHandler(this.gunaGradientTileButton3_Click);
@@ -318,8 +309,7 @@
             this.gunaGradientTileButton4.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.gunaGradientTileButton4.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientTileButton4.Image")));
             this.gunaGradientTileButton4.ImageSize = new System.Drawing.Size(32, 32);
-            this.gunaGradientTileButton4.Location = new System.Drawing.Point(24, 546);
-            this.gunaGradientTileButton4.Margin = new System.Windows.Forms.Padding(4);
+            this.gunaGradientTileButton4.Location = new System.Drawing.Point(18, 444);
             this.gunaGradientTileButton4.Name = "gunaGradientTileButton4";
             this.gunaGradientTileButton4.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
             this.gunaGradientTileButton4.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
@@ -328,7 +318,7 @@
             this.gunaGradientTileButton4.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientTileButton4.OnHoverImage")));
             this.gunaGradientTileButton4.OnPressedColor = System.Drawing.Color.White;
             this.gunaGradientTileButton4.Radius = 6;
-            this.gunaGradientTileButton4.Size = new System.Drawing.Size(80, 74);
+            this.gunaGradientTileButton4.Size = new System.Drawing.Size(60, 60);
             this.gunaGradientTileButton4.TabIndex = 2;
             this.gunaGradientTileButton4.Text = "Service";
             this.gunaGradientTileButton4.Click += new System.EventHandler(this.gunaGradientTileButton4_Click);
@@ -349,8 +339,7 @@
             this.gunaGradientTileButton2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.gunaGradientTileButton2.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientTileButton2.Image")));
             this.gunaGradientTileButton2.ImageSize = new System.Drawing.Size(26, 26);
-            this.gunaGradientTileButton2.Location = new System.Drawing.Point(24, 359);
-            this.gunaGradientTileButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.gunaGradientTileButton2.Location = new System.Drawing.Point(18, 292);
             this.gunaGradientTileButton2.Name = "gunaGradientTileButton2";
             this.gunaGradientTileButton2.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
             this.gunaGradientTileButton2.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
@@ -359,7 +348,7 @@
             this.gunaGradientTileButton2.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientTileButton2.OnHoverImage")));
             this.gunaGradientTileButton2.OnPressedColor = System.Drawing.Color.White;
             this.gunaGradientTileButton2.Radius = 6;
-            this.gunaGradientTileButton2.Size = new System.Drawing.Size(80, 74);
+            this.gunaGradientTileButton2.Size = new System.Drawing.Size(60, 60);
             this.gunaGradientTileButton2.TabIndex = 1;
             this.gunaGradientTileButton2.Text = "Order";
             this.gunaGradientTileButton2.Click += new System.EventHandler(this.gunaGradientTileButton2_Click);
@@ -380,8 +369,7 @@
             this.gunaGradientTileButton1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.gunaGradientTileButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientTileButton1.Image")));
             this.gunaGradientTileButton1.ImageSize = new System.Drawing.Size(32, 32);
-            this.gunaGradientTileButton1.Location = new System.Drawing.Point(13, 164);
-            this.gunaGradientTileButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.gunaGradientTileButton1.Location = new System.Drawing.Point(10, 133);
             this.gunaGradientTileButton1.Name = "gunaGradientTileButton1";
             this.gunaGradientTileButton1.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
             this.gunaGradientTileButton1.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
@@ -390,7 +378,7 @@
             this.gunaGradientTileButton1.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientTileButton1.OnHoverImage")));
             this.gunaGradientTileButton1.OnPressedColor = System.Drawing.Color.White;
             this.gunaGradientTileButton1.Radius = 6;
-            this.gunaGradientTileButton1.Size = new System.Drawing.Size(103, 74);
+            this.gunaGradientTileButton1.Size = new System.Drawing.Size(77, 60);
             this.gunaGradientTileButton1.TabIndex = 0;
             this.gunaGradientTileButton1.Text = "customer";
             this.gunaGradientTileButton1.Click += new System.EventHandler(this.gunaGradientTileButton1_Click);
@@ -406,13 +394,12 @@
             this.gunaControlBox1.AnimationSpeed = 0.03F;
             this.gunaControlBox1.IconColor = System.Drawing.Color.Gray;
             this.gunaControlBox1.IconSize = 15F;
-            this.gunaControlBox1.Location = new System.Drawing.Point(1267, 0);
-            this.gunaControlBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.gunaControlBox1.Location = new System.Drawing.Point(950, 0);
             this.gunaControlBox1.Name = "gunaControlBox1";
             this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.Tomato;
             this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
             this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox1.Size = new System.Drawing.Size(60, 36);
+            this.gunaControlBox1.Size = new System.Drawing.Size(45, 29);
             this.gunaControlBox1.TabIndex = 27;
             this.gunaControlBox1.Click += new System.EventHandler(this.gunaControlBox1_Click);
             // 
@@ -424,13 +411,12 @@
             this.gunaControlBox2.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MaximizeBox;
             this.gunaControlBox2.IconColor = System.Drawing.Color.Gray;
             this.gunaControlBox2.IconSize = 15F;
-            this.gunaControlBox2.Location = new System.Drawing.Point(1199, 0);
-            this.gunaControlBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.gunaControlBox2.Location = new System.Drawing.Point(899, 0);
             this.gunaControlBox2.Name = "gunaControlBox2";
             this.gunaControlBox2.OnHoverBackColor = System.Drawing.Color.Tomato;
             this.gunaControlBox2.OnHoverIconColor = System.Drawing.Color.White;
             this.gunaControlBox2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox2.Size = new System.Drawing.Size(60, 36);
+            this.gunaControlBox2.Size = new System.Drawing.Size(45, 29);
             this.gunaControlBox2.TabIndex = 28;
             // 
             // gunaControlBox3
@@ -441,13 +427,12 @@
             this.gunaControlBox3.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MinimizeBox;
             this.gunaControlBox3.IconColor = System.Drawing.Color.Gray;
             this.gunaControlBox3.IconSize = 15F;
-            this.gunaControlBox3.Location = new System.Drawing.Point(1131, 0);
-            this.gunaControlBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.gunaControlBox3.Location = new System.Drawing.Point(848, 0);
             this.gunaControlBox3.Name = "gunaControlBox3";
             this.gunaControlBox3.OnHoverBackColor = System.Drawing.Color.Tomato;
             this.gunaControlBox3.OnHoverIconColor = System.Drawing.Color.White;
             this.gunaControlBox3.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox3.Size = new System.Drawing.Size(60, 36);
+            this.gunaControlBox3.Size = new System.Drawing.Size(45, 29);
             this.gunaControlBox3.TabIndex = 29;
             // 
             // gunaResizeControl1
@@ -455,19 +440,18 @@
             this.gunaResizeControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaResizeControl1.ForeColor = System.Drawing.Color.Gray;
             this.gunaResizeControl1.ForeColorDepth = 255;
-            this.gunaResizeControl1.Location = new System.Drawing.Point(1299, 1076);
-            this.gunaResizeControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.gunaResizeControl1.Location = new System.Drawing.Point(974, 874);
             this.gunaResizeControl1.Name = "gunaResizeControl1";
-            this.gunaResizeControl1.Size = new System.Drawing.Size(27, 25);
+            this.gunaResizeControl1.Size = new System.Drawing.Size(20, 20);
             this.gunaResizeControl1.TabIndex = 30;
             this.gunaResizeControl1.TargetControl = this;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(1325, 1102);
+            this.ClientSize = new System.Drawing.Size(994, 894);
             this.ControlBox = false;
             this.Controls.Add(this.gunaResizeControl1);
             this.Controls.Add(this.gunaControlBox3);
@@ -476,7 +460,6 @@
             this.Controls.Add(this.gunaPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Opacity = 0.95D;
             this.Text = "Form1";
@@ -506,7 +489,7 @@
         public Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton7;
         public Guna.UI.WinForms.GunaGradientTileButton btnHistory;
         public Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton9;
-        public Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton5;
+        public Guna.UI.WinForms.GunaGradientTileButton btnEditAccount;
     }
 }
 

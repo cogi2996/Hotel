@@ -16,8 +16,7 @@ namespace POS
     {
         public static string username; // sa
         public static string password; // 29092003
-        public static int role ;  // 2
-        // 2 - admin , 1 staff
+        public static int role ;  // 2 - admin , 1 staff
       
     }
 }
