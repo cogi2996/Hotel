@@ -22,7 +22,7 @@ namespace POS
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="QuanLyKhachSan_21_11")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="QuanLyKhachSan")]
 	public partial class tinhtienDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -33,7 +33,7 @@ namespace POS
     #endregion
 		
 		public tinhtienDataContext() : 
-				base(global::POS.Properties.Settings.Default.QuanLyKhachSan_21_11ConnectionString, mappingSource)
+				base(global::POS.Properties.Settings.Default.QuanLyKhachSanConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -62,6 +62,24 @@ namespace POS
 			OnCreated();
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.f_CreateTableHoaDonChiTiet", IsComposable=true)]
+		public IQueryable<f_CreateTableHoaDonChiTietResult> f_CreateTableHoaDonChiTiet([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaKH", DbType="NVarChar(50)")] string maKH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TenKH", DbType="NVarChar(50)")] string tenKH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SoPhong", DbType="NVarChar(50)")] string soPhong, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SoDem", DbType="NVarChar(50)")] string soDem, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TenDV", DbType="NVarChar(50)")] string tenDV, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TienDV", DbType="NVarChar(50)")] string tienDV, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TienPhong", DbType="NVarChar(50)")] string tienPhong, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NgaySinh", DbType="NVarChar(50)")] string ngaySinh, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NgayDi", DbType="NVarChar(50)")] string ngayDi, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CheckIn", DbType="NVarChar(50)")] string checkIn, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TongTien", DbType="NVarChar(50)")] string tongTien)
+		{
+			return this.CreateMethodCallQuery<f_CreateTableHoaDonChiTietResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maKH, tenKH, soPhong, soDem, tenDV, tienDV, tienPhong, ngaySinh, ngayDi, checkIn, tongTien);
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.f_TinhSoDem", IsComposable=true)]
+		public System.Nullable<int> f_TinhSoDem([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="DateTime")] System.Nullable<System.DateTime> checkin, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="DateTime")] System.Nullable<System.DateTime> checkout)
+		{
+			return ((System.Nullable<int>)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), checkin, checkout).ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.f_TinhGiaPhong", IsComposable=true)]
+		public System.Nullable<int> f_TinhGiaPhong([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TienGioDau", DbType="Int")] System.Nullable<int> tienGioDau, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TienQuaDem", DbType="Int")] System.Nullable<int> tienQuaDem, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TienGioTiepTheo", DbType="Int")] System.Nullable<int> tienGioTiepTheo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="DateTime")] System.Nullable<System.DateTime> checkin)
+		{
+			return ((System.Nullable<int>)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tienGioDau, tienQuaDem, tienGioTiepTheo, checkin).ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.f_TongTienDichVu", IsComposable=true)]
 		public System.Nullable<int> f_TongTienDichVu([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaKH", DbType="Int")] System.Nullable<int> maKH)
 		{
@@ -72,18 +90,6 @@ namespace POS
 		public System.Nullable<int> f_TongTienHoaDon([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaKH", DbType="Int")] System.Nullable<int> maKH)
 		{
 			return ((System.Nullable<int>)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maKH).ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.f_TinhSoDem", IsComposable=true)]
-		public System.Nullable<int> f_TinhSoDem([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="DateTime")] System.Nullable<System.DateTime> checkin, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="DateTime")] System.Nullable<System.DateTime> checkout)
-		{
-			return ((System.Nullable<int>)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), checkin, checkout).ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.f_CreateTableHoaDonChiTiet", IsComposable=true)]
-		public IQueryable<f_CreateTableHoaDonChiTietResult> f_CreateTableHoaDonChiTiet([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaKH", DbType="NVarChar(50)")] string maKH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TenKH", DbType="NVarChar(50)")] string tenKH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SoPhong", DbType="NVarChar(50)")] string soPhong, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SoDem", DbType="NVarChar(50)")] string soDem, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TenDV", DbType="NVarChar(50)")] string tenDV, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TienDV", DbType="NVarChar(50)")] string tienDV, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TienPhong", DbType="NVarChar(50)")] string tienPhong, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NgaySinh", DbType="NVarChar(50)")] string ngaySinh, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NgayDi", DbType="NVarChar(50)")] string ngayDi, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CheckIn", DbType="NVarChar(50)")] string checkIn, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TongTien", DbType="NVarChar(50)")] string tongTien)
-		{
-			return this.CreateMethodCallQuery<f_CreateTableHoaDonChiTietResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maKH, tenKH, soPhong, soDem, tenDV, tienDV, tienPhong, ngaySinh, ngayDi, checkIn, tongTien);
 		}
 	}
 	

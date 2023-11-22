@@ -287,9 +287,6 @@
     <EmbeddedResource Include="Service.resx">
       <DependentUpon>Service.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="tinhtien.dbml.layout">
-      <DependentUpon>tinhtien.dbml</DependentUpon>
-    </None>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
@@ -321,6 +318,9 @@
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>tinhtien.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </None>
+    <None Include="tinhtien.dbml.layout">
+      <DependentUpon>tinhtien.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

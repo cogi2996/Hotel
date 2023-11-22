@@ -311,6 +311,7 @@ namespace POS
 
         public void RemoveRoom(int soPhong)
         {
+            
             cmd = new SqlCommand("proc_XoaPhong", cnnAccount);
             cmd.CommandType = CommandType.StoredProcedure;
 
@@ -403,22 +404,68 @@ namespace POS
             return MaKH;
 
         }
-        public DataTable DS_KhachHang(string sql)
+        public DataTable DS_KhachHangThanhToan(int MaKH)
         {
             dt = new DataTable();
 
-            cmd = new SqlCommand(sql, cnnAccount);
-            cmd.CommandType = CommandType.Text;
-
+            cmd = new SqlCommand("proc_DanhSachKH", this.cnnAccount);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaKH", MaKH);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 
             da.Fill(dt);
 
             return dt;
         }
+        public DataTable ChiTietPhong(int MaKH)
+        {
+            Connect();
+            dt = new DataTable();
+            cmd = new SqlCommand("proc_ChiTietPhong", this.cnnAccount);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaKH", MaKH);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            Close();
+            return dt;
+        }
+        public void CapNhatHoaDon(int MaKH,String tongtien)
+        {
+            Connect();
+            cmd = new SqlCommand("proc_LuuTruHoaDon", this.cnnAccount);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaKH", MaKH);
+            cmd.Parameters.AddWithValue("@TongTien", tongtien);
+            cmd.ExecuteNonQuery();
+            Close();
+        }
+        public DataTable ChiTietDichVu(int MaKH)
+        {
+            Connect();
+            dt = new DataTable();
+            cmd = new SqlCommand("proc_DichVuSuDung", cnnAccount);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaKH", MaKH);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            Close();
+            return dt;
+        }
+        public DataTable TongTien(int MaKH)
+        {
+            Connect();
+            dt = new DataTable();
+            cmd = new SqlCommand("proc_TongTien", cnnAccount);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaKH", MaKH);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            Close();
+            return dt;
+        }
         public int SoDem(string checkin,string checkout)
         {
-            cnnAccount.Open();
+            Connect();
             cmd = new SqlCommand();
             cmd.CommandText = "f_TinhSoDem";
             cmd.CommandType = CommandType.StoredProcedure;
@@ -433,28 +480,19 @@ namespace POS
             int tenloai;
             cmd.ExecuteScalar();
             tenloai = (int)retValParam.Value;
+            Close();
             return tenloai;
         }
-       /* public void TaoBangHoaDon()
-        {
-            cnn.Open();
-            cmd = new SqlCommand("proc_taoHoaDon", cnn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.ExecuteNonQuery();
-            cnnAccount.Close();
-        }*/
-       
         public DataTable TaoHoaDon(string ma,string ten,string phong,string dem,string ngays,string ngayden,string ngaydi,string tp,string tdv,string tiendv,string tt)
         {
-            
-            dt = new DataTable();
 
-            cmd = new SqlCommand($"SELECT * FROM dbo.f_CreateTableHoaDonChiTiet('{ma}', 'N{ten}', '{phong}', '{dem}', 'N{tdv}', '{tiendv}', '{tp}', '{ngays}', '{ngaydi}','{ngayden}', '{tt}') where MaKH='{ma}'", this.cnnAccount);
+            Connect();
+            dt = new DataTable();
+            cmd = new SqlCommand($"SELECT * FROM dbo.f_CreateTableHoaDonChiTiet('{ma}', N'{ten}', '{phong}', '{dem}', N'{tdv}', '{tiendv}', '{tp}', '{ngays}', '{ngaydi}','{ngayden}', '{tt}') where MaKH='{ma}'", this.cnnAccount);
             cmd.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
-
             da.Fill(dt);
-
+            Close();
             return dt;
         }
 

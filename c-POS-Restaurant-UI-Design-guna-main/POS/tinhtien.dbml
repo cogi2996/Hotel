@@ -1,18 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyKhachSan_21_11" Class="tinhtienDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=QuanLyKhachSan_21_11;Integrated Security=True" SettingsObjectName="POS.Properties.Settings" SettingsPropertyName="QuanLyKhachSan_21_11ConnectionString" Provider="System.Data.SqlClient" />
-  <Function Name="dbo.f_TongTienDichVu" Method="f_TongTienDichVu" IsComposable="true">
-    <Parameter Name="MaKH" Parameter="maKH" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.f_TongTienHoaDon" Method="f_TongTienHoaDon" IsComposable="true">
-    <Parameter Name="MaKH" Parameter="maKH" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.f_TinhSoDem" Method="f_TinhSoDem" IsComposable="true">
-    <Parameter Name="checkin" Type="System.DateTime" DbType="DateTime" />
-    <Parameter Name="checkout" Type="System.DateTime" DbType="DateTime" />
-    <Return Type="System.Int32" />
-  </Function>
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyKhachSan" Class="tinhtienDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=QuanLyKhachSan;User ID=nhanvien1" SettingsObjectName="POS.Properties.Settings" SettingsPropertyName="QuanLyKhachSanConnectionString1" Provider="System.Data.SqlClient" />
   <Function Name="dbo.f_CreateTableHoaDonChiTiet" Method="f_CreateTableHoaDonChiTiet" IsComposable="true">
     <Parameter Name="MaKH" Parameter="maKH" Type="System.String" DbType="NVarChar(50)" />
     <Parameter Name="TenKH" Parameter="tenKH" Type="System.String" DbType="NVarChar(50)" />
@@ -38,5 +25,25 @@
       <Column Name="CheckIn" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="TongTien" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.f_TinhSoDem" Method="f_TinhSoDem" IsComposable="true">
+    <Parameter Name="checkin" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="checkout" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.f_TinhGiaPhong" Method="f_TinhGiaPhong" IsComposable="true">
+    <Parameter Name="TienGioDau" Parameter="tienGioDau" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TienQuaDem" Parameter="tienQuaDem" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TienGioTiepTheo" Parameter="tienGioTiepTheo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="checkin" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.f_TongTienDichVu" Method="f_TongTienDichVu" IsComposable="true">
+    <Parameter Name="MaKH" Parameter="maKH" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.f_TongTienHoaDon" Method="f_TongTienHoaDon" IsComposable="true">
+    <Parameter Name="MaKH" Parameter="maKH" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
   </Function>
 </Database>

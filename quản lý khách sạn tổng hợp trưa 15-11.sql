@@ -874,5 +874,22 @@ VALUES
 go
 select d.SoPhong,d.CheckIn 
 from DatPhong d,KhachHang k
-where d.MaKH = k.MaKH and k.MaKH = 2
+where d.MaKH = k.MaKH and k.MaKH = 2;
+
+use QuanLyKhachSan
+go
+EXEC sp_help 'HoaDonChiTiet';
+create table HoaDonChiTiet(
+	MaKH nvarchar(50) primary key,
+	TenKH nvarchar(50),
+	SoPhong nvarchar(50),
+	SoDem nvarchar(50),
+	TenDV nvarchar(50),
+	TienDV nvarchar(50),
+	TienPhong nvarchar(50),
+	NgaySinh nvarchar(50),
+	NgayDi nvarchar(50),
+	CheckIn nvarchar(50),
+	TongTien nvarchar(50))
+SELECT @@VERSION;
 
