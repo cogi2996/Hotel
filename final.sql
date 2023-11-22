@@ -57,11 +57,22 @@ insert DangNhap values ('sa2','29092003','admin')
 
 -- kiểm tra đăng nhập 
 drop function dbo.checkLogin
-create function checkLogin (@username NVARCHAR(100), @password NVARCHAR(100))returns intasbegin 	declare @role INT,@check nvarchar(100);	SET @role = 0;	SELECT @check = DangNhap.role	FROM DangNhap	WHERE username = @username and password = @password	if @check = N'admin'  -- Sử dụng N để chỉ ra chuỗi Unicode
+create function checkLogin (@username NVARCHAR(100), @password NVARCHAR(100))
+returns int
+as
+begin 
+	declare @role INT,@check nvarchar(100);
+	SET @role = 0;
+	SELECT @check = DangNhap.role
+	FROM DangNhap
+	WHERE username = @username and password = @password
+	if @check = N'admin'  -- Sử dụng N để chỉ ra chuỗi Unicode
 		set @role = 2;
 	else if @check = N'user'  -- Sử dụng N để chỉ ra chuỗi Unicode
 		set @role = 1;
-	return @role;end
+	return @role;
+end
+
 
 --print(dbo.checkLogin('sda','29092003'))
 SELECT dbo.checkLogin('nhanvien1', '29092003')
@@ -75,7 +86,59 @@ As
 BEGIN
 INSERT INTO DangNhap VALUES (@tk, @mk, @role)
 END
--- xoá tài khoản
+
+--- tin
+-- trigger xóa tài khoản
+CREATE TRIGGER deleteAccount
+ON DangNhap
+AFTER DELETE
+AS
+BEGIN
+    -- Lấy ra username vừa bị xóa
+    DECLARE @username NVARCHAR(100)
+    SELECT @username = username
+    FROM deleted
+
+    -- Xóa đăng nhập (LOGIN) tương ứng
+    DECLARE @sqlLogin NVARCHAR(2000)
+    SET @sqlLogin = 'DROP LOGIN [' + @username + ']'
+    EXEC (@sqlLogin)
+
+    -- Xóa người dùng (USER) tương ứng
+    DECLARE @sqlUser NVARCHAR(2000)
+    SET @sqlUser = 'DROP USER [' + @username + ']'
+    EXEC (@sqlUser)
+END
+
+--procedure xoá tài khoản
+CREATE PROCEDURE proc_XoaTaiKhoan
+@username nvarchar(100)
+AS
+BEGIN
+    DELETE FROM DangNhap
+    WHERE username = @username;
+END;
+
+-- sửa procedure thêm tài khoản của tuấn 
+CREATE PROCEDURE proc_ThemTaiKhoan 
+@username nvarchar(100),
+@password nvarchar(100),
+@role nvarchar(10)
+AS
+BEGIN
+    IF EXISTS (
+        SELECT 1
+        FROM DangNhap
+        WHERE username = @username
+    )
+    BEGIN
+        RAISERROR('Username đã tồn tại.', 16, 1);
+        RETURN;
+    END
+
+    INSERT INTO DangNhap (username, password, role)
+    VALUES (@username, @password, @role);
+END;
 
 --> THIẾU TRIGGER BẮT LỖI INSERT TRÙNG USERNAME
 
