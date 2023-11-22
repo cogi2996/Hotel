@@ -32,5 +32,25 @@ namespace POS.Properties {
                 return ((string)(this["QuanLyKhachSanConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=QuanLyKhachSan_21_11;Integrated Security=True")]
+        public string QuanLyKhachSan_21_11ConnectionString {
+            get {
+                return ((string)(this["QuanLyKhachSan_21_11ConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=QuanLyKhachSan;User ID=nhanvien1;Password=29092003")]
+        public string QuanLyKhachSanConnectionString1 {
+            get {
+                return ((string)(this["QuanLyKhachSanConnectionString1"]));
+            }
+        }
     }
 }

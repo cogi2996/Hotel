@@ -46,6 +46,7 @@
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
@@ -73,6 +74,12 @@
     <Compile Include="Bill.Designer.cs">
       <DependentUpon>Bill.cs</DependentUpon>
     </Compile>
+    <Compile Include="checkout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="checkout.Designer.cs">
+      <DependentUpon>checkout.cs</DependentUpon>
+    </Compile>
     <Compile Include="BillHistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +98,12 @@
     <Compile Include="ControllerBar.Designer.cs">
       <DependentUpon>ControllerBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="crys_bill.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crys_bill.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Customer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +111,14 @@
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
     <Compile Include="DBConnection.cs" />
+    <Compile Include="ds_Bill.cs">
+      <DependentUpon>ds_Bill.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_Bill.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_Bill.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EditCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +149,19 @@
     <Compile Include="Form_non.Designer.cs">
       <DependentUpon>Form_non.cs</DependentUpon>
     </Compile>
+    <Compile Include="f_bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_bill.Designer.cs">
+      <DependentUpon>f_bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f_hoadon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_hoadon.Designer.cs">
+      <DependentUpon>f_hoadon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GLOBAL.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +199,11 @@
     <Compile Include="Service.Designer.cs">
       <DependentUpon>Service.cs</DependentUpon>
     </Compile>
+    <Compile Include="tinhtien.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tinhtien.dbml</DependentUpon>
+    </Compile>
     <Compile Include="UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -183,6 +222,9 @@
     <EmbeddedResource Include="Bill.resx">
       <DependentUpon>Bill.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="checkout.resx">
+      <DependentUpon>checkout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BillHistory.resx">
       <DependentUpon>BillHistory.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +233,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ControllerBar.resx">
       <DependentUpon>ControllerBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crys_bill.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crys_bill.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
@@ -209,6 +255,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_non.resx">
       <DependentUpon>Form_non.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_bill.resx">
+      <DependentUpon>f_bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_hoadon.resx">
+      <DependentUpon>f_hoadon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -241,6 +293,17 @@
     <EmbeddedResource Include="UserControl2.resx">
       <DependentUpon>UserControl2.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ds_Bill.xsc">
+      <DependentUpon>ds_Bill.xsd</DependentUpon>
+    </None>
+    <None Include="ds_Bill.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_Bill.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_Bill.xss">
+      <DependentUpon>ds_Bill.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -251,6 +314,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="tinhtien.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>tinhtien.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tinhtien.dbml.layout">
+      <DependentUpon>tinhtien.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -280,6 +351,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-pass-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-edit-26.png" />

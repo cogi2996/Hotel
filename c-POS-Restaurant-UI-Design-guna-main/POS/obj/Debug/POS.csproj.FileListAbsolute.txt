@@ -255,6 +255,14 @@ C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\De
 C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.CopyComplete
 C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.exe
 C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.pdb
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.f_bill.resources
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.checkout.resources
+C:\Users\FPTSHOP\Downloads\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.f_hoadon.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.checkout.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.EditRoom.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.f_bill.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.f_hoadon.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Login.resources
 D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.csproj.AssemblyReference.cache
 D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.EditRoom.resources
 D:\năm 3\hệ quản trị cơ sở dữ liệu\ttt\DoAn - Copy\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Login.resources
@@ -265,3 +273,7 @@ D:\hk1 N3 2023-2024\he_qt_csdl\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\ob
 D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Price.resources
 D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.BillHistory.resources
 D:\HocTap\Nam3\HK1\DatabaseManagementSystem\DoAn\Hotel\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.BookedRoom.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.BillHistory.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.BookedRoom.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.EditService.resources
+D:\năm 3\hệ quản trị cơ sở dữ liệu\DoAn\c-POS-Restaurant-UI-Design-guna-main\POS\obj\Debug\POS.Price.resources
