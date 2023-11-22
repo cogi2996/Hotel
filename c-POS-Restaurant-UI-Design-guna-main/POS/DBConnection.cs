@@ -167,7 +167,44 @@ namespace POS
             cmd.ExecuteNonQuery();
         }
 
+        public DataTable ListAccount()
+        {
+            dt = new DataTable();
 
+            cmd = new SqlCommand("SELECT * FROM Dangnhap", cnnAccount);
+            cmd.CommandType = CommandType.Text;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public void RemoveAccount(String username)
+        {
+            cmd = new SqlCommand("proc_XoaTaiKhoan", cnnAccount);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            // Thêm tham số cho stored procedure
+            cmd.Parameters.AddWithValue("@username", username);
+
+
+            cmd.ExecuteNonQuery();
+        }
+
+        public void AddAccount(String username, String password, String role)
+        {
+            cmd = new SqlCommand("proc_ThemTaiKhoan", cnnAccount);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            // Thêm tham số cho stored procedure
+            cmd.Parameters.AddWithValue("@username", username);
+            cmd.Parameters.AddWithValue("@password", password);
+            cmd.Parameters.AddWithValue("@role", role);
+
+            cmd.ExecuteNonQuery();
+        }
 
         //tay
         public DataTable ListCustomer()

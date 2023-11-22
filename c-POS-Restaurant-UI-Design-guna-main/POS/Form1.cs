@@ -91,5 +91,10 @@ namespace POS
         {
             OpenChildForm(new checkout());
         }
+
+        private void gunaGradientTileButton5_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new EditAccount());
+        }
     }
 }

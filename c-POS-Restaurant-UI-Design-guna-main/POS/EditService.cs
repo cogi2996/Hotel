@@ -58,7 +58,7 @@ namespace POS
             try
             {
                 dbcon.AddService(txtTenDV.Text, int.Parse(txtDonGia.Text));
-                MessageBox.Show("Thêm phòng mới thành công!",
+                MessageBox.Show("Thêm dịch vụ mới thành công!",
                                 "Thông báo",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
@@ -83,7 +83,7 @@ namespace POS
             try
             {
                 dbcon.RemoveService(int.Parse(txtMaDV.Text));
-                MessageBox.Show("Xóa phòng thành công!",
+                MessageBox.Show("Xóa dịch vụ thành công!",
                                 "Thông báo",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
@@ -108,7 +108,7 @@ namespace POS
             try
             {
                 dbcon.EditService(int.Parse(txtMaDV.Text), txtTenDV.Text, int.Parse(txtDonGia.Text));
-                MessageBox.Show("Sửa thông tin phòng thành công!",
+                MessageBox.Show("Sửa thông tin dịch vụ thành công!",
                                 "Thông báo",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
