@@ -266,13 +266,61 @@ namespace POS
 
 
         }
-        public DataTable DS_KhachHang(string sql)
+        public DataTable DS_KhachHangThanhToan(int MaKH)
         {
             dt = new DataTable();
 
-            cmd = new SqlCommand(sql, cnn);
-            cmd.CommandType = CommandType.Text;
+            cmd = new SqlCommand("proc_DanhSachKH", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaKH", MaKH);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
 
+            da.Fill(dt);
+
+            return dt;
+        }
+        public DataTable ChiTietPhong(int MaKH)
+        {
+            dt = new DataTable();
+
+            cmd = new SqlCommand("proc_ChiTietPhong", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaKH", MaKH);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(dt);
+
+            return dt;
+        }
+        public void CapNhatHoaDon(int MaKH,String tongtien)
+        {
+            cnn.Open();
+            cmd = new SqlCommand("proc_LuuTruHoaDon", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaKH", MaKH);
+            cmd.Parameters.AddWithValue("@TongTien", tongtien);
+            cmd.ExecuteNonQuery();
+        }
+        public DataTable ChiTietDichVu(int MaKH)
+        {
+            dt = new DataTable();
+
+            cmd = new SqlCommand("proc_DichVuSuDung", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaKH", MaKH);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(dt);
+
+            return dt;
+        }
+        public DataTable TongTien(int MaKH)
+        {
+            dt = new DataTable();
+
+            cmd = new SqlCommand("proc_TongTien", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaKH", MaKH);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 
             da.Fill(dt);
@@ -312,7 +360,7 @@ namespace POS
             
             dt = new DataTable();
 
-            cmd = new SqlCommand($"SELECT * FROM dbo.f_CreateTableHoaDonChiTiet('{ma}', 'N{ten}', '{phong}', '{dem}', 'N{tdv}', '{tiendv}', '{tp}', '{ngays}', '{ngaydi}','{ngayden}', '{tt}') where MaKH='{ma}'", cnn);
+            cmd = new SqlCommand($"SELECT * FROM dbo.f_CreateTableHoaDonChiTiet('{ma}', N'{ten}', '{phong}', '{dem}', 'N{tdv}', '{tiendv}', '{tp}', '{ngays}', '{ngaydi}','{ngayden}', '{tt}') where MaKH='{ma}'", cnn);
             cmd.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 
