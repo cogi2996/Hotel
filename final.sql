@@ -338,3 +338,23 @@ BEGIN
     -- Xóa bản ghi từ bảng DangNhap dựa trên tên người dùng
     DELETE FROM DangNhap WHERE username = @username;
 END
+
+
+--23/11
+CREATE TRIGGER trg_CheckUsername
+ON DangNhap
+INSTEAD OF INSERT
+AS
+BEGIN
+    DECLARE @username NVARCHAR(100);
+    SELECT @username = username FROM inserted;
+
+    IF @username LIKE '%[^a-zA-Z0-9]%' OR @username LIKE '[0-9]%'
+    BEGIN
+        RAISERROR('Username không được chứa ký tự đặc biệt hoặc bắt đầu bằng số.', 16, 1);
+        RETURN;
+    END
+
+    INSERT INTO DangNhap
+    SELECT * FROM inserted;
+END;
